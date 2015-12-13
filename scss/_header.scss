@@ -1,0 +1,48 @@
+header {
+
+  margin-top: 10px;
+  box-sizing: border-box;
+  height: auto;
+  color: white;
+
+  .top-header {
+    height: 80px;
+  }
+
+  h1 {
+    padding-left: 10px;
+    display: inline;
+    float: left;
+  }
+
+  img {
+    float: left;
+    display: inline;
+  }
+
+  // .left {
+  //   float: left;
+  // }
+}
+
+nav {
+  clear: both;
+  background-color: $darker-green;
+
+  ul {
+    list-style-type: none;
+    height: 50px;
+    padding: 10px 0px;
+
+    li {
+      padding-left: 10px;
+      box-sizing: border-box;
+      display: block;
+      float: left;
+
+      &.current {
+        background-color: darken($dark-green, 2.5%);
+      }
+    }
+  }
+}

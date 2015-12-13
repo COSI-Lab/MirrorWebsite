@@ -1,0 +1,24 @@
+footer {
+  width: 100%;
+  background-color: $darker-green;
+  color: white;
+  height: 160px;
+  z-index: 2;
+  box-shadow: 0px 2px 4px black;
+
+  .container {
+    width: 960px;
+    padding-top: 1px;
+    margin: 0 auto;
+  }
+
+  a {
+    color: white;
+    font-style: italic;
+    text-decoration: none;
+
+    &:hover {
+      font-weight: bold;
+    }
+  }
+}

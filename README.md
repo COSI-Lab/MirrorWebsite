@@ -3,9 +3,14 @@ This is going to be a reboot of our current website for Clarkson's
 [Mirror](http://mirror.clarkson.edu/). With this update, there are plans to create
 a modern design and have the site be responsive as well.
 
+## Setup
+To compile the Sass and Jade files, download [Rake](https://github.com/ruby/rake)
+and run the rakefile by running the command `rake`.
+
 ## Tools used
 - Sass
 - Jade
+- [normalize.scss](https://github.com/appleboy/normalize.scss)
 
 ## Contribute
 If you are interested in contributing, contact either [Benjamin Lannon](mailto:lannonbr@clarkson.edu)

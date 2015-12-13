@@ -1,5 +1,35 @@
-$background-color: #4b5541;
+@import "normalize";
+@import "variables";
+@import "header";
+@import "footer";
+@import "grid";
+
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
 body {
-  background-color: $background-color;
+  background-color: $dark-green;
+  font-family: $main-font;
+}
+
+.container {
+  width: 960px;
+  height: 100%;
+  margin: auto auto;
+}
+
+.content {
+  background-color: darken(white, 2%);
+}
+
+.carasouel {
+  font-family: $bold-font;
+  text-align: center;
+  color: white;
+  height: 300px;
+  background-image: url("../img/mainback.jpeg");
+
+  h1 {
+    font-size: 4em;
+  }
 }

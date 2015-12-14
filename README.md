@@ -15,3 +15,7 @@ and run the rakefile by running the command `rake`.
 ## Contribute
 If you are interested in contributing, contact either [Benjamin Lannon](mailto:lannonbr@clarkson.edu)
 or anyone on the COSI WebDev team.
+
+## Credits
+mainback.jpg was found on [Unsplash](https://unsplash.com/photos/_3l5B_4E_u0) by Scott Webb and is
+licensed under Creative Commons Zero.

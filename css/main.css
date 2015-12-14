@@ -389,15 +389,30 @@ header {
 nav {
   clear: both;
   background-color: #383f30; }
+  nav .container {
+    height: 50px;
+    margin: 0 auto;
+    padding: 0; }
   nav ul {
     list-style-type: none;
-    height: 50px;
-    padding: 10px 0px; }
+    height: 50px; }
     nav ul li {
-      padding-left: 10px;
+      padding-left: 25px;
+      padding-right: 25px;
+      padding-top: 10px;
       box-sizing: border-box;
       display: block;
-      float: left; }
+      float: left;
+      text-align: center;
+      height: inherit; }
+      nav ul li a {
+        display: block;
+        color: white;
+        text-decoration: none;
+        width: inherit;
+        height: inherit; }
+      nav ul li:hover {
+        background: #3d4535; }
       nav ul li.current {
         background-color: #454e3b; }
 

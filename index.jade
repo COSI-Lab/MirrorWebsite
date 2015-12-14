@@ -7,6 +7,10 @@ html(lang="en")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     meta(charset="utf-8")
     meta(name="description" content="The website for Clarkson University's Software Mirror")
+    script.
+      window.onload = function() {
+      var foo = document.getElementById("navhome");
+      foo.setAttribute("class", "current"); };
   body
     include includes/_header.jade
     .carasouel
@@ -27,31 +31,27 @@ html(lang="en")
             
         hr
         
-        .row
-          .col.col--1-of-4
+        .row.mid
+          .col.col--1-of-3
             img(src="img/debian_logo.svg")
-          .col.col--1-of-4
-            img(src="img/gnu.svg")
-          .col.col--1-of-4
-            img(src="img/tux.png")
-          .col.col--1-of-4
-            img(src="img/tux.png")
-        .row
-          .col.col--1-of-4
+          .col.col--2-of-3
             h2 Linux Distros
             p.
               We host around 20 distributions including Debian, Ubuntu, Arch Linux, Linux Mint,
               and many more. Many are official mirrors and the majority are updated 4 times a
-              day from upstream mirrors.
-          .col.col--1-of-4
+              day from upstream mirrors. Learn more on the Distributions page.
+        .row.mid
+          .col.col--1-of-3
+            img(src="img/gnu.svg")
+          .col.col--2-of-3
             h2 GNU Software
-            p This is some text to talk about the things and stuff
-          .col.col--1-of-4
+            p This is some text to talk about the things and stuff  
+        .row.mid
+          .col.col--1-of-3
+            img(src="img/tux.png")
+          .col.col--2-of-3
             h2 Linux Kernel
             p This is some text to talk about the things and stuff
-          .col.col--1-of-4
-            h2 And more!
-            p If you are interested in having Software hosted on Mirror, contact us!
         
         hr
         
@@ -59,6 +59,6 @@ html(lang="en")
         p.
           The newest iteration will be completed in January 2016, but we have had Mirror
           running for almost a decade now. If you want to learn more about the newest
-          iteration or the history behind the project. Visit the History page.
+          iteration or the history behind the project, Visit the History page.
         
     include includes/_footer.jade

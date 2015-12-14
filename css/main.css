@@ -769,6 +769,8 @@ hr {
     display: block;
     margin: 0 auto;
     height: 200px; }
+  .content .mid {
+    margin-bottom: 15px; }
 
 .carasouel {
   font-family: "Raleway";

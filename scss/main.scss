@@ -12,14 +12,30 @@ body {
   font-family: $main-font;
 }
 
+hr {
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
 .container {
   width: 960px;
   height: 100%;
-  margin: auto auto;
+  margin: 0 auto;
 }
 
 .content {
   background-color: darken(white, 2%);
+
+  .top {
+    padding-top: 20px;
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+    height: 200px;
+  }
 }
 
 .carasouel {
@@ -28,8 +44,10 @@ body {
   color: white;
   height: 300px;
   background-image: url("../img/mainback.jpeg");
+  box-sizing: border-box;
 
   h1 {
     font-size: 4em;
+    padding-top: 50px;
   }
 }

@@ -388,7 +388,9 @@ header {
 
 nav {
   clear: both;
-  background-color: #383f30; }
+  background-color: #383f30;
+  margin-bottom: 0px;
+  padding-bottom: 0px; }
   nav .container {
     height: 50px;
     margin: 0 auto;
@@ -749,21 +751,34 @@ body {
   background-color: #4b5541;
   font-family: "Open Sans"; }
 
+hr {
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 30px; }
+
 .container {
   width: 960px;
   height: 100%;
-  margin: auto auto; }
+  margin: 0 auto; }
 
 .content {
   background-color: #fafafa; }
+  .content .top {
+    padding-top: 20px; }
+  .content img {
+    display: block;
+    margin: 0 auto;
+    height: 200px; }
 
 .carasouel {
   font-family: "Raleway";
   text-align: center;
   color: white;
   height: 300px;
-  background-image: url("../img/mainback.jpeg"); }
+  background-image: url("../img/mainback.jpeg");
+  box-sizing: border-box; }
   .carasouel h1 {
-    font-size: 4em; }
+    font-size: 4em;
+    padding-top: 50px; }
 
 /*# sourceMappingURL=main.css.map */

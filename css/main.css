@@ -386,19 +386,19 @@ header {
     float: left;
     display: inline; }
 
-nav {
+nav#navdesktop {
   clear: both;
   background-color: #383f30;
   margin-bottom: 0px;
   padding-bottom: 0px; }
-  nav .container {
+  nav#navdesktop .container {
     height: 50px;
     margin: 0 auto;
     padding: 0; }
-  nav ul {
+  nav#navdesktop ul {
     list-style-type: none;
     height: 50px; }
-    nav ul li {
+    nav#navdesktop ul li {
       padding-left: 25px;
       padding-right: 25px;
       padding-top: 10px;
@@ -407,17 +407,26 @@ nav {
       float: left;
       text-align: center;
       height: inherit; }
-      nav ul li a {
+      nav#navdesktop ul li a {
         display: block;
         color: white;
         text-decoration: none;
         width: inherit;
         height: inherit; }
-      nav ul li:hover {
+      nav#navdesktop ul li:hover {
         background: #3d4535; }
-      nav ul li.current {
+      nav#navdesktop ul li.current {
         background-color: #454e3b; }
 
+nav#navmobile {
+  display: none; }
+
+@media (max-width: 900px) {
+  nav#navdesktop {
+    display: none; }
+
+  nav#navmobile {
+    display: block; } }
 footer {
   width: 100%;
   background-color: #383f30;
@@ -426,7 +435,7 @@ footer {
   z-index: 2;
   box-shadow: 0px 2px 4px black; }
   footer .container {
-    width: 960px;
+    max-width: 960px;
     padding-top: 1px;
     margin: 0 auto; }
   footer a {
@@ -436,6 +445,9 @@ footer {
     footer a:hover {
       font-weight: bold; }
 
+@media (max-width: 900px) {
+  footer {
+    height: 320px; } }
 /*-----------------------------------*\
 
   $TOAST-GRID
@@ -757,9 +769,11 @@ hr {
   margin-bottom: 30px; }
 
 .container {
-  width: 960px;
+  max-width: 960px;
   height: 100%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding-left: 5px;
+  padding-right: 5px; }
 
 .content {
   background-color: #fafafa; }

@@ -26,7 +26,7 @@ header {
   // }
 }
 
-nav {
+nav#navdesktop {
   clear: both;
   background-color: $darker-green;
   margin-bottom: 0px;
@@ -68,5 +68,19 @@ nav {
         background-color: darken($dark-green, 2.5%);
       }
     }
+  }
+}
+
+nav#navmobile {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  nav#navdesktop {
+    display: none;
+  }
+
+  nav#navmobile {
+    display: block;
   }
 }

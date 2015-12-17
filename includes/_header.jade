@@ -1,20 +1,26 @@
 //- The header for all pages
+mixin nav-list
+  ul 
+    li#navhome
+      a(href="index.html") Mirror Home
+    li#navdistributions
+      a(href="distributions.html") Distributions
+    li#nav3rdparty
+      a(href="") 3rd Party Repos
+    li#navmisc
+      a(href="") Misc.
+    li#navdirectory
+      a(href="") Directory Listing
+    li#navhistory 
+      a(href="") History
+
 header
   .container.top-header
     a(href="http://clarkson.edu/"): img(src="img/clarksonlogo.jpg")
     h1.left Mirror
-  nav
+  nav#navdesktop
     .container
-      ul 
-        li#navhome
-          a(href="index.html") Mirror Home
-        li#navdistributions
-          a(href="distributions.html") Distributions
-        li#nav3rdparty
-          a(href="") 3rd Party Repos
-        li#navmisc
-          a(href="") Misc.
-        li#navdirectory
-          a(href="") Directory Listing
-        li#navhistory 
-          a(href="") History
+      +nav-list
+nav#navmobile
+  .container
+    +nav-list

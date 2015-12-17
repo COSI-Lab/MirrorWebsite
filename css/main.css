@@ -812,6 +812,7 @@ hr {
   background-image: url("../img/mainback.jpeg");
   box-sizing: border-box; }
   .carasouel h1 {
+    margin-top: 0;
     font-size: 4em;
     padding-top: 50px; }
 

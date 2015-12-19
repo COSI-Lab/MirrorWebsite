@@ -1,0 +1,18 @@
+doctype html
+html(lang="en")
+  head
+    title Clarkson University Mirror - Directory
+    link(rel="stylesheet" type="text/css" href="css/main.css")
+    meta(name="theme-color" content="#035245")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(charset="utf-8")
+    meta(name="description" content="The website for Clarkson University's Software Mirror")
+    script.
+      window.onload = function() {
+        var foo = document.getElementById('navdirectory');
+        foo.setAttribute("class", "current");
+      };
+      
+  body
+    include includes/_header.jade
+    include includes/_footer.jade

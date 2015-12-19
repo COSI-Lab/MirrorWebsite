@@ -17,7 +17,9 @@ mixin nav-list
 header
   .container.top-header
     a(href="http://clarkson.edu/"): img(src="img/clarksonlogo.jpg")
-    h1.left Mirror
+    h1(class="left")
+      a(href="index.html") Mirror
+    i(class="fa fa-bars menu-button")
   nav#navdesktop
     .container
       +nav-list

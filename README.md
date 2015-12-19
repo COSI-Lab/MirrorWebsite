@@ -12,6 +12,7 @@ and run the rakefile by running the command `rake`.
 - Jade
 - [normalize.scss](https://github.com/appleboy/normalize.scss)
 - [Toast](https://daneden.github.io/Toast)
+- [FontAwesome](http://fortawesome.github.io/Font-Awesome/)
 
 ## Contribute
 If you are interested in contributing, contact either [Benjamin Lannon](mailto:lannonbr@clarkson.edu)

@@ -12,6 +12,10 @@ body {
   font-family: $main-font;
 }
 
+h1 {
+      margin-top: 0;
+}
+
 hr {
   width: 80%;
   margin: 0 auto;
@@ -22,12 +26,16 @@ hr {
   max-width: 960px;
   height: 100%;
   margin: 0 auto;
-  padding-left: 5px;
-  padding-right: 5px;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .content {
   background-color: darken(white, 2%);
+
+  a {
+    color: green;
+  }
 
   .top {
     padding-top: 20px;
@@ -53,8 +61,23 @@ hr {
   box-sizing: border-box;
 
   h1 {
-    margin-top: 0;
+
     font-size: 4em;
     padding-top: 50px;
   }
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  p {
+    text-align: justify;
+  }
+}
+
+.row {
+  margin-bottom: 5px;
 }

@@ -4,8 +4,8 @@
 @import "footer";
 @import "grid";
 
-@import url(https://fonts.googleapis.com/css?family=Raleway);
-@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab);
 
 body {
   background-color: $dark-green;
@@ -32,6 +32,10 @@ hr {
 
 .content {
   background-color: darken(white, 2%);
+
+  p {
+    line-height: 1.5em;
+  }
 
   a {
     color: green;
@@ -79,5 +83,5 @@ hr {
 }
 
 .row {
-  margin-bottom: 5px;
+  margin-bottom: 8px;
 }

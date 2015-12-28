@@ -1,8 +1,8 @@
-@import "normalize";
-@import "variables";
-@import "header";
-@import "footer";
-@import "grid";
+@import "base/normalize";
+@import "base/variables";
+@import "layout/header";
+@import "layout/footer";
+@import "vendors/grid";
 
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 @import url(https://fonts.googleapis.com/css?family=Roboto+Slab);

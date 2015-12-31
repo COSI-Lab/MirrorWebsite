@@ -1,0 +1,7 @@
+.distro {
+  border-bottom: 2px solid lighten(black, 80%);
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}

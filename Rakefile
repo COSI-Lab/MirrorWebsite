@@ -1,3 +1,5 @@
+# To be removed in place of Gulp
+
 task default: %w[jade css]
 
 task :jade do

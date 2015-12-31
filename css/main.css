@@ -796,6 +796,11 @@ footer {
 .col--am {
   vertical-align: middle; }
 
+.distro {
+  border-bottom: 2px solid #cccccc; }
+  .distro:last-child {
+    border-bottom: 0; }
+
 body {
   background-color: #4b5541;
   font-family: "Roboto"; }
@@ -816,13 +821,12 @@ hr {
   padding-right: 2rem; }
 
 .content {
-  background-color: #fafafa; }
+  background-color: #fafafa;
+  padding-top: 20px; }
   .content p {
     line-height: 1.5em; }
   .content a {
     color: green; }
-  .content .top {
-    padding-top: 20px; }
   .content img {
     display: block;
     margin: 0 auto;

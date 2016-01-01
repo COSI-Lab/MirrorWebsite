@@ -4,8 +4,9 @@ This is going to be a reboot of our current website for Clarkson's
 a modern design and have the site be responsive as well.
 
 ## Setup
-To compile the Sass and Jade files, download [Rake](https://github.com/ruby/rake)
-and run the rakefile by running the command `rake`.
+To compile the Sass and Jade files, type `npm install` (assuming npm is already installed)
+and then either run the specific gulp tasks like `gulp jade` / `gulp sass`, or have them
+recompile on modifications with `gulp watch`
 
 ## Tools used
 - Sass

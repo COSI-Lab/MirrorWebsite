@@ -1,0 +1,9 @@
+{
+  "name": "mirror2016",
+  "version": "1.0.0",
+  "dependencies": {
+    "gulp": "3.9.x",
+    "gulp-sass": "2.1.x",
+    "gulp-jade": "1.1.x"
+  }
+}

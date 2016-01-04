@@ -990,6 +990,19 @@ footer a:hover {
   border-bottom: 0;
 }
 
+.distro-contents h2 {
+  border-bottom: 1px solid black;
+  text-align: center;
+}
+
+.distro-contents ul {
+  list-style-type: none;
+}
+
+.distro-contents ul li {
+  padding: 10px 0px;
+}
+
 body {
   background-color: #4b5541;
   font-family: "Roboto";

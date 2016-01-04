@@ -5,3 +5,17 @@
     border-bottom: 0;
   }
 }
+
+.distro-contents {
+  h2 {
+    border-bottom: 1px solid black;
+    text-align: center;
+  }
+
+  ul {
+    list-style-type: none;
+    li {
+      padding: 10px 0px;
+    }
+  }
+}

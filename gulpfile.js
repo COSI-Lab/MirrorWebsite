@@ -9,12 +9,12 @@ gulp.task('sass', function() {
 });
 
 gulp.task('jade', function() {
-  return gulp.src("./*.jade")
+  return gulp.src("./jade/*.jade")
     .pipe(jade({pretty: true}))
     .pipe(gulp.dest("./"));
 });
 
 gulp.task('watch', function() {
 	gulp.watch(['./scss/*.scss', './scss/**/*.scss'], ['sass']);
-	gulp.watch('./*.jade', ['jade']);
+	gulp.watch('./jade/*.jade', ['jade']);
 });

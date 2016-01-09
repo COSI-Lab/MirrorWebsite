@@ -1026,6 +1026,10 @@ hr {
   padding-right: 2rem;
 }
 
+img.logo {
+  width: 90%;
+}
+
 .content {
   background-color: #fafafa;
   padding-top: 20px;
@@ -1047,6 +1051,10 @@ hr {
 
 .content .mid {
   margin-bottom: 15px;
+}
+
+.center {
+  text-align: center;
 }
 
 .carasouel {

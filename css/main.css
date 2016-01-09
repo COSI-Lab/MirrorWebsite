@@ -1028,6 +1028,7 @@ hr {
 
 img.logo {
   width: 90%;
+  margin-bottom: 10px;
 }
 
 .content {
@@ -1051,6 +1052,11 @@ img.logo {
 
 .content .mid {
   margin-bottom: 15px;
+}
+
+.content .subfooter {
+  color: #777;
+  font-size: 0.8em;
 }
 
 .center {

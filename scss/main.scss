@@ -34,6 +34,7 @@ hr {
 
 img.logo {
   width: 90%;
+  margin-bottom: 10px;
 }
 
 .content {
@@ -56,6 +57,11 @@ img.logo {
 
   .mid {
     margin-bottom: 15px;
+  }
+
+  .subfooter {
+    color: $lighter-black;
+    font-size: 0.8em;
   }
 }
 

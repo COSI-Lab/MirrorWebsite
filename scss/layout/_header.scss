@@ -41,8 +41,8 @@ i.menu-button {
 nav#navdesktop {
   clear: both;
   background-color: $darker-green;
-  margin-bottom: 0px;
-  padding-bottom: 0px;
+  margin-bottom: 0;
+  padding-bottom: 0;
 
   .container {
     height: 50px;
@@ -89,10 +89,10 @@ nav#navmobile {
 
   ul {
     list-style-type: none;
-    padding-left: 0px;
+    padding-left: 0;
 
     li {
-      margin: 0px;
+      margin: 0;
       width: 100%;
       border-bottom: 2px solid darken($darker-green, 3%);
       padding-top: 1.25em;

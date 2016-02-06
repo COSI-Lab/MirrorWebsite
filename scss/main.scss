@@ -41,6 +41,15 @@ img.logo {
   background-color: darken(white, 2%);
   padding-top: 20px;
 
+  section {
+    margin-top: 5px;
+    margin-bottom: 20px;
+  }
+
+  h5 {
+    display: inline;
+  }
+
   p {
     line-height: 1.5em;
   }

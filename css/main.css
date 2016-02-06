@@ -451,8 +451,8 @@ i.menu-button {
 nav#navdesktop {
   clear: both;
   background-color: #383f30;
-  margin-bottom: 0px;
-  padding-bottom: 0px;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 nav#navdesktop .container {
@@ -500,11 +500,11 @@ nav#navmobile {
 
 nav#navmobile ul {
   list-style-type: none;
-  padding-left: 0px;
+  padding-left: 0;
 }
 
 nav#navmobile ul li {
-  margin: 0px;
+  margin: 0;
   width: 100%;
   border-bottom: 2px solid #30372a;
   padding-top: 1.25em;
@@ -1013,27 +1013,36 @@ h1 {
 }
 
 hr {
-  width: 80%;
   margin: 0 auto;
   margin-bottom: 30px;
+  width: 80%;
 }
 
 .container {
-  max-width: 960px;
   height: 100%;
   margin: 0 auto;
+  max-width: 960px;
   padding-left: 2rem;
   padding-right: 2rem;
 }
 
 img.logo {
-  width: 90%;
   margin-bottom: 10px;
+  width: 90%;
 }
 
 .content {
   background-color: #fafafa;
   padding-top: 20px;
+}
+
+.content section {
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+.content h5 {
+  display: inline;
 }
 
 .content p {
@@ -1046,8 +1055,8 @@ img.logo {
 
 .content img {
   display: block;
-  margin: 0 auto;
   height: 200px;
+  margin: 0 auto;
 }
 
 .content .mid {
@@ -1056,7 +1065,7 @@ img.logo {
 
 .content .subfooter {
   color: #777;
-  font-size: 0.8em;
+  font-size: .8em;
 }
 
 .center {

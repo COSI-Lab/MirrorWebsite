@@ -26,80 +26,298 @@ html(lang="en")
           .col.col--1-of-4.distro-contents
             h2 Contents
             ul
-              li Arch Linux
-              li Backtrack
-              li CentOS
-              li Debian
-              li Fedora
-              li Gentoo
-              li IPFire
-              li Knoppix
-              li LinuxMint
-              li OpenBSD
-              li pfSense
-              li OpenSUSE
-              li Sabayon
-              li Serenity Linux
-              li Slackware
-              li Slitaz
-              li Ubuntu
-              li Unity Linux
+              li: a(href='#arch') Arch Linux
+              li: a(href='#centos') CentOS
+              li: a(href='#debian') Debian
+              li: a(href='#fedora') Fedora
+              li: a(href='#gentoo') Gentoo
+              li: a(href='#ipfire') IPFire
+              li: a(href='#mint') LinuxMint
+              li: a(href='#openbsd') OpenBSD
+              li: a(href='#pfsense') pfSense
+              li: a(href='#opensuse') OpenSUSE
+              li: a(href='#sabayon') Sabayon
+              li: a(href='#serenity') Serenity Linux
+              li: a(href='#slackware') Slackware
+              li: a(href='#ubuntu') Ubuntu
+              li: a(href='#unitylinux') Unity Linux
             
           .col.col--3-of-4
+            h5 Note: 
+            | All distros are updated 4 times daily unless said otherwise.
+          
             .distro#arch
               h3 Arch Linux
-              h5 homepage:
-              a(href="http://archlinux.org") http://archlinux.org
+              h5 ISOs: 
+              a(href='http://mirror.clarkson.edu/archlinux/iso/latest/') http://mirror.clarkson.edu/archlinux/iso/latest/
+              br
+              h5 HTTP: 
+              a(href='http://mirror.clarkson.edu/archlinux/') http://mirror.clarkson.edu/archlinux/
+              br
+              h5 Rsync: 
+              | rsync://mirror.clarkson.edu/archlinux
+              br
+              br
+              h5 Upstream Mirror: 
+              a(href="http://mirrors.rit.edu") mirrors.rit.edu
+              br
+              h5 Homepage: 
+              a(href='http://www.archilinux.org/') http://www.archilinux.org/
               
-              .distro  
-              h3 Backtrack
-              
-              .distro    
+            .distro#centos
               h3 CentOS (Official Mirror)
+              h5 ISOs: 
+              a(href='http://mirror.clarkson.edu/centos/6/isos/') http://mirror.clarkson.edu/centos/6/isos/
+              br
+              h5 HTTP: 
+              a(href='http://mirror.clarkson.edu/archlinux/') http://mirror.clarkson.edu/centos/
+              br
+              h5 Rsync: 
+              | rsync://mirror.clarkson.edu/centos
+              br
+              br
+              h5 Upstream Mirror: 
+              a(href="http://privatemirror.chpc.utah.edu") privatemirror.chpc.utah.edu
+              br
+              h5 Homepage: 
+              a(href='http://www.centos.org/') http://www.centos.org/
               
-              .distro  
+            .distro#debian
               h3 Debian
+              h5 ISOs: 
+              a(href='http://mirror.clarkson.edu/debian-cd/') http://mirror.clarkson.edu/debian-cd/
+              br
+              h5 HTTP: 
+              a(href='http://mirror.clarkson.edu/debian/') http://mirror.clarkson.edu/debian/
+              br
+              h5 Rsync: 
+              | rsync://mirror.clarkson.edu/debian-cd
+              br
+              h5 Rsync: 
+              | rsync://mirror.clarkson.edu/debian
+              br
+              br
+              h5 Upstream Mirrors: 
+              a(href="http://ftp.us.debian.org") ftp.us.debian.org
+              |  & 
+              a(href="http://cdimage.debian.org") cdimage.debian.org
+              br
+              h5 Homepage: 
+              a(href='http://www.debian.org/') http://www.debian.org/
               
-              .distro  
+            .distro#fedora
               h3 Fedora (Official Mirror)
+              h5 ISOs: 
+              a(href='http://mirror.clarkson.edu/fedora/linux/releases/') http://mirror.clarkson.edu/fedora/linux/releases/
+              br
+              h5 HTTP: 
+              a(href='http://mirror.clarkson.edu/fedora/linux/') http://mirror.clarkson.edu/fedora/linux/
+              br
+              h5 Rsync: 
+              | rsync://mirror.clarkson.edu/fedora
+              br
+              br
+              h5 Upstream Mirror: 
+              a(href="http://mirrors.rit.edu") mirrors.rit.edu
+              br
+              h5 Homepage: 
+              a(href='http://fedoraproject.org/') http://fedoraproject.org/
               
-              .distro  
+            .distro#gentoo
               h3 Gentoo
+              h5 ISOs: 
+              a(href='http://mirror.clarkson.edu/gentoo/releases/') http://mirror.clarkson.edu/archlinux/gentoo/releases/
+              br
+              h5 HTTP: 
+              a(href='http://mirror.clarkson.edu/gentoo/') http://mirror.clarkson.edu/gentoo/
+              br
+              |  & 
+              a(href='http://mirror.clarkson.edu/gentoo-portage/')
+              h5 Rsync: 
+              | rsync://mirror.clarkson.edu/gentoo
+              br
+              h5 Rsync: 
+              | rsync://mirror.clarkson.edu/gentoo-portage
+              br
+              br
+              h5 Upstream Mirror: 
+              a(href="http://mirrors.rit.edu") mirrors.rit.edu
+              br
+              h5 Homepage: 
+              a(href='http://www.gentoo.org/') http://www.gentoo.org/
               
-              .distro  
+            .distro#ipfire
               h3 IPFire (Official Mirror)
-              
-              .distro
-              h3 Knoppix
-              
-              .distro
+              h5 HTTP: 
+              a(href='http://mirror.clarkson.edu/ipfire/') http://mirror.clarkson.edu/ipfire/
+              br
+              h5 Rsync: 
+              | rsync://mirror.clarkson.edu/ipfire
+              br
+              br
+              h5 Upstream Mirror: 
+              a(href="http://rsync.ipfire.org") rsync.ipfire.org
+              br
+              h5 Frequency of Updates: 
+              | Hourly
+              br
+              h5 Homepage: 
+              a(href='http://www.ipfire.org/') http://www.ipfire.org/
+                            
+            .distro#mint
               h3 LinuxMint
+              h5 ISOs: 
+              a(href='http://mirror.clarkson.edu/linuxmint/iso/') http://mirror.clarkson.edu/linuxmint/iso/
+              br
+              h5 HTTP: 
+              a(href='http://mirror.clarkson.edu/linuxmint/') http://mirror.clarkson.edu/linuxmint/
+              br
+              h5 Rsync: 
+              | rsync://mirror.clarkson.edu/linuxmint-iso
+              br
+              h5 Rsync: 
+              | rsync://mirror.clarkson.edu/linuxmint-packages
+              br
+              h5 Rsync: 
+              | rsync://mirror.clarkson.edu/linuxmint-debian
+              br
+              br
+              h5 Upstream Mirror: 
+              a(href="http://ftp.heanet.ie") ftp.heanet.ie
+              |  & 
+              a(href="http://packages.linuxmint.com") packages.linuxmint.com
+              |  & 
+              a(href="http://debian.linuxmint.com") debian.linuxmint.com
+              br
+              h5 Homepage: 
+              a(href='http://www.linuxmint.com/') http://www.linuxmint.com/
               
-              .distro
+            .distro#openbsd
               h3 OpenBSD
+              h5 HTTP: 
+              a(href='http://mirror.clarkson.edu/openbsd/') http://mirror.clarkson.edu/openbsd/
+              br
+              h5 Rsync: 
+              | rsync://mirror.clarkson.edu/openbsd
+              br
+              br
+              h5 Upstream Mirror: 
+              a(href="http://mirror.gtlib.gatech.edu") mirror.gtlib.gatech.edu
+              br
+              h5 Homepage: 
+              a(href='http://www.openbsd.org/') http://www.openbsd.org/
               
-              .distro
+            .distro#pfsense
               h3 pfSense
+              h5 HTTP: 
+              a(href='http://mirror.clarkson.edu/pfsense/') http://mirror.clarkson.edu/pfsense/
+              br
+              h5 Rsync: 
+              | rsync://mirror.clarkson.edu/pfsense
+              br
+              br
+              h5 Upstream Mirror: 
+              a(href="http://cvs.pfsense.org") cvs.pfsense.org
+              br
+              h5 Homepage: 
+              a(href='http://www.pfsense.org/') http://www.pfsense.org/
               
-              .distro
+            .distro#opensuse
               h3 OpenSUSE
+              h5 ISOs: 
+              a(href='http://mirror.clarkson.edu/opensuse/distribution/') http://mirror.clarkson.edu/opensuse/distribution/
+              br
+              h5 HTTP: 
+              a(href='http://mirror.clarkson.edu/opensuse/') http://mirror.clarkson.edu/opensuse/
+              br
+              h5 Rsync: 
+              | rsync://mirror.clarkson.edu/opensuse
+              br
+              br
+              h5 Upstream Mirror: 
+              a(href="http://rsync.opensuse.org") rsync.opensuse.org
+              br
+              h5 Homepage: 
+              a(href='http://www.opensuse.org/') http://www.opensuse.org/
               
-              .distro
+            .distro#sabayon
               h3 Sabayon (Official Mirror)
+              h5 HTTP: 
+              a(href='http://mirror.clarkson.edu/sabayon/') http://mirror.clarkson.edu/sabayon/
+              br
+              h5 Rsync: 
+              | rsync://mirror.clarkson.edu/sabayon
+              br
+              br
+              h5 Upstream Mirror: 
+              a(href="http://na.mirror.garr.it") na.mirror.garr.it
+              br
+              h5 Homepage: 
+              a(href='http://sabayon.org/') http://sabayon.org/
               
-              .distro
+            .distro#serenity
               h3 Serenity Linux (Main Mirror)
+              h5 HTTP: 
+              a(href='http://mirror.clarkson.edu/serenity') http://mirror.clarkson.edu/serenity
+              br
+              h5 Rsync: 
+              | rsync://mirror.clarkson.edu/serenity
+              br
+              br
+              h5 Homepage: 
+              a(href='http://serenitylinux.org/') http://serenitylinux.org/
               
-              .distro
+            .distro#slackware
               h3 Slackware
-              
-              .distro
-              h3 Slitaz (Official Mirror)
-              
-              .distro
+              h5 HTTP: 
+              a(href='http://mirror.clarkson.edu/slackware/') http://mirror.clarkson.edu/slackware/
+              br
+              h5 Rsync: 
+              | rsync://mirror.clarkson.edu/slackware
+              br
+              br
+              h5 Upstream Mirror: 
+              a(href="http://mirror.gtlib.gatech.edu/") mirror.gtlib.gatech.edu
+              br
+              h5 Homepage: 
+              a(href='http://www.slackware.com/') http://www.slackware.com/
+                
+            .distro#ubuntu
               h3 Ubutnu (Official Mirror)
+              h5 ISOs: 
+              a(href='http://mirror.clarkson.edu/ubuntu-releases/') http://mirror.clarkson.edu/ubuntu-releases/
+              br
+              h5 HTTP: 
+              a(href='http://mirror.clarkson.edu/ubuntu/') http://mirror.clarkson.edu/ubuntu/
+              br
+              h5 Rsync: 
+              | rsync://mirror.clarkson.edu/ubuntu-releases
+              br
+              h5 Rsync: 
+              | rsync://mirror.clarkson.edu/ubuntu
+              br
+              br
+              h5 Upstream Mirror: 
+              a(href="http://us.releases.ubuntu.com") us.release.ubuntu.com
+              |  & 
+              a(href="http://us.archive.ubuntu.com") us.archive.ubuntu.com
+              br
+              h5 Homepage: 
+              a(href='http://www.ubuntu.com/') http://www.ubuntu.com/
               
-              .distro
+            .distro#unitylinux
               h3 Unity Linux (Official Mirror)
+              h5 HTTP: 
+              a(href='http://mirror.clarkson.edu/unity/') http://mirror.clarkson.edu/unity/
+              br
+              h5 Rsync: 
+              | rsync://mirror.clarkson.edu/unity
+              br
+              br
+              h5 Upstream Mirror: 
+              a(href="http://distro.ibiblio.org") distro.ibiblio.org
+              br
+              h5 Homepage: 
+              a(href='http://unity-linux.org/') http://unity-linux.org/
 
     include ../includes/_footer.jade

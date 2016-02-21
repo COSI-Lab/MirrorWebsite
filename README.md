@@ -1,4 +1,7 @@
 # Mirror2016
+
+![Homepage screenshot](https://raw.githubusercontent.com/COSI-Lab/Mirror2016/master/MirrorScreenshot.png)
+
 This is going to be a reboot of our current website for Clarkson's
 [Mirror](http://mirror.clarkson.edu/). With this update, there are plans to create
 a modern design and have the site be responsive as well.

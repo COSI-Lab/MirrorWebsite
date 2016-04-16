@@ -1,6 +1,6 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
-var jade = require('gulp-jade');
+var pug = require('gulp-pug');
 
 gulp.task('sass', function() {
   return gulp.src("./scss/main.scss")
@@ -8,13 +8,13 @@ gulp.task('sass', function() {
     .pipe(gulp.dest("./css"));
 });
 
-gulp.task('jade', function() {
-  return gulp.src("./jade/*.jade")
-    .pipe(jade({pretty: true}))
+gulp.task('pug', function() {
+  return gulp.src("./pug/*.pug")
+    .pipe(pug({pretty: true}))
     .pipe(gulp.dest("./"));
 });
 
 gulp.task('watch', function() {
 	gulp.watch(['./scss/*.scss', './scss/**/*.scss'], ['sass']);
-	gulp.watch('./jade/*.jade', ['jade']);
+	gulp.watch('./pug/*.pug', ['pug']);
 });

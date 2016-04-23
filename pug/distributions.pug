@@ -27,20 +27,15 @@ html(lang="en")
             h2 Contents
             ul
               li: a(href='#arch') Arch Linux
-              li: a(href='#centos') CentOS
               li: a(href='#debian') Debian
               li: a(href='#fedora') Fedora
               li: a(href='#gentoo') Gentoo
               li: a(href='#ipfire') IPFire
               li: a(href='#mint') LinuxMint
-              li: a(href='#openbsd') OpenBSD
-              li: a(href='#pfsense') pfSense
-              li: a(href='#opensuse') OpenSUSE
               li: a(href='#sabayon') Sabayon
               li: a(href='#serenity') Serenity Linux
               li: a(href='#slackware') Slackware
               li: a(href='#ubuntu') Ubuntu
-              li: a(href='#unitylinux') Unity Linux
               li: a(href='#raspbian') Raspbian
               li: a(href='#voidlinux') Void Linux
               li: a(href='#parrotsec') Parrot Security OS
@@ -62,28 +57,10 @@ html(lang="en")
               br
               br
               h5 Upstream Mirror:
-              a(href="http://mirrors.rit.edu") mirrors.rit.edu
+              a(href="http://mirror.cs.pitt.edu") mirror.cs.pitt.edu
               br
               h5 Homepage:
               a(href='http://www.archilinux.org/') http://www.archilinux.org/
-
-            .distro#centos
-              h3 CentOS (Official Mirror)
-              h5 ISOs:
-              a(href='./centos/6/isos/') http://mirror.clarkson.edu/centos/6/isos/
-              br
-              h5 HTTP:
-              a(href='./centos/') http://mirror.clarkson.edu/centos/
-              br
-              h5 Rsync:
-              | rsync://mirror.clarkson.edu/centos
-              br
-              br
-              h5 Upstream Mirror:
-              a(href="http://privatemirror.chpc.utah.edu") privatemirror.chpc.utah.edu
-              br
-              h5 Homepage:
-              a(href='http://www.centos.org/') http://www.centos.org/
 
             .distro#debian
               h3 Debian
@@ -121,7 +98,7 @@ html(lang="en")
               br
               br
               h5 Upstream Mirror:
-              a(href="http://mirrors.rit.edu") mirrors.rit.edu
+              a(href="http://mirror.cs.pitt.edu") mirror.cs.pitt.edu
               br
               h5 Homepage:
               a(href='http://fedoraproject.org/') http://fedoraproject.org/
@@ -143,7 +120,7 @@ html(lang="en")
               br
               br
               h5 Upstream Mirror:
-              a(href="http://mirrors.rit.edu") mirrors.rit.edu
+              a(href="http://gentoo.cs.uni.edu") gentoo.cs.uni.edu
               br
               h5 Homepage:
               a(href='http://www.gentoo.org/') http://www.gentoo.org/
@@ -185,7 +162,7 @@ html(lang="en")
               br
               br
               h5 Upstream Mirror:
-              a(href="http://ftp.heanet.ie") ftp.heanet.ie
+              a(href="http://mirror.umd.edu") mirror.umd.edu
               |  &
               a(href="http://packages.linuxmint.com") packages.linuxmint.com
               |  &
@@ -193,54 +170,6 @@ html(lang="en")
               br
               h5 Homepage:
               a(href='http://www.linuxmint.com/') http://www.linuxmint.com/
-
-            .distro#openbsd
-              h3 OpenBSD
-              h5 HTTP:
-              a(href='./openbsd/') http://mirror.clarkson.edu/openbsd/
-              br
-              h5 Rsync:
-              | rsync://mirror.clarkson.edu/openbsd
-              br
-              br
-              h5 Upstream Mirror:
-              a(href="http://mirror.gtlib.gatech.edu") mirror.gtlib.gatech.edu
-              br
-              h5 Homepage:
-              a(href='http://www.openbsd.org/') http://www.openbsd.org/
-
-            .distro#pfsense
-              h3 pfSense
-              h5 HTTP:
-              a(href='./pfsense/') http://mirror.clarkson.edu/pfsense/
-              br
-              h5 Rsync:
-              | rsync://mirror.clarkson.edu/pfsense
-              br
-              br
-              h5 Upstream Mirror:
-              a(href="http://cvs.pfsense.org") cvs.pfsense.org
-              br
-              h5 Homepage:
-              a(href='http://www.pfsense.org/') http://www.pfsense.org/
-
-            .distro#opensuse
-              h3 OpenSUSE
-              h5 ISOs:
-              a(href='./opensuse/distribution/') http://mirror.clarkson.edu/opensuse/distribution/
-              br
-              h5 HTTP:
-              a(href='./opensuse/') http://mirror.clarkson.edu/opensuse/
-              br
-              h5 Rsync:
-              | rsync://mirror.clarkson.edu/opensuse
-              br
-              br
-              h5 Upstream Mirror:
-              a(href="http://rsync.opensuse.org") rsync.opensuse.org
-              br
-              h5 Homepage:
-              a(href='http://www.opensuse.org/') http://www.opensuse.org/
 
             .distro#sabayon
               h3 Sabayon (Official Mirror)
@@ -279,7 +208,7 @@ html(lang="en")
               br
               br
               h5 Upstream Mirror:
-              a(href="http://mirror.gtlib.gatech.edu/") mirror.gtlib.gatech.edu
+              a(href="http://mirror.cs.princeton.edu/") mirror.cs.princeton.edu
               br
               h5 Homepage:
               a(href='http://www.slackware.com/') http://www.slackware.com/
@@ -307,21 +236,6 @@ html(lang="en")
               h5 Homepage:
               a(href='http://www.ubuntu.com/') http://www.ubuntu.com/
 
-            .distro#unitylinux
-              h3 Unity Linux (Official Mirror)
-              h5 HTTP:
-              a(href='./unity/') http://mirror.clarkson.edu/unity/
-              br
-              h5 Rsync:
-              | rsync://mirror.clarkson.edu/unity
-              br
-              br
-              h5 Upstream Mirror:
-              a(href="http://distro.ibiblio.org") distro.ibiblio.org
-              br
-              h5 Homepage:
-              a(href='http://unity-linux.org/') http://unity-linux.org/
-
             .distro#raspbian
               h3 Raspbian
               h5 HTTP:
@@ -345,8 +259,7 @@ html(lang="en")
               | rsync://mirror.clarkson.edu/VoidLinux
               br
               br
-              h5 Upstream Mirror:
-              br
+
               h5 Homepage:
               a(href='http://www.voidlinux.eu/') http://www.voidlinux.eu/
 
@@ -360,7 +273,9 @@ html(lang="en")
               br
               br
               h5 Upstream Mirror:
+              a(href="http://archive.parrotsec.org") archive.parrotsec.org
               br
+
               h5 Homepage:
               a(href='https://www.parrotsec.org/') https://www.parrotsec.org/
 

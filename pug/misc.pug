@@ -1,125 +1,147 @@
 doctype html
 html(lang="en")
-  head
-    title Clarkson University Mirror - Misc.
-    link(rel="stylesheet" type="text/css" href="css/main.css")
-    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css")
-    script(src="js/vendors/jquery-2.1.4.min.js")
-    script(src="js/main.js")
-    meta(name="theme-color" content="#035245")
-    meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    meta(charset="utf-8")
-    meta(name="description" content="The website for Clarkson University's Software Mirror")
-    script.
-      window.onload = function() {
-        var foo = document.getElementById('navmisc');
-        foo.setAttribute("class", "current");
-      };
+	head
+		title Clarkson University Mirror - Misc.
+		link(rel="stylesheet" type="text/css" href="css/main.css")
+		link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css")
+		script(src="js/vendors/jquery-2.1.4.min.js")
+		script(src="js/main.js")
+		meta(name="theme-color" content="#035245")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		meta(charset="utf-8")
+		meta(name="description" content="The website for Clarkson University's Software Mirror")
+		script.
+			window.onload = function() {
+				var foo = document.getElementById('navmisc');
+				foo.setAttribute("class", "current");
+			};
 
-  body
-    include ../includes/_header.pug
+	body
+		include ../includes/_header.pug
 
-    .content
-      .container
-        section
-          h1 GNU Software (Official Mirror)
-          h5 HTTP:
-          a(href="./gnu/") http://mirror.clarkson.edu/gnu/
-          br
+		.content
+			.container
+				section
+					h1 GNU Software (Official Mirror)
+					h5 HTTP:
+					a(href="./gnu/") http://mirror.clarkson.edu/gnu/
+					br
 
-          h5 Rsync:
-          |  rsync://mirror.clarkson.edu/gnu
-          br
-          br
+					h5 Rsync:
+					|	rsync://mirror.clarkson.edu/gnu
+					br
+					br
 
-          h5 Upstream Mirror:
-          a(href="http://mirrors.kernel.org/") http://mirrors.kernel.org/
-          br
+					h5 Upstream Mirror:
+					a(href="http://mirrors.kernel.org/") http://mirrors.kernel.org/
+					br
 
-          h5 Frequency of Updates:
-          |  4 times Daily
-          br
+					h5 Frequency of Updates:
+					|	4 times Daily
+					br
 
-          h5 Homepage:
-          a(href="http://directory.fsf.org/GNU/") http://directory.fsf.org/GNU/
+					h5 Homepage:
+					a(href="http://directory.fsf.org/GNU/") http://directory.fsf.org/GNU/
 
-        section
-          h1 Linux (Including Kernel Source) (Not synced yet)
-          h5 HTTP:
-          a(href="./linux/") http://mirror.clarkson.edu/linux/
-          br
+				section
+					h1 Linux (Including Kernel Source) (Not synced yet)
+					h5 HTTP:
+					a(href="./linux/") http://mirror.clarkson.edu/linux/
+					br
 
-          h5 Rsync:
-          |  rsync://mirror.clarkson.edu/linux/
-          br
-          br
+					h5 Rsync:
+					|	rsync://mirror.clarkson.edu/linux/
+					br
+					br
 
-          h5 Upstream Mirror:
-          a(href="http://rsync.kernel.org/") http://rsync.kernel.org/
-          br
+					h5 Upstream Mirror:
+					a(href="http://rsync.kernel.org/") http://rsync.kernel.org/
+					br
 
-          h5 Frequency of Updates:
-          |  4 times Daily
-          br
+					h5 Frequency of Updates:
+					|	4 times Daily
+					br
 
-          h5 Homepage:
-          a(href="http://kernel.org") http://kernel.org
+					h5 Homepage:
+					a(href="http://kernel.org") http://kernel.org
 
-        section
-          h1 Extra Packages for Enterprise Linux (EPEL) (Official Mirror)
-          h5 HTTP:
-          a(href="./epel/") http:://mirror.clarkson.edu/epel/
-          br
+				section
+					h1 Extra Packages for Enterprise Linux (EPEL) (Official Mirror)
+					h5 HTTP:
+					a(href="./epel/") http:://mirror.clarkson.edu/epel/
+					br
 
-          h5 Rsync:
-          | rsync://mirror.clarkson.edu/fedora-epel/
-          br
-          br
+					h5 Rsync:
+					| rsync://mirror.clarkson.edu/fedora-epel/
+					br
+					br
 
-          h5 Upstream Mirror:
-          a(href="http://mirrors1.kernel.org") http://mirrors1.kernel.org
-          br
+					h5 Upstream Mirror:
+					a(href="http://mirrors1.kernel.org") http://mirrors1.kernel.org
+					br
 
-          h5 Frequency of Updates:
-          | 4 times Daily
-          br
+					h5 Frequency of Updates:
+					| 4 times Daily
+					br
 
-          h5 Homepage:
-          a(href="http://fedoraproject.org/wiki/EPEL") http://fedoraproject.org/wiki/EPEL
+					h5 Homepage:
+					a(href="http://fedoraproject.org/wiki/EPEL") http://fedoraproject.org/wiki/EPEL
 
-        section
-          h1 Software (Not Linux-specific) (Not synced yet)
-          h5 HTTP:
-          a(href="./software/") http://mirror.clarkson.edu/software/
-          br
+				section
+					h1 Software (Not Linux-specific) (Not synced yet)
+					h5 HTTP:
+					a(href="./software/") http://mirror.clarkson.edu/software/
+					br
 
-          h5 Rsync:
-          |  rsync://mirror.clarkson.edu/software/
-          br
-          br
+					h5 Rsync:
+					|	rsync://mirror.clarkson.edu/software/
+					br
+					br
 
-          h5 Upstream Mirror:
-          a(href="http://debian.lcs.mit.edu/") http://debian.lcs.mit.edu/
-          br
+					h5 Upstream Mirror:
+					a(href="http://debian.lcs.mit.edu/") http://debian.lcs.mit.edu/
+					br
 
-          h5 Frequency of Updates:
-          |  4 times Daily
-          br
+					h5 Frequency of Updates:
+					|	4 times Daily
+					br
 
-          h5 Homepage:
-          a(href="http://kernel.org") http://kernel.org
+					h5 Homepage:
+					a(href="http://kernel.org") http://kernel.org
 
-        section
-          h1 Isabelle (Official Mirror)
-          h5 HTTP:
-          a(href="http://mirror.clarkson.edu/isabelle/") http://mirror.clarkson.edu/isabelle/
-          br
+				section
+					h1 The Document Foundation (Including LibreOffice)
+					h5 HTTP:
+					a(href="./tdf/") http://mirror.clarkson.edu/tdf/
+					br
 
-          h5 Frequency of Updates:
-          |  4 times Daily
-          br
+					h5 Rsync:
+					|	rsync://mirror.clarkson.edu/tdf
+					br
+					br
 
-          h5 Homepage:
-          a(href="https://isabelle.in.tum.de/") https://isabelle.in.tum.de/
+					h5 Upstream Mirror:
+					a(href="http://rsync.documentfoundation.org/") rsync.documentfoundation.org
+					br
 
-    include ../includes/_footer.pug
+					h5 Frequency of Updates:
+					|	4 times daily
+					br
+
+					h5 Homepage:
+					a(href="http://www.documentfoundation.org/") http://www.documentfoundation.org/
+
+				section
+					h1 Isabelle (Official Mirror)
+					h5 HTTP:
+					a(href="http://mirror.clarkson.edu/isabelle/") http://mirror.clarkson.edu/isabelle/
+					br
+
+					h5 Frequency of Updates:
+					|	4 times Daily
+					br
+
+					h5 Homepage:
+					a(href="https://isabelle.in.tum.de/") https://isabelle.in.tum.de/
+
+		include ../includes/_footer.pug

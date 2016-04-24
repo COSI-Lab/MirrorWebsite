@@ -990,6 +990,10 @@ footer a:hover {
   padding-bottom: 1em;
 }
 
+.distro h5 {
+  padding-right: 0.25em;
+}
+
 .distro:last-child {
   border-bottom: 0;
 }
@@ -1072,6 +1076,7 @@ img.logo {
 
 .content h5 {
   display: inline;
+  padding: 0.25em;
 }
 
 .content p {

@@ -2,6 +2,10 @@
   border-bottom: 2px solid lighten(black, 80%);
   padding-bottom: 1em;
 
+	h5 {
+		padding-right: 0.25em;
+	}
+
   &:last-child {
     border-bottom: 0;
   }

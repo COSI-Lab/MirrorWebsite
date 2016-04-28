@@ -1,0 +1,30 @@
+doctype html
+html(lang="en")
+	head
+		title Clarkson University Mirror - Statistics
+		link(rel="stylesheet" type="text/css" href="css/main.css")
+		link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css")
+		script(src="js/vendors/jquery-2.1.4.min.js")
+		script(src="js/main.js")
+		meta(name="theme-color" content="#035245")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		meta(charset="utf-8")
+		meta(name="description" content="The website for Clarkson University's Software Mirror")
+		script.
+			window.onload = function() {
+				var foo = document.getElementById('navstats');
+				foo.setAttribute("class", "current");
+			};
+
+	body
+		include ../includes/_header.pug
+		.content
+			.container
+				h1 Statistics
+				p This page includes statistics on the traffic (up and down) of Mirror
+				img(src="img/vnstati-sum.png").statImg
+				img(src="img/vnstati-month.png").statImg
+				img(src="img/vnstati-day.png").statImg
+				img(src="img/vnstati-hour.png").statImg
+
+		include ../includes/_footer.pug

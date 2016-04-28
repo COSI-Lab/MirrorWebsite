@@ -1133,3 +1133,15 @@ img.logo {
 .row {
   margin-bottom: 8px;
 }
+
+img.statImg {
+  max-width: 75%;
+  max-height: auto;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 800px) {
+  img.statImg {
+    max-width: 350px;
+  }
+}

@@ -1,10 +1,10 @@
 .navlinks {
-  width: 100%;
-  position: absolute;
-  top: 0;
+  background-color: rgba(255, 255, 255, .2);
   font-size: 12px;
   height: 40px;
-  background-color: rgba(255, 255, 255, 0.2);
+  position: absolute;
+  top: 0;
+  width: 100%;
 
   ul {
     list-style-type: none;
@@ -14,7 +14,7 @@
       margin-right: 15px;
 
       a {
-        color: white;
+        color: $white;
         font-weight: bold;
         text-decoration: none;
       }

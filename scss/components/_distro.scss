@@ -1,10 +1,10 @@
 .distro {
-  border-bottom: 2px solid lighten(black, 80%);
+  border-bottom: 2px solid lighten($black, 80%);
   padding-bottom: 1em;
 
-	h5 {
-		padding-right: 0.25em;
-	}
+  h5 {
+    padding-right: .25em;
+  }
 
   &:last-child {
     border-bottom: 0;
@@ -13,14 +13,15 @@
 
 .distro-contents {
   h2 {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid $black;
     text-align: center;
   }
 
   ul {
     list-style-type: none;
+
     li {
-      padding: 10px 0px;
+      padding: 10px 0;
     }
   }
 }

@@ -1,20 +1,20 @@
 // Styles for the footer
 footer {
-  width: 100%;
   background-color: $darker-green;
-  color: white;
+  box-shadow: 0 2px 4px $black;
+  color: $white;
   height: 180px;
+  width: 100%;
   z-index: 2;
-  box-shadow: 0px 2px 4px black;
 
   .container {
+    margin: 0 auto;
     max-width: 960px;
     padding-top: 1px;
-    margin: 0 auto;
   }
 
   a {
-    color: white;
+    color: $white;
     font-style: italic;
     text-decoration: none;
 

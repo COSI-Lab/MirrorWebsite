@@ -1,46 +1,46 @@
 // Styles for the header
 header {
 
-  margin-top: 10px;
   box-sizing: border-box;
+  color: $white;
   height: auto;
-  color: white;
+  margin-top: 10px;
 
   .top-header {
     height: 80px;
   }
 
   h1 {
-    padding-top: 20px;
-    padding-left: 10px;
     display: inline;
     float: left;
+    padding-left: 10px;
+    padding-top: 20px;
 
     a {
-      color: white;
+      color: $white;
       text-decoration: none;
     }
   }
 
   img {
-    float: left;
     display: inline;
+    float: left;
   }
 
 }
 
 i.menu-button {
-  color: white;
-  font-size: 2em;
-  margin: 0.67em 0;
-  float: right;
+  color: $white;
   display: none;
+  float: right;
+  font-size: 2em;
+  margin: .67em 0;
   padding-right: 15px;
 }
 
 nav#navdesktop {
-  clear: both;
   background-color: $darker-green;
+  clear: both;
   margin-bottom: 0;
   padding-bottom: 0;
 
@@ -51,23 +51,20 @@ nav#navdesktop {
   }
 
   ul {
-    list-style-type: none;
     height: 3rem;
+    list-style-type: none;
 
     li {
-      padding-left: 25px;
-      padding-right: 25px;
-      padding-top: 1em;
-      padding-bottom: 1em;
       box-sizing: border-box;
       display: block;
       float: left;
-      text-align: center;
       height: inherit;
+      padding: 1em 25px;
+      text-align: center;
 
       a {
+        color: $white;
         display: block;
-        color: white;
         text-decoration: none;
       }
 
@@ -83,33 +80,32 @@ nav#navdesktop {
 }
 
 nav#navmobile {
-  display: none;
   background-color: $darker-green;
-  color: white;
+  color: $white;
+  display: none;
 
   ul {
     list-style-type: none;
     padding-left: 0;
 
     li {
-      margin: 0;
-      width: 100%;
       border-bottom: 2px solid darken($darker-green, 3%);
-      padding-top: 1.25em;
-      padding-bottom: 1.25em;
       box-sizing: border-box;
+      margin: 0;
+      padding: 1.25em 0;
+      width: 100%;
 
       &:last-child {
-        border-bottom: none;
+        border-bottom: 0;
       }
 
       a {
+        color: inherit;
+        display: block;
+        height: inherit;
         text-align: center;
         text-decoration: none;
         width: inherit;
-        height: inherit;
-        display: block;
-        color: inherit;
 
         &:hover {
           background-color: lighten($darker-green, 2%);

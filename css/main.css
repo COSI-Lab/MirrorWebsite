@@ -412,10 +412,10 @@ th {
 }
 
 header {
-  margin-top: 10px;
   box-sizing: border-box;
+  color: #fff;
   height: auto;
-  color: white;
+  margin-top: 10px;
 }
 
 header .top-header {
@@ -423,34 +423,34 @@ header .top-header {
 }
 
 header h1 {
-  padding-top: 20px;
-  padding-left: 10px;
   display: inline;
   float: left;
+  padding-left: 10px;
+  padding-top: 20px;
 }
 
 header h1 a {
-  color: white;
+  color: #fff;
   text-decoration: none;
 }
 
 header img {
-  float: left;
   display: inline;
+  float: left;
 }
 
 i.menu-button {
-  color: white;
-  font-size: 2em;
-  margin: 0.67em 0;
-  float: right;
+  color: #fff;
   display: none;
+  float: right;
+  font-size: 2em;
+  margin: .67em 0;
   padding-right: 15px;
 }
 
 nav#navdesktop {
-  clear: both;
   background-color: #383f30;
+  clear: both;
   margin-bottom: 0;
   padding-bottom: 0;
 }
@@ -462,25 +462,22 @@ nav#navdesktop .container {
 }
 
 nav#navdesktop ul {
-  list-style-type: none;
   height: 3rem;
+  list-style-type: none;
 }
 
 nav#navdesktop ul li {
-  padding-left: 25px;
-  padding-right: 25px;
-  padding-top: 1em;
-  padding-bottom: 1em;
   box-sizing: border-box;
   display: block;
   float: left;
-  text-align: center;
   height: inherit;
+  padding: 1em 25px;
+  text-align: center;
 }
 
 nav#navdesktop ul li a {
+  color: #fff;
   display: block;
-  color: white;
   text-decoration: none;
 }
 
@@ -493,9 +490,9 @@ nav#navdesktop ul li.current {
 }
 
 nav#navmobile {
-  display: none;
   background-color: #383f30;
-  color: white;
+  color: #fff;
+  display: none;
 }
 
 nav#navmobile ul {
@@ -504,25 +501,24 @@ nav#navmobile ul {
 }
 
 nav#navmobile ul li {
-  margin: 0;
-  width: 100%;
   border-bottom: 2px solid #30372a;
-  padding-top: 1.25em;
-  padding-bottom: 1.25em;
   box-sizing: border-box;
+  margin: 0;
+  padding: 1.25em 0;
+  width: 100%;
 }
 
 nav#navmobile ul li:last-child {
-  border-bottom: none;
+  border-bottom: 0;
 }
 
 nav#navmobile ul li a {
+  color: inherit;
+  display: block;
+  height: inherit;
   text-align: center;
   text-decoration: none;
   width: inherit;
-  height: inherit;
-  display: block;
-  color: inherit;
 }
 
 nav#navmobile ul li a:hover {
@@ -548,22 +544,22 @@ nav#navmobile ul li a:hover {
 }
 
 footer {
-  width: 100%;
   background-color: #383f30;
-  color: white;
+  box-shadow: 0 2px 4px #000;
+  color: #fff;
   height: 180px;
+  width: 100%;
   z-index: 2;
-  box-shadow: 0px 2px 4px black;
 }
 
 footer .container {
+  margin: 0 auto;
   max-width: 960px;
   padding-top: 1px;
-  margin: 0 auto;
 }
 
 footer a {
-  color: white;
+  color: #fff;
   font-style: italic;
   text-decoration: none;
 }
@@ -991,7 +987,7 @@ footer a:hover {
 }
 
 .distro h5 {
-  padding-right: 0.25em;
+  padding-right: .25em;
 }
 
 .distro:last-child {
@@ -999,7 +995,7 @@ footer a:hover {
 }
 
 .distro-contents h2 {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #000;
   text-align: center;
 }
 
@@ -1008,16 +1004,16 @@ footer a:hover {
 }
 
 .distro-contents ul li {
-  padding: 10px 0px;
+  padding: 10px 0;
 }
 
 .navlinks {
-  width: 100%;
-  position: absolute;
-  top: 0;
+  background-color: rgba(255, 255, 255, 0.2);
   font-size: 12px;
   height: 40px;
-  background-color: rgba(255, 255, 255, 0.2);
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 
 .navlinks ul {
@@ -1030,7 +1026,7 @@ footer a:hover {
 }
 
 .navlinks ul li a {
-  color: white;
+  color: #fff;
   font-weight: bold;
   text-decoration: none;
 }
@@ -1070,13 +1066,13 @@ img.logo {
 }
 
 .content section {
-  margin-top: 5px;
   margin-bottom: 20px;
+  margin-top: 5px;
 }
 
 .content h5 {
   display: inline;
-  padding: 0.25em;
+  padding: .25em;
 }
 
 .content p {
@@ -1084,7 +1080,7 @@ img.logo {
 }
 
 .content a {
-  color: green;
+  color: #008000;
 }
 
 .content img {
@@ -1107,12 +1103,12 @@ img.logo {
 }
 
 .carasouel {
-  font-family: "Roboto Slab";
-  text-align: center;
-  color: white;
-  height: 300px;
   background-image: url("../img/mainback.jpeg");
   box-sizing: border-box;
+  color: #fff;
+  font-family: "Roboto Slab";
+  height: 300px;
+  text-align: center;
 }
 
 .carasouel h1 {
@@ -1135,9 +1131,9 @@ img.logo {
 }
 
 img.statImg {
-  max-width: 75%;
-  max-height: auto;
   margin-bottom: 20px;
+  max-height: auto;
+  max-width: 75%;
 }
 
 @media screen and (max-width: 800px) {

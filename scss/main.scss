@@ -80,13 +80,17 @@ img.logo {
 }
 
 .carasouel {
-  background-image: url('../img/mainback.jpeg');
+  background: linear-gradient(
+      rgba(0,0,0,.35),
+      rgba(0,0,0,.35)
+    ),
+    url('../img/mainback.jpeg');
   box-sizing: border-box;
   color: $white;
   font-family: $bold-font;
   height: 300px;
   text-align: center;
-  
+
   h1 {
     font-size: 4em;
     padding-top: 100px;

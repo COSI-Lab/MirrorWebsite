@@ -7,8 +7,6 @@
 @import 'components/distro';
 @import 'components/topnav';
 
-
-
 body {
   background-color: $dark-green;
   font-family: $main-font;
@@ -88,10 +86,10 @@ img.logo {
   font-family: $bold-font;
   height: 300px;
   text-align: center;
-
+  
   h1 {
     font-size: 4em;
-    padding-top: 50px;
+    padding-top: 100px;
   }
 }
 

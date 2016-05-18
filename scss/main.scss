@@ -11,6 +11,10 @@ body {
   background-color: $dark-green;
   font-family: $main-font;
   margin-top: 60px;
+
+  @media (max-width: 900px) {
+    margin-top: 0;
+  }
 }
 
 h1 {
@@ -91,9 +95,14 @@ img.logo {
   height: 300px;
   text-align: center;
 
+  .container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+
   h1 {
     font-size: 4em;
-    padding-top: 100px;
   }
 }
 

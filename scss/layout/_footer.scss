@@ -3,7 +3,7 @@ footer {
   background-color: $darker-green;
   box-shadow: 0 2px 4px $black;
   color: $white;
-  height: 200px;
+  height: 220px;
   width: 100%;
   z-index: 2;
 
@@ -21,6 +21,10 @@ footer {
     &:hover {
       font-weight: bold;
     }
+  }
+
+  i {
+    padding-right: 5px;
   }
 }
 

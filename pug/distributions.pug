@@ -26,6 +26,7 @@ html(lang="en")
 					.col.col--1-of-4.distro-contents
 						h2 Contents
 						ul
+							li: a(href='#alpine') Alpine Linux
 							li: a(href='#arch') Arch Linux
 							li: a(href='#centos') CentOS
 							li: a(href='#debian') Debian
@@ -48,6 +49,18 @@ html(lang="en")
 						h5 Note:
 						| All distros are updated 4 times daily unless said otherwise.
 
+						.distro#alpine
+							h3 Alpine Linux
+							h5 HTTP:
+							a(href='./alpine/') http://mirror.clarkson.edu/alpine/
+							br
+							br
+							h5 Upstream Mirror
+							a(href="rsync://rsync.alpinelinux.org") rsync://rsync.alpinelinux.org
+							br
+							h5 Homepage:
+							a(href="http://www.alpinelinux.org/") http://www.alpinelinux.org/
+
 						.distro#arch
 							h3 Arch Linux
 							h5 ISOs:
@@ -64,7 +77,7 @@ html(lang="en")
 							a(href="http://mirror.cs.pitt.edu") mirror.cs.pitt.edu
 							br
 							h5 Homepage:
-							a(href='http://www.archilinux.org/') http://www.archilinux.org/
+							a(href='http://www.archlinux.org/') http://www.archlinux.org/
 
 						.distro#debian
 							h3 Debian

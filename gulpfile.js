@@ -4,7 +4,6 @@ var pug = require('gulp-pug');
 var sourcemaps = require('gulp-sourcemaps');
 
 gulp.task('sass', function() {
-	console.log(scsslint);
   return gulp.src("./scss/main.scss")
 		.pipe(sourcemaps.init())
     .pipe(sass({outputStyle: 'expanded'}))

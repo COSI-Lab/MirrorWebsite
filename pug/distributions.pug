@@ -2,14 +2,7 @@ doctype html
 html(lang="en")
 	head
 		title Clarkson University Mirror - Distributions
-		link(rel="stylesheet" type="text/css" href="css/main.css")
-		link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css")
-		script(src="js/vendors/jquery-2.1.4.min.js")
-		script(src="js/main.js")
-		meta(name="theme-color" content="#035245")
-		meta(name="viewport" content="width=device-width, initial-scale=1.0")
-		meta(charset="utf-8")
-		meta(name="description" content="The website for Clarkson University's Software Mirror")
+		include ../includes/_mainHeadTags.pug
 		script.
 			window.onload = function() {
 				var foo = document.getElementById('navdistributions');

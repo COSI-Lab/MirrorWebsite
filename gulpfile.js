@@ -4,6 +4,7 @@ var pug = require('gulp-pug');
 var sourcemaps = require('gulp-sourcemaps');
 
 gulp.task('sass', function() {
+	console.log(scsslint);
   return gulp.src("./scss/main.scss")
 		.pipe(sourcemaps.init())
     .pipe(sass({outputStyle: 'expanded'}))
@@ -16,6 +17,8 @@ gulp.task('pug', function() {
     .pipe(pug({pretty: true}))
     .pipe(gulp.dest("./"));
 });
+
+// TODO: Create Linter task
 
 gulp.task('watch', function() {
 	gulp.watch(['./scss/*.scss', './scss/**/*.scss'], ['sass']);

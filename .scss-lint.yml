@@ -1,0 +1,27 @@
+exclude:
+  - 'scss/vendors/_grid.scss'
+  - 'scss/base/_normalize.scss'
+  - 'node_modules/**'
+
+linters:
+  Comment:
+    enabled: false
+
+  ColorVariable:
+    enabled: false
+
+  Indentation:
+    character: tab
+    width: 1
+
+  IdSelector:
+    enabled: false
+
+  LeadingZero:
+    style: include_zero
+
+  SelectorDepth:
+    enabled: false
+
+  NestingDepth:
+    enabled: false

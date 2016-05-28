@@ -1,27 +1,27 @@
 .distro {
-  border-bottom: 2px solid lighten($black, 80%);
-  padding-bottom: 1em;
+	border-bottom: 2px solid lighten($black, 80%);
+	padding-bottom: 1em;
 
-  h5 {
-    padding-right: .25em;
-  }
+	h5 {
+		padding-right: 0.25em;
+	}
 
-  &:last-child {
-    border-bottom: 0;
-  }
+	&:last-child {
+		border-bottom: 0;
+	}
 }
 
 .distro-contents {
-  h2 {
-    border-bottom: 1px solid $black;
-    text-align: center;
-  }
+	h2 {
+		border-bottom: 1px solid $black;
+		text-align: center;
+	}
 
-  ul {
-    list-style-type: none;
+	ul {
+		list-style-type: none;
 
-    li {
-      padding: 10px 0;
-    }
-  }
+		li {
+			padding: 10px 0;
+		}
+	}
 }

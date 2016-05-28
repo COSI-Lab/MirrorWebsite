@@ -1,136 +1,136 @@
 // Styles for the header
 header {
 
-  box-sizing: border-box;
-  color: $white;
-  height: auto;
-  margin-top: 10px;
+	box-sizing: border-box;
+	color: $white;
+	height: auto;
+	margin-top: 10px;
 
-  .top-header {
-    height: 80px;
-  }
+	.top-header {
+		height: 80px;
+	}
 
-  h1 {
-    display: inline;
-    float: left;
-    padding-left: 10px;
-    padding-top: 20px;
+	h1 {
+		display: inline;
+		float: left;
+		padding-left: 10px;
+		padding-top: 20px;
 
-    a {
-      color: $white;
-      text-decoration: none;
-    }
-  }
+		a {
+			color: $white;
+			text-decoration: none;
+		}
+	}
 
-  img {
-    display: inline;
-    float: left;
-  }
+	img {
+		display: inline;
+		float: left;
+	}
 
 }
 
-i.menu-button {
-  color: $white;
-  display: none;
-  float: right;
-  font-size: 2em;
-  margin: .67em 0;
-  padding-right: 15px;
+.menu-button {
+	color: $white;
+	display: none;
+	float: right;
+	font-size: 2em;
+	margin: 0.67em 0;
+	padding-right: 15px;
 }
 
-nav#navdesktop {
-  background-color: $darker-green;
-  clear: both;
-  margin-bottom: 0;
-  padding-bottom: 0;
+#navdesktop {
+	background-color: $darker-green;
+	clear: both;
+	margin-bottom: 0;
+	padding-bottom: 0;
 
-  .container {
-    height: 50px;
-    margin: 0 auto;
-    padding: 0;
-  }
+	.container {
+		height: 50px;
+		margin: 0 auto;
+		padding: 0;
+	}
 
-  ul {
-    height: 3rem;
-    list-style-type: none;
+	ul {
+		height: 3rem;
+		list-style-type: none;
 
-    li {
-      box-sizing: border-box;
-      display: block;
-      float: left;
-      height: inherit;
-      padding: 1em 25px;
-      text-align: center;
+		li {
+			box-sizing: border-box;
+			display: block;
+			float: left;
+			height: inherit;
+			padding: 1em 25px;
+			text-align: center;
 
-      a {
-        color: $white;
-        display: block;
-        text-decoration: none;
-      }
+			a {
+				color: $white;
+				display: block;
+				text-decoration: none;
+			}
 
-      &:hover {
-        background: lighten($darker-green, 2%);
-      }
+			&:hover {
+				background: lighten($darker-green, 2%);
+			}
 
-      &.current {
-        background-color: darken($dark-green, 2.5%);
-      }
-    }
-  }
+			&.current {
+				background-color: darken($dark-green, 2.5%);
+			}
+		}
+	}
 }
 
-nav#navmobile {
-  background-color: $darker-green;
-  color: $white;
-  display: none;
+#navmobile {
+	background-color: $darker-green;
+	color: $white;
+	display: none;
 
-  ul {
-    list-style-type: none;
-    padding-left: 0;
+	ul {
+		list-style-type: none;
+		padding-left: 0;
 
-    li {
-      border-bottom: 2px solid darken($darker-green, 3%);
-      box-sizing: border-box;
-      margin: 0;
-      padding: 1.25em 0;
-      width: 100%;
+		li {
+			border-bottom: 2px solid darken($darker-green, 3%);
+			box-sizing: border-box;
+			margin: 0;
+			padding: 1.25em 0;
+			width: 100%;
 
-      &:last-child {
-        border-bottom: 0;
-      }
+			&:last-child {
+				border-bottom: 0;
+			}
 
-      a {
-        color: inherit;
-        display: block;
-        height: inherit;
-        text-align: center;
-        text-decoration: none;
-        width: inherit;
+			a {
+				color: inherit;
+				display: block;
+				height: inherit;
+				text-align: center;
+				text-decoration: none;
+				width: inherit;
 
-        &:hover {
-          background-color: lighten($darker-green, 2%);
-        }
-      }
-    }
-  }
+				&:hover {
+					background-color: lighten($darker-green, 2%);
+				}
+			}
+		}
+	}
 }
 
 @media (min-width: 901px) {
-  nav#navmobile {
-    display: none;
-  }
+	#navmobile {
+		display: none;
+	}
 }
 
 @media (max-width: 900px) {
-  nav#navdesktop {
-    display: none;
-  }
+	#navdesktop {
+		display: none;
+	}
 
-  .navlinks {
-    display: none;
-  }
+	.navlinks {
+		display: none;
+	}
 
-  i.menu-button {
-    display: inline-block;
-  }
+	.menu-button {
+		display: inline-block;
+	}
 }

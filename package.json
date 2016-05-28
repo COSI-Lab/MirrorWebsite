@@ -5,6 +5,7 @@
     "gulp": "3.9.x",
     "gulp-pug": "1.2.x",
     "gulp-sass": "2.1.x",
+    "gulp-scss-lint": "^0.4.0",
     "gulp-sourcemaps": "^1.6.0",
     "pug": "^2.0.0-alpha3"
   }

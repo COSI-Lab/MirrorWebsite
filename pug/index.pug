@@ -1,60 +1,60 @@
 doctype html
 html(lang="en")
-  head
-    title Clarkson University Mirror - Index
-    include ../includes/_mainHeadTags.pug
-    script.
-      window.onload = function() {
-      var foo = document.getElementById("navhome");
-      foo.setAttribute("class", "current"); };
-  body
-    include ../includes/_header.pug
+	head
+		title Clarkson University Mirror - Index
+		include ../includes/_mainHeadTags.pug
+		script.
+			window.onload = function() {
+			var foo = document.getElementById("navhome");
+			foo.setAttribute("class", "current"); };
+	body
+		include ../includes/_header.pug
+		
+		.carasouel
+			.container
+				h1 Welcome to Mirror
 
-    .carasouel
-      .container
-        h1 Welcome to Mirror
+		.content
+			.container
+				.top
+					h2 About Mirror
+					p.
+						This site is a public repository of free and open source software. It is located at
+						#[a(href="http://www.clarkson.edu/") Clarkson University] in Potsdam, NY, US. This
+						site strives to provide exposure to open source software and various open source
+						operating systems. Currently, this site mirrors several Linux distributions, some
+						third party repositories, and even the Linux Kernel. You can find out more information
+						about everything we mirror by choosing the category that you are interested in.
 
-    .content
-      .container
-        .top
-          h2 About Mirror
-          p.
-            This site is a public repository of free and open source software. It is located at
-            #[a(href="http://www.clarkson.edu/") Clarkson University] in Potsdam, NY, US. This
-            site strives to provide exposure to open source software and various open source
-            operating systems. Currently, this site mirrors several Linux distributions, some
-            third party repositories, and even the Linux Kernel. You can find out more information
-            about everything we mirror by choosing the category that you are interested in.
+				hr
 
-        hr
+				.row.mid
+					.col.col--1-of-3
+						img(src="img/debian_logo.svg")
+						h2 Linux Distros
+						p.
+							We host around 20 distributions including Debian, Ubuntu, Arch Linux, Linux Mint,
+							and many more. Many are official mirrors and the majority are updated 4 times a
+							day from upstream mirrors. Learn more on the #[a(href="distributions.html") Distributions] page.
+					.col.col--1-of-3
+						img(src="img/gnu.svg")
+						h2 GNU Software
+						p.
+							We also host a large quantity of software maintained by the GNU Project. you can
+							find it on the #[a(href="misc.html") Misc.] page.
+					.col.col--1-of-3
+						img(src="img/tux.png")
+						h2 Linux Kernel
+						p.
+							Versions of the Linux Kernel (Up to 4.5.X) can also be found on the #[a(href="misc.html") Misc.]
+							page, found in the same place is documentation and souce for the kernel.
 
-        .row.mid
-          .col.col--1-of-3
-            img(src="img/debian_logo.svg")
-            h2 Linux Distros
-            p.
-              We host around 20 distributions including Debian, Ubuntu, Arch Linux, Linux Mint,
-              and many more. Many are official mirrors and the majority are updated 4 times a
-              day from upstream mirrors. Learn more on the #[a(href="distributions.html") Distributions] page.
-          .col.col--1-of-3
-            img(src="img/gnu.svg")
-            h2 GNU Software
-            p.
-                We also host a large quantity of software maintained by the GNU Project. you can
-                find it on the #[a(href="misc.html") Misc.] page.
-          .col.col--1-of-3
-            img(src="img/tux.png")
-            h2 Linux Kernel
-            p.
-             Versions of the Linux Kernel (Up to 4.5.X) can also be found on the #[a(href="misc.html") Misc.]
-             page, found in the same place is documentation and souce for the kernel.
+				hr
 
-        hr
+				h2 History
+				p.
+					The newest iteration was completed in April 2016, but we have had Mirror
+					running for almost a decade now. If you want to learn more about the newest
+					iteration or the history behind the project, Visit the #[a(href="history.html") History] page.
 
-        h2 History
-        p.
-          The newest iteration was completed in April 2016, but we have had Mirror
-          running for almost a decade now. If you want to learn more about the newest
-          iteration or the history behind the project, Visit the #[a(href="history.html") History] page.
-
-    include ../includes/_footer.pug
+		include ../includes/_footer.pug

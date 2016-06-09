@@ -4,3 +4,4 @@ cp favicon.ico dist/
 cp -r img/ dist/
 cp -r js/ dist/
 cp -r css/ dist/
+cp -r components/ dist/

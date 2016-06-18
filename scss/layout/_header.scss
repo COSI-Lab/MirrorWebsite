@@ -38,6 +38,10 @@ header {
 	padding-right: 15px;
 }
 
+ul {
+	padding: 0;
+}
+
 #navdesktop {
 	background-color: $darker-green;
 	clear: both;
@@ -53,12 +57,13 @@ header {
 	ul {
 		height: 3rem;
 		list-style-type: none;
+		margin-bottom: 0;
 
 		li {
 			box-sizing: border-box;
 			display: block;
 			float: left;
-			height: inherit;
+			height: 50px;
 			padding: 1em 25px;
 			text-align: center;
 

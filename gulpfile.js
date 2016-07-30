@@ -3,23 +3,27 @@ var sass = require('gulp-sass');
 var pug = require('gulp-pug');
 var sourcemaps = require('gulp-sourcemaps');
 
-gulp.task('sass', function() {
-  return gulp.src("./scss/main.scss")
+gulp.task('sass', function () {
+	return gulp.src('./scss/main.scss')
 		.pipe(sourcemaps.init())
-    .pipe(sass({outputStyle: 'expanded'}))
+		.pipe(sass({
+			outputStyle: 'expanded',
+			indentType: "tab",
+			indentWidth: 1
+		}))
 		.pipe(sourcemaps.write())
-    .pipe(gulp.dest("./css"));
+		.pipe(gulp.dest('./css'));
 });
 
-gulp.task('pug', function() {
-  return gulp.src("./pug/*.pug")
-    .pipe(pug({pretty: true}))
-    .pipe(gulp.dest("./"));
+gulp.task('pug', function () {
+	return gulp.src('./pug/*.pug')
+		.pipe(pug({ pretty: true }))
+		.pipe(gulp.dest('./'));
 });
 
-// TODO: Create Linter task
+// TODO: Create Linter task (JS & SCSS)
 
-gulp.task('watch', function() {
+gulp.task('watch', function () {
 	gulp.watch(['./scss/*.scss', './scss/**/*.scss'], ['sass']);
 	gulp.watch('./pug/*.pug', ['pug']);
 });

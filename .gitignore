@@ -2,3 +2,4 @@
 node_modules/
 includes/_ips.pug
 ips.txt
+dist/

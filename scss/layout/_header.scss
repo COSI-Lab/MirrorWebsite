@@ -64,12 +64,13 @@ ul {
 			display: block;
 			float: left;
 			height: 50px;
-			padding: 1em 25px;
 			text-align: center;
+			width: 160px;
 
 			a {
 				color: $white;
 				display: block;
+				line-height: 50px;
 				text-decoration: none;
 			}
 
@@ -97,20 +98,21 @@ ul {
 			border-bottom: 2px solid darken($darker-green, 3%);
 			box-sizing: border-box;
 			margin: 0;
-			padding: 1.25em 0;
 			width: 100%;
+			height: 50px;
 
 			&:last-child {
 				border-bottom: 0;
 			}
 
 			a {
+				width: 100%;
+				height: 100%;
 				color: inherit;
 				display: block;
-				height: inherit;
+				line-height: 50px;
 				text-align: center;
 				text-decoration: none;
-				width: inherit;
 
 				&:hover {
 					background-color: lighten($darker-green, 2%);

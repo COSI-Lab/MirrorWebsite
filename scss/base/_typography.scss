@@ -1,1 +1,9 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab);
+@font-face {
+    font-family: "Roboto";
+    src: url('../fonts/Roboto-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "Roboto Slab";
+    src: url('../fonts/RobotoSlab-Regular.ttf') format('truetype');
+}

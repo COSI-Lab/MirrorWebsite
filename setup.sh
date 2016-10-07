@@ -6,4 +6,5 @@ cp -r img/ dist/
 cp -r js/ dist/
 cp -r css/ dist/
 cp -r components/ dist/
+cp -r fonts/ dist/
 cp -r dist/* /var/www

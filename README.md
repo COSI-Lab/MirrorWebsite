@@ -1,11 +1,11 @@
-# Mirror2016
+# MirrorWebsite
 
 ![Homepage screenshot](https://raw.githubusercontent.com/COSI-Lab/Mirror2016/master/MirrorScreenshot.png)
 
 This is the source of the current website for Clarkson's FOSS Mirror.
 
 ## Development Setup
-The Sass and Pug (formerly known as Jade) files can be compiled to CSS & HTML
+The Sass and Pug files can be compiled to CSS & HTML
 respectively either manually or with Gulp. To install the dependencies, run
 `npm install` and then either run the specific gulp tasks like `gulp pug` /
 `gulp sass`, or have them recompile on modifications with `gulp watch`.

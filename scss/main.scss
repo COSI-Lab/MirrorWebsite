@@ -40,6 +40,33 @@ hr {
 	width: 90%;
 }
 
+.software-section {
+	section {
+		border-bottom: 2px solid lighten(black, 80%);
+		padding-bottom: 1em;
+	}
+
+	section:last-child {
+		border-bottom: 0;
+	}
+}
+
+.software-contents {
+	h2 {
+		border-bottom: 1px solid black;
+		text-align: center;
+	}
+
+
+	ul {
+		list-style-type: none;
+
+		li {
+			padding: 10px 0;
+		}
+	}
+}
+
 .content {
 	background-color: $white;
 	padding-top: 20px;

@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <title>Clarkson University Mirror - Directory</title>
-    <script src="js/vendors/webcomponents.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <script src="js/vendors/jquery-2.1.4.min.js"></script>
@@ -11,7 +10,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <meta name="description" content="The website for Clarkson University's Software Mirror">
-    <link rel="import" href="components/cosi-nav.html">
+    <link rel="stylesheet" href="https://dubsdot.cosi.clarkson.edu/cosi-nav.css">
+    <script src="js/fetch.js"></script>
+    <script src="js/cosi-nav.js" defer></script>
+    <style>
+      :root {
+          --background-color: rgba(255,255,255,0.2);
+          --text-color: white;
+      }
+    </style>
     <script>
       window.onload = function() {
       	var foo = document.getElementById('navdirectory');

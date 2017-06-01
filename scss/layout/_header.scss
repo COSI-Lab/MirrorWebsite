@@ -58,14 +58,15 @@ ul {
 		height: 3rem;
 		list-style-type: none;
 		margin-bottom: 0;
+		display: flex;
+		justify-content: center;
 
 		li {
 			box-sizing: border-box;
 			display: block;
-			float: left;
 			height: 50px;
 			text-align: center;
-			width: 160px;
+			padding: 0 40px;
 
 			a {
 				color: $white;
@@ -90,9 +91,14 @@ ul {
 	color: $white;
 	display: none;
 
+	.container {
+		padding: 0;
+	}
+
 	ul {
 		list-style-type: none;
 		padding-left: 0;
+		margin: 0;
 
 		li {
 			border-bottom: 2px solid darken($darker-green, 3%);

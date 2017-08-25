@@ -1,0 +1,88 @@
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 2vw;
+}
+
+@media (max-width: 512px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.radial {
+    width: 120px;
+    height: 120px;
+}
+
+@media (max-width: 500px) {
+    .radial {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+.grid-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-section .content {
+    padding-top: 0;
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
+}
+
+.grid-section .content h4 {
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+.grid-section .content table {
+    min-width: 100px;
+}
+
+td {
+    min-width: 25px;
+}
+
+.grid-section .content table td:last-child {
+    text-align: right;
+}
+
+/*-----------------------------------*/
+
+.graph-options {
+    background-color: #D8D8D8;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 5px;
+}
+
+.graph-options button {
+    margin: 0 5px;
+    outline: 0;
+    border: 0;
+    background-color: transparent;
+}
+
+.graph-content {
+    height: 300px;
+    background-color: #F0F0F0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.graph-options button:hover,
+.selected { 
+    font-weight: bold;
+}
+
+@media (max-width: 500px) {
+    .graph-content {
+        height: 500px;
+    }
+}

@@ -1,24 +1,79 @@
 doctype html
 html(lang="en")
-	head
-		title Clarkson University Mirror - Statistics
-		include ../includes/_mainHeadTags.pug
-		script.
-			window.onload = function() {
-				var foo = document.getElementById('navstats');
-				foo.setAttribute("class", "current");
-			};
+    head
+        title Clarkson University Mirror - Statistics
+        include ../includes/_mainHeadTags.pug
+        include ../includes/_mixins.pug
+        link(rel="stylesheet" href="css/stats.css")
+        link(rel="stylesheet" href="css/c3.min.css")
+        script(src="js/vendors/d3/d3.min.js")
+        script(src="js/vendors/c3/c3.min.js")
+        script.
+            window.onload = function() {
+                var foo = document.getElementById('navstats');
+                foo.setAttribute("class", "current");
+            };
 
-	body
-		include ../includes/_header.pug
-		.content
-			.container
-				h1 Statistics
-				//- include ../includes/_ips.pug (uncomment this when being put onto the server)
-				p This page includes statistics on the traffic (up and down) of Mirror
-				img(src="img/vnstati-sum.png").stat-img
-				img(src="img/vnstati-month.png").stat-img
-				img(src="img/vnstati-day.png").stat-img
-				img(src="img/vnstati-hour.png").stat-img
+    body
+        include ../includes/_header.pug
+        .content
+            .container
+                h1 Statistics
+                h2 General Statistics
+                h3#updated
+                .grid
+                    #today_stats.grid-section
+                        .radial
+                            +donut
+                        .content
+                            h4
+                            +stats-table
+                    #yesterday_stats.grid-section
+                        .radial
+                            +donut
+                        .content
+                            h4
+                            +stats-table
+                    #month_stats.grid-section
+                        .radial
+                            +donut
+                        .content
+                            h4
+                            +stats-table
+                    #prev_month_stats.grid-section
+                        .radial
+                            +donut
+                        .content
+                            h4
+                            +stats-table
+                h2 Monthly Stats
+                .graph-container
+                    .graph-options
+                        button.selected Graph
+                        // button Table
+                    #month-graph.graph-content
+                h2 Weekly Stats
+                .graph-container
+                    .graph-options
+                        button.selected Graph
+                        // button Table
+                    #week-graph.graph-content
+                h2 Hourly Stats
+                .graph-container
+                    .graph-options
+                        button.selected Graph
+                        // button Table
+                    #hour-graph.graph-content
+                h2 Distro Usage
+                p View daily bandwidth stats categorized to each repository for distros / software.
+                a(href="/distrousage/distrousage_latest.txt") Latest
+                br
+                a(href="/distrousage/archive") Archive
+                p(style="text-align:center; font-size: 80%") MirrorBand V1.1
 
-		include ../includes/_footer.pug
+        include ../includes/_footer.pug
+        script(src="js/month.js")
+        script(src="js/day.js")
+        script(src="js/hour.js")
+        script(src="js/updated.js")
+        script(src="js/stats.js")

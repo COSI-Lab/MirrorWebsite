@@ -6,26 +6,27 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <script src="js/vendors/jquery-2.1.4.min.js"></script>
     <script src="js/main.js"></script>
-    <link rel="stylesheet" href="css/stats.css">
     <meta name="theme-color" content="#035245">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <meta name="description" content="The website for Clarkson University's Software Mirror">
     <link rel="stylesheet" href="https://dubsdot.cosi.clarkson.edu/cosi-nav.css">
+    <script src="js/fetch.js"></script>
     <script src="js/cosi-nav.js" defer></script>
-    <script src="js/vendors/d3/d3.min.js"></script>
-    <link rel="stylesheet" href="css/c3.min.css">
-    <script src="js/vendors/c3/c3.min.js"></script>
     <style>
       :root {
           --background-color: rgba(255,255,255,0.2);
           --text-color: white;
       }
     </style>
+    <link rel="stylesheet" href="css/stats.css">
+    <link rel="stylesheet" href="css/c3.min.css">
+    <script src="js/vendors/d3/d3.min.js"></script>
+    <script src="js/vendors/c3/c3.min.js"></script>
     <script>
       window.onload = function() {
-      	var foo = document.getElementById('navstats');
-      	foo.setAttribute("class", "current");
+          var foo = document.getElementById('navstats');
+          foo.setAttribute("class", "current");
       };
       
     </script>
@@ -65,117 +66,154 @@
         <h2>General Statistics</h2>
         <h3 id="updated"></h3>
         <div class="grid">
-            <div id="today_stats" class="grid-section">
-                <div class="radial">
-                    <svg width="100%" height="100%" viewBox="0 0 42 42" class="donut">
-                        <circle class="donut-hole" cx="21" cy="21" r="15.91549430918952" fill="#fff"></circle>
-                        <circle class="donut-ring" cx="21" cy="21" r="15.91549430918952" fill="transparent" stroke="#E0E0E0" stroke-width="8"></circle>
-                        <circle class="donut-segment" cx="21" cy="21" r="15.91549430918952" fill="transparent" stroke="#606060" stroke-width="8"></circle>
-                        <circle class="donut-segment" cx="21" cy="21" r="15.91549430918952" fill="transparent" stroke="#94CD27" stroke-width="8"></circle>
-                    </svg>
-                </div>
-                <div class="content">
-                    <h4></h4>
-                    <table>
-                        <tr><td>rx</td><td class="rx"></td></tr>
-                        <tr><td>tx</td><td class="tx"></td></tr>
-                        <tr><td>=</td><td class="total"></td></tr>
-                        <tr><td colspan=2 class="rate"></td></tr>
-                    </table>
-                </div>
+          <div class="grid-section" id="today_stats">
+            <div class="radial">
+                  <svg class="donut" width="100" height="100%" viewbox="0 0 42 42">
+                    <circle class="donut-hole" cx="21" cy="21" r="15.91549430918952" fill="#fff"></circle>
+                    <circle class="donut-ring" cx="21" cy="21" r="15.91549430918952" fill="transparent" stroke="#E0E0E0" stroke-width="8"></circle>
+                    <circle class="donut-segment" cx="21" cy="21" r="15.91549430918952" fill="transparent" stroke="#606060" stroke-width="8"></circle>
+                    <circle class="donut-segment" cx="21" cy="21" r="15.91549430918952" fill="transparent" stroke="#94CD27" stroke-width="8"></circle>
+                  </svg>
             </div>
-            <div id="yesterday_stats" class="grid-section">
-                <div class="radial">
-                    <svg width="100%" height="100%" viewBox="0 0 42 42" class="donut">
-                        <circle class="donut-hole" cx="21" cy="21" r="15.91549430918952" fill="#fff"></circle>
-                        <circle class="donut-ring" cx="21" cy="21" r="15.91549430918952" fill="transparent" stroke="#E0E0E0" stroke-width="8"></circle>
-                        <circle class="donut-segment" cx="21" cy="21" r="15.91549430918952" fill="transparent" stroke="#606060" stroke-width="8"></circle>
-                        <circle class="donut-segment" cx="21" cy="21" r="15.91549430918952" fill="transparent" stroke="#94CD27" stroke-width="8"></circle>
-                    </svg>
-                </div>
-                <div class="content">
-                    <h4></h4>
-                    <table>
-                        <tr><td>rx</td><td class="rx"></td></tr>
-                        <tr><td>tx</td><td class="tx"></td></tr>
-                        <tr><td>=</td><td class="total"></td></tr>
-                        <tr><td colspan="2" class="rate"></td></tr>
-                    </table>
-                </div>
+            <div class="content">
+              <h4></h4>
+                  <table>
+                    <tr>
+                      <td>rx</td>
+                      <td class="rx"></td>
+                    </tr>
+                    <tr>
+                      <td>tx</td>
+                      <td class="tx"></td>
+                    </tr>
+                    <tr>
+                      <td>\=</td>
+                      <td class="total"></td>
+                    </tr>
+                    <tr>
+                      <td class="rate" colspan="2"></td>
+                    </tr>
+                  </table>
             </div>
-            <div id="month_stats" class="grid-section">
-                <div class="radial">
-                    <svg width="100%" height="100%" viewBox="0 0 42 42" class="donut">
-                        <circle class="donut-hole" cx="21" cy="21" r="15.91549430918952" fill="#fff"></circle>
-                        <circle class="donut-ring" cx="21" cy="21" r="15.91549430918952" fill="transparent" stroke="#E0E0E0" stroke-width="8"></circle>
-                        <circle class="donut-segment" cx="21" cy="21" r="15.91549430918952" fill="transparent" stroke="#606060" stroke-width="8"></circle>
-                        <circle class="donut-segment" cx="21" cy="21" r="15.91549430918952" fill="transparent" stroke="#94CD27" stroke-width="8"></circle>
-                    </svg>
-                </div>
-                <div class="content">
-                    <h4></h4>
-                    <table>
-                        <tr><td>rx</td><td class="rx"></td></tr>
-                        <tr><td>tx</td><td class="tx"></td></tr>
-                        <tr><td>=</td><td class="total"></td></tr>
-                        <tr><td colspan=2 class="rate"></td></tr>
-                    </table>
-                </div>
+          </div>
+          <div class="grid-section" id="yesterday_stats">
+            <div class="radial">
+                  <svg class="donut" width="100" height="100%" viewbox="0 0 42 42">
+                    <circle class="donut-hole" cx="21" cy="21" r="15.91549430918952" fill="#fff"></circle>
+                    <circle class="donut-ring" cx="21" cy="21" r="15.91549430918952" fill="transparent" stroke="#E0E0E0" stroke-width="8"></circle>
+                    <circle class="donut-segment" cx="21" cy="21" r="15.91549430918952" fill="transparent" stroke="#606060" stroke-width="8"></circle>
+                    <circle class="donut-segment" cx="21" cy="21" r="15.91549430918952" fill="transparent" stroke="#94CD27" stroke-width="8"></circle>
+                  </svg>
             </div>
-            <div id="prev_month_stats" class="grid-section">
-                <div class="radial">
-                    <svg width="100%" height="100%" viewBox="0 0 42 42" class="donut">
-                        <circle class="donut-hole" cx="21" cy="21" r="15.91549430918952" fill="#fff"></circle>
-                        <circle class="donut-ring" cx="21" cy="21" r="15.91549430918952" fill="transparent" stroke="#E0E0E0" stroke-width="8"></circle>
-                        <circle class="donut-segment" cx="21" cy="21" r="15.91549430918952" fill="transparent" stroke="#606060" stroke-width="8"></circle>
-                        <circle class="donut-segment" cx="21" cy="21" r="15.91549430918952" fill="transparent" stroke="#94CD27" stroke-width="8"></circle>
-                    </svg>
-                </div>
-                <div class="content">
-                    <h4></h4>
-                    <table>
-                        <tr><td>rx</td><td class="rx"></td></tr>
-                        <tr><td>tx</td><td class="tx"></td></tr>
-                        <tr><td>=</td><td class="total"></td></tr>
-                        <tr><td colspan=2 class="rate"></td></tr>
-                    </table>
-                </div>
+            <div class="content">
+              <h4></h4>
+                  <table>
+                    <tr>
+                      <td>rx</td>
+                      <td class="rx"></td>
+                    </tr>
+                    <tr>
+                      <td>tx</td>
+                      <td class="tx"></td>
+                    </tr>
+                    <tr>
+                      <td>\=</td>
+                      <td class="total"></td>
+                    </tr>
+                    <tr>
+                      <td class="rate" colspan="2"></td>
+                    </tr>
+                  </table>
             </div>
+          </div>
+          <div class="grid-section" id="month_stats">
+            <div class="radial">
+                  <svg class="donut" width="100" height="100%" viewbox="0 0 42 42">
+                    <circle class="donut-hole" cx="21" cy="21" r="15.91549430918952" fill="#fff"></circle>
+                    <circle class="donut-ring" cx="21" cy="21" r="15.91549430918952" fill="transparent" stroke="#E0E0E0" stroke-width="8"></circle>
+                    <circle class="donut-segment" cx="21" cy="21" r="15.91549430918952" fill="transparent" stroke="#606060" stroke-width="8"></circle>
+                    <circle class="donut-segment" cx="21" cy="21" r="15.91549430918952" fill="transparent" stroke="#94CD27" stroke-width="8"></circle>
+                  </svg>
+            </div>
+            <div class="content">
+              <h4></h4>
+                  <table>
+                    <tr>
+                      <td>rx</td>
+                      <td class="rx"></td>
+                    </tr>
+                    <tr>
+                      <td>tx</td>
+                      <td class="tx"></td>
+                    </tr>
+                    <tr>
+                      <td>\=</td>
+                      <td class="total"></td>
+                    </tr>
+                    <tr>
+                      <td class="rate" colspan="2"></td>
+                    </tr>
+                  </table>
+            </div>
+          </div>
+          <div class="grid-section" id="prev_month_stats">
+            <div class="radial">
+                  <svg class="donut" width="100" height="100%" viewbox="0 0 42 42">
+                    <circle class="donut-hole" cx="21" cy="21" r="15.91549430918952" fill="#fff"></circle>
+                    <circle class="donut-ring" cx="21" cy="21" r="15.91549430918952" fill="transparent" stroke="#E0E0E0" stroke-width="8"></circle>
+                    <circle class="donut-segment" cx="21" cy="21" r="15.91549430918952" fill="transparent" stroke="#606060" stroke-width="8"></circle>
+                    <circle class="donut-segment" cx="21" cy="21" r="15.91549430918952" fill="transparent" stroke="#94CD27" stroke-width="8"></circle>
+                  </svg>
+            </div>
+            <div class="content">
+              <h4></h4>
+                  <table>
+                    <tr>
+                      <td>rx</td>
+                      <td class="rx"></td>
+                    </tr>
+                    <tr>
+                      <td>tx</td>
+                      <td class="tx"></td>
+                    </tr>
+                    <tr>
+                      <td>\=</td>
+                      <td class="total"></td>
+                    </tr>
+                    <tr>
+                      <td class="rate" colspan="2"></td>
+                    </tr>
+                  </table>
+            </div>
+          </div>
         </div>
-        
         <h2>Monthly Stats</h2>
         <div class="graph-container">
-            <div class="graph-options">
-                <button class="selected">Graph</button>
-                <!-- <button>Table</button> -->
-            </div>
-            <div id="month-graph" class="graph-content"></div>
+          <div class="graph-options">
+            <button class="selected">Graph</button>
+            <!-- button Table-->
+          </div>
+          <div class="graph-content" id="month-graph"></div>
         </div>
-
         <h2>Weekly Stats</h2>
         <div class="graph-container">
-            <div class="graph-options">
-                <button class="selected">Graph</button>
-                <!-- <button>Table</button> -->
-            </div>
-            <div id="week-graph" class="graph-content"></div>
+          <div class="graph-options">
+            <button class="selected">Graph</button>
+            <!-- button Table-->
+          </div>
+          <div class="graph-content" id="week-graph"></div>
         </div>
-
         <h2>Hourly Stats</h2>
         <div class="graph-container">
-            <div class="graph-options">
-                <button class="selected">Graph</button>
-                <!-- <button>Table</button> -->
-            </div>
-            <div id="hour-graph" class="graph-content"></div>
+          <div class="graph-options">
+            <button class="selected">Graph</button>
+            <!-- button Table-->
+          </div>
+          <div class="graph-content" id="hour-graph"></div>
         </div>
-	
-	<h2>Distro-Usage</h2>
-	<p>View daily bandwidth stats categorized to each repository for distros / software.</p>
-	<a href="/distrousage/distrousage_latest.txt">Latest</a> |
-	<a href="/distrousage/archive/">Archive</a>
-
-	<p style="text-align:center; font-size: 80%">MirrorBand V1.1</p>
+        <h2>Distro Usage</h2>
+        <p>View daily bandwidth stats categorized to each repository for distros / software.</p><a href="/distrousage/distrousage_latest.txt">Latest</a><br><a href="/distrousage/archive">Archive</a>
+        <p style="text-align:center; font-size: 80%;">MirrorBand V1.1</p>
       </div>
     </div>
     <footer>

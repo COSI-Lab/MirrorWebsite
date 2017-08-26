@@ -86,3 +86,12 @@ td {
         height: 500px;
     }
 }
+
+.donut-segment {
+    transition: stroke-dasharray 600ms ease-out;
+}
+
+.donut-segment,
+.donut-ring {
+    stroke-width: 8
+}

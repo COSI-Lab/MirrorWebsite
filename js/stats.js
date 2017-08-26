@@ -32,10 +32,26 @@ function renderStatsTable(section, data) {
 function renderDonut(donutElement, fullPerc, txPerc, rxPerc) {
 	let segments = donutElement.getElementsByClassName('donut-segment');
 
-	segments[0].setAttribute('stroke-dasharray', `${fullPerc * txPerc} ${100 - (fullPerc * txPerc)}`);
-	segments[0].setAttribute('stroke-dashoffset', "25");
-	segments[1].setAttribute('stroke-dasharray', `${fullPerc * rxPerc} ${100 - (fullPerc * rxPerc)}`);
-	segments[1].setAttribute('stroke-dashoffset', `${25 - (fullPerc * txPerc)}`);
+	function setupDonut() {
+		segments[0].setAttribute('stroke-dashoffset', "25");
+		segments[1].setAttribute('stroke-dashoffset', `${25 - (fullPerc * txPerc)}`);	
+
+		segments[0].setAttribute('stroke-dasharray', '0 100')
+		segments[1].setAttribute('stroke-dasharray', '0 100');
+
+		segments[0].setAttribute('stroke', '#606060');
+		segments[1].setAttribute('stroke', '#94CD27');
+	}
+
+	requestAnimationFrame(function() {
+		setupDonut();
+		requestAnimationFrame(function() {
+			segments[0].setAttribute('stroke-dasharray', `${fullPerc * txPerc} ${100 - (fullPerc * txPerc)}`);
+			setTimeout(function() {
+				segments[1].setAttribute('stroke-dasharray', `${fullPerc * rxPerc} ${100 - (fullPerc * rxPerc)}`);
+			}, 600)
+		})
+	});
 }
 
 function renderRadials() {

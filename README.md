@@ -16,6 +16,7 @@ respectively either manually or with Gulp. To install the dependencies, run
 - [normalize.scss](https://github.com/appleboy/normalize.scss)
 - [Toast Grid System](https://daneden.github.io/Toast)
 - [FontAwesome](http://fortawesome.github.io/Font-Awesome/)
+- [C3.js](https://github.com/c3js/c3)
 
 ## Contribute
 If you are interested in contributing, contact either [Benjamin Lannon](mailto:lannonbr@clarkson.edu)

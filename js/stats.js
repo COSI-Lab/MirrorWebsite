@@ -117,7 +117,7 @@ function renderRadials() {
 function renderMonthChart() {
 	let txs = monthData.map(month => month.tx).map(tx => (toTB(tx)).toFixed(3)).reverse();
 	let rxs = monthData.map(month => month.rx).map(rx => (toTB(rx)).toFixed(3)).reverse();
-
+	let rates = monthData.map(month => month.rate).map(rate => rate.toFixed(2)).reverse();
 	let times = monthData.map(month => month.time).reverse();
 
 	txs = ['tx', ...txs];
@@ -133,6 +133,12 @@ function renderMonthChart() {
 			groups: [['rx', 'tx']],
 			colors: { tx: '#606060', rx: '#94CD27' }
 		},
+		tooltip: {
+			format: {
+				title: function(x) { return 'Avg Rate: ' + rates[x] + 'Mbit/s'; },
+				value: function(value) { return value + 'TB'}
+			}
+		},
 		axis: {
 			rotated: isMobile,
 			x: { type: 'category' },
@@ -143,13 +149,14 @@ function renderMonthChart() {
 				}
 			}
 		}
-	})
+	});
 }
 
 function renderDayChart() {
 	let times = dayData.map(day => day.time).reverse();
 	let txs = dayData.map(day => day.tx).map(tx => (toTB(tx)).toFixed(3)).reverse();
 	let rxs = dayData.map(day => day.rx).map(rx => (toTB(rx)).toFixed(3)).reverse();
+	let rates = dayData.map(day => day.rate).map(rate => rate.toFixed(2)).reverse();
 
 	times = ['x', ...times];
 	txs = ['tx', ...txs];
@@ -163,6 +170,12 @@ function renderDayChart() {
 			type: 'bar',
 			groups: [['rx', 'tx']],
 			colors: { tx: '#606060', rx: '#94CD27' }
+		},
+		tooltip: {
+			format: {
+				title: function(x) { return 'Avg Rate: ' + rates[x] + 'Mbit/s'; },
+				value: function(value) { return value + 'TB'}
+			}
 		},
 		axis: {
 			rotated: isMobile,
@@ -181,6 +194,7 @@ function renderHourChart() {
 	let times = hourData.map(hour => hour.time).map(hour => hour.split(' ')[1].split(':')[0]).reverse();
 	let txs = hourData.map(hour => hour.tx).map(tx => (toGB(tx)).toFixed(3)).reverse();
 	let rxs = hourData.map(hour => hour.rx).map(rx => (toGB(rx)).toFixed(3)).reverse();
+	let rates = hourData.map(hour => hour.rate).map(rate => rate.toFixed(2)).reverse();
 
 	times = ['x', ...times];
 	txs = ['tx', ...txs];
@@ -194,6 +208,12 @@ function renderHourChart() {
 			type: 'bar',
 			groups: [['rx', 'tx']],
 			colors: { tx: '#606060', rx: '#94CD27' }
+		},
+		tooltip: {
+			format: {
+				title: function(x) { return 'Avg Rate: ' + rates[x] + 'Mbit/s'; },
+				value: function(value) { return value + 'GB'}
+			}
 		},
 		axis: {
 			rotated: isMobile,

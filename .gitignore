@@ -3,3 +3,7 @@ node_modules/
 includes/_ips.pug
 ips.txt
 dist/
+js/day.js
+js/month.js
+js/hour.js
+js/updated.js

@@ -228,6 +228,18 @@ function renderHourChart() {
 	});
 }
 
+function renderPBBar() {
+	let container = document.getElementById('pb-container');
+
+	let {percentage, total} = window.pb;
+
+	let totalSpan = document.createElement('span');
+	totalSpan.innerHTML = `${(total/1000000000000).toFixed(3)} TB out of 1PB`;
+	container.appendChild(totalSpan);
+
+	document.documentElement.style.setProperty('--pb-width', percentage*100 + '%');
+}
+
 var isMobile = false;
 
 $(document).ready(function() {
@@ -270,4 +282,6 @@ $(document).ready(function() {
 	document.getElementById("updated").innerText = LastUpdate;
 
 	renderRadials();
+
+	renderPBBar();
 });

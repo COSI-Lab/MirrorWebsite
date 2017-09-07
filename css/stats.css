@@ -1,3 +1,7 @@
+:root {
+    --pb-width: 0%;
+}
+
 .grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -94,4 +98,23 @@ td {
 .donut-segment,
 .donut-ring {
     stroke-width: 8
+}
+
+/*-----------------------------------*/
+
+.progressbar {
+    background-color: #E0E0E0;
+    height: 20px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.progressbar--filled {
+    background-color: #94CD27;
+    width: var(--pb-width);
+    height: 100%;
+    border-radius: inherit;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    transition: width 1s ease-in;
 }

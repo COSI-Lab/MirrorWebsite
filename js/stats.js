@@ -120,8 +120,6 @@ function calcMonthEstimate(currAgg, rate) {
 	// rate * 8 (to MB) * 3600 (to hours) * 24 (to day) * numDays (to month) / 1000 (to GB) / 1000 (to TB)
 	let estimate = (rate / 8 * 3600 * 24 * numDays / 1000 / 1000) - currAgg;
 
-	console.log(currAgg);
-
 	return parseFloat(estimate.toFixed(3));
 }
 
@@ -250,10 +248,17 @@ function renderPBBar() {
 	let {percentage, total} = window.pb;
 
 	let totalSpan = document.createElement('span');
-	totalSpan.innerHTML = `${(total/1000000000000).toFixed(3)} TB out of 1PB`;
-	container.appendChild(totalSpan);
 
 	document.documentElement.style.setProperty('--pb-width', percentage*100 + '%');
+
+	let remainingMBytes = (1000000000000000 - total)/1000000;
+	let currDailyRate = monthData[0].rate / 8 * 3600 * 24;
+	let daysLeft = Math.ceil(remainingMBytes / currDailyRate);
+
+	let date = moment().add(daysLeft, 'days').format('MM/DD/YYYY');
+
+	totalSpan.innerHTML = `${(total/1000000000000).toFixed(3)}TB out of 1PB. Mirror should reach 1PB on ${date}`;
+	container.appendChild(totalSpan);
 }
 
 var isMobile = false;

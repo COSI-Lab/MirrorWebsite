@@ -114,24 +114,40 @@ function renderRadials() {
 	renderDonut(lastMonthDonut, lastMonthFullPercentage, lastMonthTxPercentage, lastMonthRxPercentage);
 }
 
+function calcMonthEstimate(currAgg, rate) {
+	const numDays = moment().daysInMonth();
+	
+	// rate * 8 (to MB) * 3600 (to hours) * 24 (to day) * numDays (to month) / 1000 (to GB) / 1000 (to TB)
+	let estimate = (rate / 8 * 3600 * 24 * numDays / 1000 / 1000) - currAgg;
+
+	console.log(currAgg);
+
+	return parseFloat(estimate.toFixed(3));
+}
+
 function renderMonthChart() {
 	let txs = monthData.map(month => month.tx).map(tx => (toTB(tx)).toFixed(3)).reverse();
 	let rxs = monthData.map(month => month.rx).map(rx => (toTB(rx)).toFixed(3)).reverse();
 	let rates = monthData.map(month => month.rate).map(rate => rate.toFixed(2)).reverse();
 	let times = monthData.map(month => month.time).reverse();
 
+	let estimates = [];
+	let estimate = calcMonthEstimate(parseFloat(rxs[11]) + parseFloat(txs[11]), rates[11]);
+
 	txs = ['tx', ...txs];
 	rxs = ['rx', ...rxs];
 	times = ['x', ...times];
+	estimates = ['estimated additional bandwidth', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, estimate]
 
 	var monthChart = c3.generate({
 		bindto: '#month-graph',
 		data: {
 			x: 'x',
-			columns: [times, txs, rxs],
+			columns: [times, rxs, txs, estimates],
 			type: 'bar',
-			groups: [['rx', 'tx']],
-			colors: { tx: '#606060', rx: '#94CD27' }
+			groups: [['rx', 'tx', 'estimated additional bandwidth']],
+			colors: { tx: '#606060', rx: '#94CD27', 'estimated additional bandwidth': '#D8D8D8' },
+			order: null
 		},
 		tooltip: {
 			format: {

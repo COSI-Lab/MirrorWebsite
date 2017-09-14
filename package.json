@@ -2,7 +2,7 @@
   "name": "mirror2016",
   "version": "1.0.0",
   "dependencies": {
-    "gulp": "3.9.x",
+    "gulp": "^3.9.1",
     "gulp-pug": "1.2.x",
     "gulp-sass": "2.1.x",
     "gulp-scss-lint": "^0.4.0",

@@ -15,229 +15,245 @@ html(lang="en")
 		.content
 			.container
 				h1 Other Software
-				
+
 				.row
 					.col.col--1-of-4.software-contents
 						h2 Contents
 						ul
-							li: a(href="#gnu") GNU Software
-							li: a(href="#linux") Linux
-							li: a(href="#gparted") Gparted
-							li: a(href="#epel") EPEL
-							li: a(href="#tdf") The Document Foundation
-							li: a(href="#ctan") CTAN
+							li: a(href="#blender") Blender
+							li: a(href="#clonezilla") Clonezilla
 							li: a(href="#cpan") CPAN
 							li: a(href="#cran") CRAN
-							li: a(href="#clonezilla") Clonezilla
+							li: a(href="#ctan") CTAN
 							li: a(href="#cygwin") Cygwin
+							li: a(href="#epel") EPEL
+							li: a(href="#gnu") GNU Software
+							li: a(href="#gparted") Gparted
 							li: a(href="#isabelle") Isabelle
+							li: a(href="#linux") Linux
 							li: a(href="#odroid") Odroid Packages
-							li: a(href="#blender") Blender
+							li: a(href="#tdf") The Document Foundation
+							li: a(href="#vlc") VLC
+
 					.col.col--3-of-4.software-section
+						section#blender
+							h3 Blender
+							h5 HTTP:
+							a(href="./blender/") http://mirror.clarkson.edu/blender/
+							br
+
+							h5 Frequency of Updates:
+							| 4 times daily
+							br
+
+							h5 Homepage:
+							a(href="https://www.blender.org") https://www.blender.org
+
+						section#clonezilla
+							h3 Clonezilla
+							h5 HTTP:
+							a(href="./clonezilla/") http://mirror.clarkson.edu/clonezilla/
+							br
+
+							h5 Frequency of Updates
+							| 1 time daily
+							br
+
+							h5 Homepage:
+							a(href="http://clonezilla.org/") http://clonezilla.org/
+
+						section#cpan
+							h3 CPAN
+							h5 HTTP:
+							a(href="./cpan/") http://mirror.clarkson.edu/cpan/
+							br
+
+							h5 Frequency of Updates
+							| 2 times Daily
+							br
+
+							h5 Homepage:
+							a(href="http://cpan.org/") http://www.cpan.org/
+
+						section#cran
+							h3 CRAN
+							h5 HTTP:
+							a(href="./cran/") http://mirror.clarkson.edu/cran/
+							br
+
+							h5 Frequency of Updates
+							| 2 times Daily
+							br
+
+							h5 Homepage:
+							a(href="http://cran.r-project.org/") http://cran.r-project.org/
+
+						section#ctan
+							h3 CTAN
+							h5 HTTP:
+							a(href="./ctan/") http://mirror.clarkson.edu/ctan/
+							br
+
+							h5 Frequency of Updates
+							| 2 times Daily
+							br
+
+							h5 Homepage:
+							a(href="http://ctan.org/") http://www.ctan.org/
+
+
+						section#cygwin
+							h3 Cygwin
+							h5 HTTP:
+							a(href="./cygwin/") http://mirror.clarkson.edu/cygwin/
+							br
+
+							h5 Frequency of Updates:
+							| 2 times Daily
+							br
+
+							h5 Homepage:
+							a(href="https://www.cygwin.com/") https://www.cygwin.com/
+
+						section#epel
+							h3 Extra Packages for Enterprise Linux (EPEL)
+							h5 HTTP:
+							a(href="./fedora-epel/") http://mirror.clarkson.edu/fedora-epel/
+							br
+
+							h5 Rsync:
+							| rsync://mirror.clarkson.edu/fedora-epel/
+							br
+							br
+
+							h5 Upstream Mirror:
+							a(href="http://mirrors1.kernel.org") http://mirrors1.kernel.org
+							br
+
+							h5 Frequency of Updates:
+							| 6 times Daily
+							br
+
+							h5 Homepage:
+							a(href="http://fedoraproject.org/wiki/EPEL") http://fedoraproject.org/wiki/EPEL
+
 						section#gnu
 							h3 GNU Software (Official Mirror)
 							h5 HTTP:
 							a(href="./gnu/") http://mirror.clarkson.edu/gnu/
 							br
-						
+
 							h5 Rsync:
 							|	rsync://mirror.clarkson.edu/gnu
 							br
 							br
-						
+
 							h5 Upstream Mirror:
 							a(href="http://mirrors.kernel.org/") http://mirrors.kernel.org/
 							br
-						
+
 							h5 Frequency of Updates:
 							|	2 times Daily
 							br
-						
+
 							h5 Homepage:
 							a(href="http://directory.fsf.org/GNU/") http://directory.fsf.org/GNU/
-						
-						section#linux
-							h3 Linux (Including Kernel Source)
-							h5 HTTP:
-							a(href="./linux/") http://mirror.clarkson.edu/linux/
-							br
-						
-							h5 Rsync:
-							|	rsync://mirror.clarkson.edu/linux/
-							br
-							br
-						
-							h5 Upstream Mirror:
-							a(href="http://rsync.kernel.org/") http://rsync.kernel.org/
-							br
-						
-							h5 Frequency of Updates:
-							|	2 times Daily
-							br
-						
-							h5 Homepage:
-							a(href="http://kernel.org") http://kernel.org
-						
+
 						section#gparted
 							h3 Gparted
 							h5 HTTP:
 							a(href="./gparted/") http://mirror.clarkson.edu/gparted
 							br
 							br
-						
+
 							h5 Upstream Mirror:
 							a(href="https://sourceforge.net/projects/gparted/files/") https://sourceforge.net/projects/gparted/files/
 							br
-						
+
 							h5 Homepage:
 							a(href="http://gparted.org/") http://gparted.org/
-						
-						section#epel
-							h3 Extra Packages for Enterprise Linux (EPEL)
-							h5 HTTP:
-							a(href="./fedora-epel/") http://mirror.clarkson.edu/fedora-epel/
-							br
-						
-							h5 Rsync:
-							| rsync://mirror.clarkson.edu/fedora-epel/
-							br
-							br
-						
-							h5 Upstream Mirror:
-							a(href="http://mirrors1.kernel.org") http://mirrors1.kernel.org
-							br
-						
-							h5 Frequency of Updates:
-							| 6 times Daily
-							br
-						
-							h5 Homepage:
-							a(href="http://fedoraproject.org/wiki/EPEL") http://fedoraproject.org/wiki/EPEL
-						
-						section#tdf
-							h3 The Document Foundation (Including LibreOffice)
-							h5 HTTP:
-							a(href="./tdf/") http://mirror.clarkson.edu/tdf/
-							br
-						
-							h5 Rsync:
-							|	rsync://mirror.clarkson.edu/tdf
-							br
-							br
-						
-							h5 Upstream Mirror:
-							a(href="http://rsync.documentfoundation.org/") rsync.documentfoundation.org
-							br
-						
-							h5 Frequency of Updates:
-							|	4 times daily
-							br
-						
-							h5 Homepage:
-							a(href="http://www.documentfoundation.org/") http://www.documentfoundation.org/
-						
-						section#ctan
-							h3 CTAN
-							h5 HTTP:
-							a(href="./ctan/") http://mirror.clarkson.edu/ctan/
-							br
-						
-							h5 Frequency of Updates
-							| 2 times Daily
-							br
-						
-							h5 Homepage:
-							a(href="http://ctan.org/") http://www.ctan.org/
-						
-						section#cpan
-							h3 CPAN
-							h5 HTTP:
-							a(href="./cpan/") http://mirror.clarkson.edu/cpan/
-							br
-						
-							h5 Frequency of Updates
-							| 2 times Daily
-							br
-						
-							h5 Homepage:
-							a(href="http://cpan.org/") http://www.cpan.org/
-						
-						section#cran
-							h3 CRAN
-							h5 HTTP:
-							a(href="./cran/") http://mirror.clarkson.edu/cran/
-							br
-						
-							h5 Frequency of Updates
-							| 2 times Daily
-							br
-						
-							h5 Homepage:
-							a(href="http://cran.r-project.org/") http://cran.r-project.org/
-						
-						section#clonezilla
-							h3 Clonezilla
-							h5 HTTP:
-							a(href="./clonezilla/") http://mirror.clarkson.edu/clonezilla/
-							br
-						
-							h5 Frequency of Updates
-							| 1 time daily
-							br
-						
-							h5 Homepage:
-							a(href="http://clonezilla.org/") http://clonezilla.org/
-						
-						section#cygwin
-							h3 Cygwin
-							h5 HTTP:
-							a(href="./cygwin/") http://mirror.clarkson.edu/cygwin/
-							br
-						
-							h5 Frequency of Updates:
-							| 2 times Daily
-							br
-						
-							h5 Homepage:
-							a(href="https://www.cygwin.com/") https://www.cygwin.com/
-						
+
 						section#isabelle
 							h3 Isabelle (Official Mirror)
 							h5 HTTP:
 							a(href="./isabelle/") http://mirror.clarkson.edu/isabelle/
 							br
-						
+
 							h5 Frequency of Updates:
 							|	2 times Daily
 							br
-						
+
 							h5 Homepage:
 							a(href="https://isabelle.in.tum.de/") https://isabelle.in.tum.de/
+
+						section#linux
+							h3 Linux (Including Kernel Source)
+							h5 HTTP:
+							a(href="./linux/") http://mirror.clarkson.edu/linux/
+							br
+
+							h5 Rsync:
+							|	rsync://mirror.clarkson.edu/linux/
+							br
+							br
+
+							h5 Upstream Mirror:
+							a(href="http://rsync.kernel.org/") http://rsync.kernel.org/
+							br
+
+							h5 Frequency of Updates:
+							|	2 times Daily
+							br
+
+							h5 Homepage:
+							a(href="http://kernel.org") http://kernel.org
 
 						section#odroid
 							h3 Odroid Packages
 							h5 HTTP:
 							a(href="./odroid/") http://mirror.clarkson.edu/odroid/
 							br
-						
+
 							h5 Frequency of Updates:
 							| Every 2 days
 							br
-						
+
 							h5 Homepage:
 							a(href="http://www.hardkernel.com/main/main.php") http://www.hardkernel.com/main/main.php
 
-						section#blender
-							h3 Blender
+						section#tdf
+							h3 The Document Foundation (Including LibreOffice)
 							h5 HTTP:
-							a(href="./blender/") http://mirror.clarkson.edu/blender/
+							a(href="./tdf/") http://mirror.clarkson.edu/tdf/
 							br
-						
+
+							h5 Rsync:
+							|	rsync://mirror.clarkson.edu/tdf
+							br
+							br
+
+							h5 Upstream Mirror:
+							a(href="http://rsync.documentfoundation.org/") rsync.documentfoundation.org
+							br
+
 							h5 Frequency of Updates:
-							| 4 times daily
+							|	4 times daily
 							br
-						
+
 							h5 Homepage:
-							a(href="https://www.blender.org") https://www.blender.org
+							a(href="http://www.documentfoundation.org/") http://www.documentfoundation.org/
+
+						section#vlc
+							h3 VLC
+							h5 HTTP:
+							a(href="./videolan/") http://mirror.clarkson.edu/videolan/
+							br
+
+							h5 Frequency of Updates:
+							| 12 times daily
+							br
+
+							h5 Homepage:
+							a(href="https://www.videolan.org/index.html") https://www.videolan.org/index.html
 
 		include ../includes/_footer.pug

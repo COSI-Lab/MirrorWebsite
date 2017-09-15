@@ -81,7 +81,7 @@ td {
 }
 
 .graph-options button:hover,
-.selected { 
+.selected {
     font-weight: bold;
 }
 
@@ -117,4 +117,42 @@ td {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
     transition: width 1s ease-in;
+}
+
+/*-----------------------------------*/
+
+.table-content {
+    background-color: #F0F0F0;
+}
+
+.table-content table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+.table-content table tr:first-child {
+    font-weight: bold;
+    font-size: 110%;
+}
+
+.table-content table tr {
+    height: 2em;
+}
+
+.table-content table tr td:first-child {
+    padding-left: 10px;
+}
+
+.table-content table tr td:last-child {
+    padding-left: 10px;
+}
+
+.table-content table tr:nth-child(2n) {
+    background-color: #D8D8D8;
+}
+
+@media (max-width: 768px) {
+    .table-content {
+        display: none;
+    }
 }

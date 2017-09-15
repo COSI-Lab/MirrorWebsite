@@ -1,5 +1,5 @@
 function condenseByte(byteAmt) {
-	
+
 	let res = byteAmt;
 
 	let i = 0;
@@ -34,7 +34,7 @@ function renderDonut(donutElement, fullPerc, txPerc, rxPerc) {
 
 	function setupDonut() {
 		segments[0].setAttribute('stroke-dashoffset', "25");
-		segments[1].setAttribute('stroke-dashoffset', `${25 - (fullPerc * txPerc)}`);	
+		segments[1].setAttribute('stroke-dashoffset', `${25 - (fullPerc * txPerc)}`);
 
 		segments[0].setAttribute('stroke-dasharray', '0 100')
 		segments[1].setAttribute('stroke-dasharray', '0 100');
@@ -69,12 +69,12 @@ function renderRadials() {
 	let yesterdayTotal = yesterday.rx + yesterday.tx;
 	let yesterdayTxPercentage = (yesterday.tx / yesterdayTotal) * 100;
 	let yesterdayRxPercentage = (yesterday.rx / yesterdayTotal) * 100;
-	
+
 	let thisMonth = window.monthData[0];
 	let thisMonthTotal = thisMonth.rx + thisMonth.tx;
 	let thisMonthTxPercentage = (thisMonth.tx / thisMonthTotal) * 100;
 	let thisMonthRxPercentage = (thisMonth.rx / thisMonthTotal) * 100;
-	
+
 	let lastMonth = window.monthData[1];
 	let lastMonthTotal = lastMonth.rx + lastMonth.tx;
 	let lastMonthTxPercentage = (lastMonth.tx / lastMonthTotal) * 100;
@@ -109,14 +109,14 @@ function renderRadials() {
 		lastMonthFullPercentage = (1-(-1*monthDiff)).toFixed(2);
 		thisMonthFullPercentage = 1;
 	}
-				
+
 	renderDonut(thisMonthDonut, thisMonthFullPercentage, thisMonthTxPercentage, thisMonthRxPercentage);
 	renderDonut(lastMonthDonut, lastMonthFullPercentage, lastMonthTxPercentage, lastMonthRxPercentage);
 }
 
 function calcMonthEstimate(currAgg, rate) {
 	const numDays = moment().daysInMonth();
-	
+
 	// rate * 8 (to MB) * 3600 (to hours) * 24 (to day) * numDays (to month) / 1000 (to GB) / 1000 (to TB)
 	let estimate = (rate / 8 * 3600 * 24 * numDays / 1000 / 1000) - currAgg;
 
@@ -242,6 +242,44 @@ function renderHourChart() {
 	});
 }
 
+function renderHourTable() {
+	let tableContainer = document.getElementById('hour-table');
+	let table = createTable(hourData.reverse());
+	tableContainer.appendChild(table);
+}
+
+function renderWeekTable() {
+	let tableContainer = document.getElementById('week-table');
+	let table = createTable(dayData.reverse());
+	tableContainer.appendChild(table);
+}
+
+function renderMonthTable() {
+	let tableContainer = document.getElementById('month-table');
+	let table = createTable(monthData.reverse());
+	tableContainer.appendChild(table);
+}
+
+function createTable(data) {
+	let table = document.createElement('table');
+
+	let headerRow = document.createElement('tr');
+	headerRow.innerHTML = '<td>Time</td><td>Recieved</td><td>Transferred</td><td>Rate</td>';
+	table.appendChild(headerRow);
+
+	for(let item of data) {
+		let conTx = condenseByte(item.tx);
+		let conRx = condenseByte(item.rx);
+		let rate = item.rate.toFixed(2) + 'Mbit/s';
+
+		let itemRow = document.createElement('tr');
+		itemRow.innerHTML = `<td>${item.time}</td><td>${conRx}</td><td>${conTx}</td><td>${rate}</td>`;
+		table.appendChild(itemRow);
+	}
+
+	return table;
+}
+
 function renderPBBar() {
 	let container = document.getElementById('pb-container');
 
@@ -305,4 +343,8 @@ $(document).ready(function() {
 	renderRadials();
 
 	renderPBBar();
+
+	renderHourTable();
+	renderWeekTable();
+	renderMonthTable();
 });

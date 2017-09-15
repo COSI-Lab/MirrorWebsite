@@ -297,8 +297,7 @@ function renderPBBar() {
 
 	let totalTB = parseFloat((total/1000000000000).toFixed(3));
 
-
-	totalSpan.innerHTML = `${1000 - totalTB}TB remaining. Mirror should reach 1PB on ${date}`;
+	totalSpan.innerHTML = `${(1000 - totalTB).toFixed(3)}TB remaining. Mirror should reach 1PB on ${date}`;
 	container.appendChild(totalSpan);
 }
 

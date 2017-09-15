@@ -166,24 +166,37 @@ function renderMonthChart() {
 	});
 }
 
+function calcDayEstimate(currAgg, rate) {
+
+	// rate * 8 (to MB) * 3600 (to hours) * 24 (to day) / 1000 (to GB) / 1000 (to TB)
+	let estimate = (rate / 8 * 3600 * 24 / 1000 / 1000) - currAgg;
+
+	return parseFloat(estimate.toFixed(3));
+}
+
 function renderDayChart() {
 	let times = dayData.map(day => day.time).reverse();
 	let txs = dayData.map(day => day.tx).map(tx => (toTB(tx)).toFixed(3)).reverse();
 	let rxs = dayData.map(day => day.rx).map(rx => (toTB(rx)).toFixed(3)).reverse();
 	let rates = dayData.map(day => day.rate).map(rate => rate.toFixed(2)).reverse();
 
+	let estimates = [];
+	let estimate = calcDayEstimate(parseFloat(rxs[6]) + parseFloat(txs[6]), rates[6]);
+
 	times = ['x', ...times];
 	txs = ['tx', ...txs];
 	rxs = ['rx', ...rxs];
+	estimates = ['estimated additional bandwidth', 0, 0, 0, 0, 0, 0, estimate];
 
 	var weekChart = c3.generate({
 		bindto: '#week-graph',
 		data: {
 			x: 'x',
-			columns: [times, txs, rxs],
+			columns: [times, rxs, txs, estimates],
 			type: 'bar',
-			groups: [['rx', 'tx']],
-			colors: { tx: '#606060', rx: '#94CD27' }
+			groups: [['rx', 'tx', 'estimated additional bandwidth']],
+			colors: { tx: '#606060', rx: '#94CD27', 'estimated additional bandwidth': '#D8D8D8' },
+			order: null
 		},
 		tooltip: {
 			format: {

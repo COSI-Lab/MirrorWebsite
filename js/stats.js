@@ -295,7 +295,10 @@ function renderPBBar() {
 
 	let date = moment().add(daysLeft, 'days').format('MM/DD/YYYY');
 
-	totalSpan.innerHTML = `${(total/1000000000000).toFixed(3)}TB out of 1PB. Mirror should reach 1PB on ${date}`;
+	let totalTB = parseFloat((total/1000000000000).toFixed(3));
+
+
+	totalSpan.innerHTML = `${1000 - totalTB}TB remaining. Mirror should reach 1PB on ${date}`;
 	container.appendChild(totalSpan);
 }
 

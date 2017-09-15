@@ -167,7 +167,6 @@ function renderMonthChart() {
 }
 
 function calcDayEstimate(currAgg, rate) {
-
 	// rate * 8 (to MB) * 3600 (to hours) * 24 (to day) / 1000 (to GB) / 1000 (to TB)
 	let estimate = (rate / 8 * 3600 * 24 / 1000 / 1000) - currAgg;
 

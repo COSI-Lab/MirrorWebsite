@@ -70,6 +70,16 @@ html(lang="en")
 							br
 							h5 Homepage:
 							a(href='http://www.archlinux.org/') http://www.archlinux.org/
+							br
+							br
+							.setup
+								.toggleDiv(onclick="this.parentElement.classList.toggle('open')")
+									h5 Setup
+									.fa.fa-chevron-down
+								.setup-contents
+									p To setup Arch to use our Mirror, open up #[span.file /etc/pacman.d/mirrorlist] and add the following line:
+									pre
+										| Server = http://mirror.clarkson.edu/archlinux/$repo/os/$arch
 
 						.distro#centos
 							h3 CentOS (Official Mirror)
@@ -86,6 +96,7 @@ html(lang="en")
 
 							h5 Homepage:
 							a(href='https://www.centos.org/') https://www.centos.org/
+
 
 						.distro#debian
 							h3 Debian
@@ -107,11 +118,28 @@ html(lang="en")
 							br
 							h5 Upstream Mirrors:
 							a(href="http://mirrors.rit.edu") mirrors.rit.edu
-							|	&amp; 
+							|	&amp;
 							a(href="http://cdimage.debian.org") cdimage.debian.org
 							br
 							h5 Homepage:
 							a(href='http://www.debian.org/') http://www.debian.org/
+							br
+							br
+							.setup
+								.toggleDiv(onclick="this.parentElement.classList.toggle('open')")
+									h5 Setup
+									.fa.fa-chevron-down
+								.setup-contents
+									p To setup Debian to use our Mirror, open up #[span.file /etc/apt/sources.list] and modify it to have the following lines:
+									pre.
+										deb  http://mirror.clarkson.edu/debian stretch main
+										deb-src  http://mirror.clarkson.edu/debian stretch main
+
+										deb  http://mirror.clarkson.edu/debian stretch-updates main
+										deb-src  http://mirror.clarkson.edu/debian stretch-updates main
+
+										deb http://mirror.clarkson.edu/debian-security stretch/updates main
+										deb-src http://mirror.clarkson.edu/debian-security stretch/updates main
 
 						.distro#fedora
 							h3 Fedora
@@ -154,7 +182,7 @@ html(lang="en")
 							br
 							h5 HTTP:
 							a(href='./gentoo/') http://mirror.clarkson.edu/gentoo/
-							|	amp; 
+							|	amp;
 							a(href='./gentoo-portage/') http://mirror.clarkson.edu/gentoo-portage/
 							h5 Rsync:
 							| rsync://mirror.clarkson.edu/gentoo
@@ -207,9 +235,9 @@ html(lang="en")
 							br
 							h5 Upstream Mirror:
 							a(href="http://mirror.umd.edu") mirror.umd.edu
-							|	&amp; 
+							|	&amp;
 							a(href="http://packages.linuxmint.com") packages.linuxmint.com
-							|	&amp; 
+							|	&amp;
 							a(href="http://debian.linuxmint.com") debian.linuxmint.com
 							br
 							h5 Homepage:
@@ -368,7 +396,7 @@ html(lang="en")
 							br
 							h5 Upstream Mirror:
 							a(href="http://us.releases.ubuntu.com") us.release.ubuntu.com
-							|	&amp; 
+							|	&amp;
 							a(href="http://us.archive.ubuntu.com") us.archive.ubuntu.com
 							br
 							h5 Homepage:

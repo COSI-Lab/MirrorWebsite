@@ -313,6 +313,14 @@ function renderPBBar() {
 	container.appendChild(totalSpan);
 }
 
+function renderMonthEstimate() {
+	const numDays = moment().daysInMonth();
+
+	let estimateContainer = document.getElementById('month-estimate');
+
+	estimateContainer.innerHTML = `Estimate bandwidth for ${window.monthData[11].time}: ${(window.monthData[11].rate/8*3600*24*numDays/1000/1000).toFixed(3)}TB`;
+}
+
 var isMobile = false;
 
 $(document).ready(function() {
@@ -361,4 +369,6 @@ $(document).ready(function() {
 	renderHourTable();
 	renderWeekTable();
 	renderMonthTable();
+
+	renderMonthEstimate();
 });

@@ -156,3 +156,10 @@ td {
         display: none;
     }
 }
+
+/*-----------------------------------*/
+
+#month-estimate {
+    text-align: center;
+    padding-top: 20px;
+}

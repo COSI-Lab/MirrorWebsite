@@ -1175,6 +1175,15 @@ hr {
 	margin: 0 auto;
 }
 
+.img-container {
+	height: 200px;
+}
+
+.img-container img {
+	width: 100%;
+	object-fit: contain;
+}
+
 .content .mid {
 	margin-bottom: 15px;
 }

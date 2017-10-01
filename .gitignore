@@ -1,9 +1,6 @@
 .sass-cache/
 node_modules/
 dist/
-js/day.js
-js/month.js
-js/hour.js
 js/updated.js
-js/total.js
+js/statsData.js
 mirrorband.sqlite

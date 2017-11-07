@@ -28,7 +28,7 @@
           var foo = document.getElementById('navstats');
           foo.setAttribute("class", "current");
       };
-
+      
     </script>
   </head>
   <body>
@@ -188,7 +188,6 @@
             </div>
           </div>
         </div>
-        <p id="month-estimate"></p>
         <h2>Path to 1PB</h2>
         <div id="pb-container">
           <div class="progressbar">
@@ -201,7 +200,7 @@
           <div class="graph-content" id="month-graph"></div>
           <div class="table-content" id="month-table"></div>
         </div>
-        <h2>Daily Stats</h2>
+        <h2>Weekly Stats</h2>
         <div class="graph-container">
           <div class="graph-options">Last 7 days</div>
           <div class="graph-content" id="week-graph"></div>
@@ -215,21 +214,24 @@
         </div>
         <h2>Distro Usage</h2>
         <p>View daily bandwidth stats categorized to each repository for distros / software.</p><a href="/distrousage/distrousage_latest.txt">Latest</a><br><a href="/distrousage/archive">Archive</a>
-        <p style="text-align:center; font-size: 80%; margin: 0; padding: 12px;">MirrorBand V1.1.1</p>
+        <p style="text-align:center; font-size: 80%;">MirrorBand V1.1</p>
       </div>
     </div>
     <footer>
       <div class="container">
         <div class="row">
           <div class="col col--4-of-4">
-            <h4><a href="http://cosi.clarkson.edu">Clarkson Open Source Institute</a> | Design by Benjamin Lannon | Mirror Contact: newmanre@clarkson.edu</h4>
+            <h4><a href="http://cosi.clarkson.edu">Clarkson Open Source Institute</a> | Design by Benjamin Lannon | Mirror Contact: newmanre@clarkson.edu | <a href="https://github.com/COSI-Lab/MirrorWebsite">GitHub Repository</a></h4>
           </div>
         </div>
       </div>
     </footer>
     <script src="js/vendors/moment.min.js"></script>
-    <script src="js/statsData.js"></script>
+    <script src="js/month.js"></script>
+    <script src="js/day.js"></script>
+    <script src="js/hour.js"></script>
     <script src="js/updated.js"></script>
+    <script src="js/total.js"></script>
     <script src="js/stats.js"></script>
   </body>
 </html>

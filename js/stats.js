@@ -299,19 +299,28 @@ function renderPBBar() {
 
 	let totalSpan = document.createElement('span');
 
-	document.documentElement.style.setProperty('--pb-width', percentage*100 + '%');
+	document.documentElement.style.setProperty('--pb-width', Math.min(100, percentage*100) + '%');
 
 	let remainingMBytes = (1000000000000000 - total)/1000000;
-	let currDailyRate = monthData[0].rate / 8 * 3600 * 24;
-	let daysLeft = Math.ceil(remainingMBytes / currDailyRate);
 
-	let date = moment().add(daysLeft, 'days').format('MM/DD/YYYY');
+	if(remainingMBytes < 0) {
+		totalSpan.innerHTML = `
+			1PB Reached on January 5, 2018 at 6pm EST`;	
+		document.documentElement.style.setProperty('--pb-background', '#ffc107');
+	} else {
+		document.documentElement.style.setProperty('--pb-background', '#94CD27');
+		let currDailyRate = monthData[0].rate / 8 * 3600 * 24;
+		let daysLeft = Math.ceil(remainingMBytes / currDailyRate);
 
-	let totalTB = parseFloat((total/1000000000000).toFixed(3));
+		let date = moment().add(daysLeft, 'days').format('MM/DD/YYYY');
 
-	totalSpan.innerHTML = `
-		${(1000 - totalTB).toFixed(3)}TB remaining. Mirror should reach 1PB on ${date}, or ${daysLeft} days<br>
-		<small>This is based on this month's avg rate of ${(monthData[0].rate).toFixed(2)} mbit/s</small>`;
+		let totalTB = parseFloat((total/1000000000000).toFixed(3));
+
+		totalSpan.innerHTML = `
+			${(1000 - totalTB).toFixed(3)}TB remaining. Mirror should reach 1PB on ${date}, or ${daysLeft} day${daysLeft > 1 ? "s" : ""}<br>
+			<small>This is based on this month's avg rate of ${(monthData[0].rate).toFixed(2)} mbit/s</small>`;
+	}
+
 	container.appendChild(totalSpan);
 }
 

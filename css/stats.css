@@ -110,12 +110,10 @@ td {
 }
 
 .progressbar--filled {
-    background-color: #94CD27;
+    background-color: var(--pb-background);
     width: var(--pb-width);
     height: 100%;
     border-radius: inherit;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
     transition: width 1s ease-in;
 }
 

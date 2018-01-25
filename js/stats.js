@@ -389,7 +389,7 @@ function createTable(data) {
 		<td>${item.time}</td>
 		<td>${conRx}</td>
 		<td>${conTx}</td>
-		<td>${conTotal}</td
+		<td>${conTotal}</td>
 		<td>${rate}</td>
 	`;
     table.appendChild(itemRow);

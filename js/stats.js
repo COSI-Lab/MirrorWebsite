@@ -450,6 +450,20 @@ function renderMonthEstimate() {
     )}TB`;
 }
 
+function renderAlltimeStats() {
+  let alltimeDiv = document.getElementById("alltimeStats");
+
+  const mirrorInitialDate = moment([2016, 3, 24]);
+  const now = moment();
+  const daysSinceStart = now.diff(mirrorInitialDate, "days");
+
+  alltimeDiv.innerHTML = `
+    <p>It's been ${daysSinceStart} days since the current mirror was initalized and it's pushed out a total of ${condenseByte(
+    window.pb.total
+  )} bandwidth between Rx and Tx.</p>
+  `;
+}
+
 var isMobile = false;
 
 $(document).ready(function() {
@@ -500,4 +514,6 @@ $(document).ready(function() {
   renderMonthTable();
 
   renderMonthEstimate();
+
+  renderAlltimeStats();
 });

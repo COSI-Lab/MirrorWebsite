@@ -1,163 +1,180 @@
 :root {
-    --pb-width: 0%;
+  --pb-width: 0%;
 }
 
 .grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-row-gap: 2vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row-gap: 2vw;
 }
 
 @media (max-width: 512px) {
-    .grid {
-        grid-template-columns: 1fr;
-    }
+  .grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .radial {
-    width: 120px;
-    height: 120px;
+  width: 120px;
+  height: 120px;
 }
 
 @media (max-width: 500px) {
-    .radial {
-        width: 80px;
-        height: 80px;
-    }
+  .radial {
+    width: 80px;
+    height: 80px;
+  }
 }
 
 .grid-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .grid-section .content {
-    padding-top: 0;
-    display: flex;
-    flex-direction: column;
-    margin-left: 40px;
+  padding-top: 0;
+  display: flex;
+  flex-direction: column;
+  margin-left: 40px;
 }
 
 .grid-section .content h4 {
-    margin-bottom: 10px;
-    margin-top: 0;
+  margin-bottom: 10px;
+  margin-top: 0;
 }
 
 .grid-section .content table {
-    min-width: 100px;
+  min-width: 100px;
 }
 
 td {
-    min-width: 25px;
+  min-width: 25px;
 }
 
 .grid-section .content table td:last-child {
-    text-align: right;
+  text-align: right;
 }
 
 /*-----------------------------------*/
 
 .graph-options {
-    background-color: #D8D8D8;
-    display: flex;
-    justify-content: flex-end;
-    padding-right: 5px;
+  background-color: #d8d8d8;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 5px;
 }
 
 .graph-options button {
-    margin: 0 5px;
-    outline: 0;
-    border: 0;
-    background-color: transparent;
+  margin: 0 5px;
+  outline: 0;
+  border: 0;
+  background-color: transparent;
 }
 
 .graph-content {
-    height: 300px;
-    background-color: #F0F0F0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 300px;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .graph-options button:hover,
 .selected {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 @media (max-width: 500px) {
-    .graph-content {
-        height: 500px;
-    }
+  .graph-content {
+    height: 500px;
+  }
 }
 
 .donut-segment {
-    transition: stroke-dasharray 600ms ease-out;
+  transition: stroke-dasharray 600ms ease-out;
 }
 
 .donut-segment,
 .donut-ring {
-    stroke-width: 8
+  stroke-width: 8;
 }
 
 /*-----------------------------------*/
 
 .progressbar {
-    background-color: #E0E0E0;
-    height: 20px;
-    border-radius: 10px;
-    margin-bottom: 10px;
+  background-color: #e0e0e0;
+  height: 20px;
+  border-radius: 10px;
+  margin-bottom: 10px;
 }
 
 .progressbar--filled {
-    background-color: var(--pb-background);
-    width: var(--pb-width);
-    height: 100%;
-    border-radius: inherit;
-    transition: width 1s ease-in;
+  background-color: var(--pb-background);
+  width: var(--pb-width);
+  height: 100%;
+  border-radius: inherit;
+  transition: width 1s ease-in;
 }
 
 /*-----------------------------------*/
 
 .table-content {
-    background-color: #F0F0F0;
+  background-color: #f0f0f0;
 }
 
 .table-content table {
-    width: 100%;
-    table-layout: fixed;
+  width: 100%;
+  table-layout: fixed;
 }
 
 .table-content table tr:first-child {
-    font-weight: bold;
-    font-size: 110%;
+  font-weight: bold;
+  font-size: 110%;
 }
 
 .table-content table tr {
-    height: 2em;
+  height: 2em;
 }
 
 .table-content table tr td:first-child {
-    padding-left: 10px;
+  padding-left: 10px;
 }
 
 .table-content table tr td:last-child {
-    padding-left: 10px;
+  padding-left: 10px;
 }
 
 .table-content table tr:nth-child(2n) {
-    background-color: #D8D8D8;
+  background-color: #d8d8d8;
 }
 
 @media (max-width: 768px) {
-    .table-content {
-        display: none;
-    }
+  .table-content {
+    display: none;
+  }
 }
 
 /*-----------------------------------*/
 
 #month-estimate {
-    text-align: center;
-    padding-top: 20px;
+  text-align: center;
+  padding-top: 20px;
+}
+
+/*-----------------------------------*/
+
+#distusage {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  #distusage {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+#distusage-chart {
+  margin-right: 50px;
 }

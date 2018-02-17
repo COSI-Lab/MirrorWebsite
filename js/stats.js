@@ -464,6 +464,76 @@ function renderAlltimeStats() {
   `;
 }
 
+function renderDistrousageStats() {
+  let distusageDiv = document.getElementById("distusage");
+
+  let duData = window.distrousage;
+
+  duData.sort((a, b) => {
+    if (a.bytes < b.bytes) return 1;
+    if (a.bytes > b.bytes) return -1;
+    return 0;
+  });
+
+  const todayTotal = duData.reduce((s, e) => s + e.bytes, 0);
+
+  console.log(todayTotal);
+
+  duData = duData.map(entry => {
+    return {
+      distro: entry.distro,
+      bytes: entry.bytes,
+      perc: entry.bytes / todayTotal * 100
+    };
+  });
+
+  let duDataViewable = duData.filter(entry => entry.perc >= 1.0);
+
+  const viewTotal = duDataViewable.reduce((s, e) => s + e.bytes, 0);
+  const viewPerc = duDataViewable.reduce((s, e) => s + e.perc, 0.0);
+
+  duDataViewable.push({
+    distro: "other",
+    bytes: todayTotal - viewTotal,
+    perc: 100.0 - viewPerc
+  });
+
+  console.table(duDataViewable);
+
+  var duDataPieChart = c3.generate({
+    bindto: "#distusage-chart",
+    data: {
+      columns: duDataViewable.map(entry => [entry.distro, entry.perc]),
+      type: "pie"
+    },
+    size: {
+      width: 300,
+      height: 400
+    }
+  });
+
+  const duTable = document.getElementById("distusage-table");
+
+  let table = document.createElement("table");
+
+  let headerRow = document.createElement("tr");
+  headerRow.innerHTML = "<td>Number</td><td>Distro</td><td>Bytes</td>";
+  table.appendChild(headerRow);
+
+  for (const i in duDataViewable) {
+    let itemRow = document.createElement("tr");
+    itemRow.innerHTML = `
+    <td>${parseInt(i) + 1}</td>
+    <td>${duDataViewable[i].distro}</td>
+    <td>${condenseByte(duDataViewable[i].bytes)}</td>
+    `;
+
+    table.appendChild(itemRow);
+  }
+
+  duTable.appendChild(table);
+}
+
 var isMobile = false;
 
 $(document).ready(function() {
@@ -516,4 +586,6 @@ $(document).ready(function() {
   renderMonthEstimate();
 
   renderAlltimeStats();
+
+  renderDistrousageStats();
 });

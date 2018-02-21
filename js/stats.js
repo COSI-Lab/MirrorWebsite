@@ -386,11 +386,11 @@ function createTable(data) {
 
     let itemRow = document.createElement("tr");
     itemRow.innerHTML = `
-		<td>${item.time}</td>
-		<td>${conRx}</td>
-		<td>${conTx}</td>
-		<td>${conTotal}</td>
-		<td>${rate}</td>
+      <td>${item.time}</td>
+      <td>${conRx}</td>
+      <td>${conTx}</td>
+      <td>${conTotal}</td>
+      <td>${rate}</td>
 	`;
     table.appendChild(itemRow);
   }
@@ -476,8 +476,6 @@ function renderDistrousageStats() {
   });
 
   const todayTotal = duData.reduce((s, e) => s + e.bytes, 0);
-
-  console.log(todayTotal);
 
   duData = duData.map(entry => {
     return {

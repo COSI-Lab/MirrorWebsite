@@ -1131,6 +1131,7 @@ hr {
 
 .software-section section:last-child {
 	border-bottom: 0;
+	margin-bottom: 0;
 }
 
 .software-contents h2 {
@@ -1224,7 +1225,16 @@ hr {
 }
 
 .row {
-	margin-bottom: 8px;
+	padding-bottom: 8px;
+}
+
+footer .row {
+	padding-bottom: 0;
+}
+
+.content p {
+	margin: 0;
+	padding-bottom: 16px;
 }
 
 .stat-img {

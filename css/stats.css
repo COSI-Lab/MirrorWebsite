@@ -168,13 +168,17 @@ td {
   display: flex;
 }
 
+#distusage-chart {
+  margin-right: 50px;
+}
+
 @media (max-width: 768px) {
   #distusage {
     flex-direction: column;
     align-items: center;
   }
-}
 
-#distusage-chart {
-  margin-right: 50px;
+  #distusage-chart {
+    margin-right: 0px;
+  }
 }

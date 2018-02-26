@@ -188,3 +188,9 @@ td {
   margin-bottom: 20px;
   background: white;
 }
+
+/*-----------------------------------*/
+
+.histStats li {
+  margin-left: 20px;
+}

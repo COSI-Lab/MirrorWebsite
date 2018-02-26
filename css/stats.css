@@ -59,7 +59,6 @@ td {
 /*-----------------------------------*/
 
 .graph-options {
-  background-color: #d8d8d8;
   display: flex;
   justify-content: flex-end;
   padding-right: 5px;
@@ -74,10 +73,10 @@ td {
 
 .graph-content {
   height: 300px;
-  background-color: #f0f0f0;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 20px;
 }
 
 .graph-options button:hover,
@@ -119,10 +118,6 @@ td {
 
 /*-----------------------------------*/
 
-.table-content {
-  background-color: #f0f0f0;
-}
-
 .table-content table {
   width: 100%;
   table-layout: fixed;
@@ -135,6 +130,7 @@ td {
 
 .table-content table tr {
   height: 2em;
+  border-top: 1px solid #b0b0b0;
 }
 
 .table-content table tr td:first-child {
@@ -143,10 +139,6 @@ td {
 
 .table-content table tr td:last-child {
   padding-left: 10px;
-}
-
-.table-content table tr:nth-child(2n) {
-  background-color: #d8d8d8;
 }
 
 @media (max-width: 768px) {
@@ -166,6 +158,7 @@ td {
 
 #distusage {
   display: flex;
+  margin-bottom: 20px;
 }
 
 #distusage-chart {
@@ -181,4 +174,17 @@ td {
   #distusage-chart {
     margin-right: 0px;
   }
+}
+
+/*-----------------------------------*/
+
+.content.stats-content {
+  background: #f0f0f0;
+}
+
+.stats-card {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  padding: 20px;
+  margin-bottom: 20px;
+  background: white;
 }

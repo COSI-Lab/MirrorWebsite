@@ -425,14 +425,12 @@ function renderPBBar() {
   const totalTB = parseFloat((total / 1e12).toFixed(3));
 
   totalSpan.innerHTML = `
-			${(5000 - totalTB).toFixed(
-        3
-      )}TB remaining. Mirror should reach 5PB on ${date}, or ${daysLeft} day${
-    daysLeft > 1 ? "s" : ""
-  }<br>
-			<small>This is based on this month's avg rate of ${monthData[0].rate.toFixed(
-        2
-      )} mbit/s</small>`;
+      ${(5000 - totalTB).toFixed(3)}
+      TB remaining. Mirror should reach 5PB on
+      ${date}, or
+      ${daysLeft} day${daysLeft > 1 ? "s" : ""}<br>
+      <small>This is based on this month's avg rate of
+      ${monthData[0].rate.toFixed(2)} mbit/s</small>`;
 
   container.appendChild(totalSpan);
 }
@@ -442,12 +440,18 @@ function renderMonthEstimate() {
 
   let estimateContainer = document.getElementById("month-estimate");
 
-  estimateContainer.innerHTML = `Estimate bandwidth for ${
-    window.monthData[11].time
-  }:
-		${(window.monthData[11].rate / 8 * 3600 * 24 * numDays / 1000 / 1000).toFixed(
-      3
-    )}TB`;
+  estimateContainer.innerHTML = `
+    Estimate bandwidth for
+    ${window.monthData[11].time}:
+    ${(
+      window.monthData[11].rate /
+      8 *
+      3600 *
+      24 *
+      numDays /
+      1000 /
+      1000
+    ).toFixed(3)}TB`;
 }
 
 function renderAlltimeStats() {
@@ -458,9 +462,10 @@ function renderAlltimeStats() {
   const daysSinceStart = now.diff(mirrorInitialDate, "days");
 
   alltimeDiv.innerHTML = `
-    <p>It's been ${daysSinceStart} days since the current mirror was initalized and it's pushed out a total of ${condenseByte(
-    window.pb.total
-  )} bandwidth between Rx and Tx.</p>
+    <p>
+      It's been ${daysSinceStart} days since the current mirror was initalized and it's pushed out a total of
+      ${condenseByte(window.pb.total)} bandwidth between Rx and Tx.
+    </p>
   `;
 }
 
@@ -495,8 +500,6 @@ function renderDistrousageStats() {
     bytes: todayTotal - viewTotal,
     perc: 100.0 - viewPerc
   });
-
-  console.table(duDataViewable);
 
   var duDataPieChart = c3.generate({
     bindto: "#distusage-chart",

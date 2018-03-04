@@ -1134,6 +1134,12 @@ hr {
 	margin-bottom: 0;
 }
 
+.software-contents,
+.distro-contents {
+	position: sticky;
+	top: 0px;
+}
+
 .software-contents h2 {
 	border-bottom: 1px solid black;
 	text-align: center;

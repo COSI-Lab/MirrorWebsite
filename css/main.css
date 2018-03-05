@@ -1134,10 +1134,12 @@ hr {
 	margin-bottom: 0;
 }
 
-.software-contents,
-.distro-contents {
-	position: sticky;
-	top: 0px;
+@media (min-width: 900px) {
+	.software-contents,
+	.distro-contents {
+		position: sticky;
+		top: 0px;
+	}
 }
 
 .software-contents h2 {

@@ -13,11 +13,11 @@ function condenseByte(byteAmt) {
 }
 
 function toGB(byte) {
-  return byte / 1000000000.0;
+  return byte / 1e9;
 }
 
 function toTB(byte) {
-  return byte / 1000000000000.0;
+  return byte / 1e12;
 }
 
 function renderStatsTable(section, data) {
@@ -151,6 +151,23 @@ function calcMonthEstimate(currAgg, rate) {
   return parseFloat(estimate.toFixed(3));
 }
 
+const axisData = {
+  rotated: isMobile,
+  x: { type: "category" },
+  y: {
+    label: {
+      text: "Bandwidth (In TB)",
+      position: "outer-middle"
+    }
+  }
+};
+
+const chartColors = {
+  tx: "#606060",
+  rx: "#94CD27",
+  "estimated additional bandwidth": "#D8D8D8"
+};
+
 function renderMonthChart() {
   let txs = monthData
     .map(month => month.tx)
@@ -198,11 +215,7 @@ function renderMonthChart() {
       columns: [times, rxs, txs, estimates],
       type: "bar",
       groups: [["rx", "tx", "estimated additional bandwidth"]],
-      colors: {
-        tx: "#606060",
-        rx: "#94CD27",
-        "estimated additional bandwidth": "#D8D8D8"
-      },
+      colors: chartColors,
       order: null
     },
     tooltip: {
@@ -215,16 +228,7 @@ function renderMonthChart() {
         }
       }
     },
-    axis: {
-      rotated: isMobile,
-      x: { type: "category" },
-      y: {
-        label: {
-          text: "Bandwidth (In TB)",
-          position: "outer-middle"
-        }
-      }
-    }
+    axis: axisData
   });
 }
 
@@ -268,11 +272,7 @@ function renderDayChart() {
       columns: [times, rxs, txs, estimates],
       type: "bar",
       groups: [["rx", "tx", "estimated additional bandwidth"]],
-      colors: {
-        tx: "#606060",
-        rx: "#94CD27",
-        "estimated additional bandwidth": "#D8D8D8"
-      },
+      colors: chartColors,
       order: null
     },
     tooltip: {
@@ -285,16 +285,7 @@ function renderDayChart() {
         }
       }
     },
-    axis: {
-      rotated: isMobile,
-      x: { type: "category" },
-      y: {
-        label: {
-          text: "Bandwidth (In TB)",
-          position: "outer-middle"
-        }
-      }
-    }
+    axis: axisData
   });
 }
 
@@ -327,7 +318,7 @@ function renderHourChart() {
       columns: [times, txs, rxs],
       type: "bar",
       groups: [["rx", "tx"]],
-      colors: { tx: "#606060", rx: "#94CD27" }
+      colors: chartColors
     },
     tooltip: {
       format: {
@@ -339,16 +330,7 @@ function renderHourChart() {
         }
       }
     },
-    axis: {
-      rotated: isMobile,
-      x: { type: "category" },
-      y: {
-        label: {
-          text: "Bandwidth (In GB)",
-          position: "outer-middle"
-        }
-      }
-    }
+    axis: axisData
   });
 }
 

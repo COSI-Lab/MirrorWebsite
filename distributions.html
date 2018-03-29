@@ -182,17 +182,12 @@
             <a href="http://www.archlinux.org/">http://www.archlinux.org/</a>
             <br>
             <br>
-            <div class="setup">
-              <div class="toggleDiv" onclick="this.parentElement.classList.toggle('open')">
-                <h5>Setup</h5>
-                <div class="fa fa-chevron-down"></div>
-              </div>
-              <div class="setup-contents">
-                <p>To setup Arch to use our Mirror, open up
-                  <span class="file">/etc/pacman.d/mirrorlist</span> and add the following line:</p>
-                <pre>Server = http://mirror.clarkson.edu/archlinux/$repo/os/$arch</pre>
-              </div>
-            </div>
+            <details>
+              <summary>Setup</summary>
+              <p>To setup Arch to use our Mirror, open up
+                <span class="file">/etc/pacman.d/mirrorlist</span> and add the following line:</p>
+              <pre>Server = http://mirror.clarkson.edu/archlinux/$repo/os/$arch</pre>
+            </details>
           </div>
           <div class="distro" id="centos">
             <h3>CentOS (Official Mirror)</h3>
@@ -232,15 +227,11 @@
             <a href="http://www.debian.org/">http://www.debian.org/</a>
             <br>
             <br>
-            <div class="setup">
-              <div class="toggleDiv" onclick="this.parentElement.classList.toggle('open')">
-                <h5>Setup</h5>
-                <div class="fa fa-chevron-down"></div>
-              </div>
-              <div class="setup-contents">
-                <p>To setup Debian to use our Mirror, open up
-                  <span class="file">/etc/apt/sources.list</span> and modify it to have the following lines:</p>
-                <pre>deb  http://mirror.clarkson.edu/debian stretch main
+            <details>
+              <summary>Setup</summary>
+              <p>To setup Debian to use our Mirror, open up
+                <span class="file">/etc/apt/sources.list</span> and modify it to have the following lines:</p>
+              <pre>deb  http://mirror.clarkson.edu/debian stretch main
 deb-src  http://mirror.clarkson.edu/debian stretch main
 
 deb  http://mirror.clarkson.edu/debian stretch-updates main
@@ -249,8 +240,7 @@ deb-src  http://mirror.clarkson.edu/debian stretch-updates main
 deb http://mirror.clarkson.edu/debian-security stretch/updates main
 deb-src http://mirror.clarkson.edu/debian-security stretch/updates main
 </pre>
-              </div>
-            </div>
+            </details>
           </div>
           <div class="distro" id="fedora">
             <h3>Fedora</h3>

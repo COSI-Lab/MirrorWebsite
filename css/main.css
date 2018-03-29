@@ -1058,25 +1058,17 @@ footer i {
 	padding: 10px 0;
 }
 
-.setup .fa {
-	float: right;
+summary {
+	font-weight: bold;
 }
 
-.setup-contents {
-	display: none;
-}
-
-.setup.open .setup-contents {
-	display: block;
-}
-
-.setup-contents span.file {
+details span.file {
 	background-color: #F0F0F0;
 	padding: 5px;
 	border-radius: 2px;
 }
 
-.setup-contents pre {
+details pre {
 	display: block;
 	background-color: #F0F0F0;
 	border-left: 5px solid slategray;
@@ -1084,7 +1076,7 @@ footer i {
 }
 
 @media (max-width: 768px) {
-	.setup-contents pre {
+	details pre {
 		font-size: 0.6em;
 	}
 }

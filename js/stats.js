@@ -151,17 +151,6 @@ function calcMonthEstimate(currAgg, rate) {
   return parseFloat(estimate.toFixed(3));
 }
 
-const axisData = {
-  rotated: isMobile,
-  x: { type: "category" },
-  y: {
-    label: {
-      text: "Bandwidth (In TB)",
-      position: "outer-middle"
-    }
-  }
-};
-
 const chartColors = {
   tx: "#606060",
   rx: "#94CD27",
@@ -228,7 +217,16 @@ function renderMonthChart() {
         }
       }
     },
-    axis: axisData
+    axis: {
+      rotated: isMobile,
+      x: { type: "category" },
+      y: {
+        label: {
+          text: "Bandwidth (In TB)",
+          position: "outer-middle"
+        }
+      }
+    }
   });
 }
 
@@ -285,7 +283,16 @@ function renderDayChart() {
         }
       }
     },
-    axis: axisData
+    axis: {
+      rotated: isMobile,
+      x: { type: "category" },
+      y: {
+        label: {
+          text: "Bandwidth (In TB)",
+          position: "outer-middle"
+        }
+      }
+    }
   });
 }
 
@@ -330,7 +337,16 @@ function renderHourChart() {
         }
       }
     },
-    axis: axisData
+    axis: {
+      rotated: isMobile,
+      x: { type: "category" },
+      y: {
+        label: {
+          text: "Bandwidth (In TB)",
+          position: "outer-middle"
+        }
+      }
+    }
   });
 }
 

@@ -447,7 +447,7 @@ header img {
 	float: left;
 }
 
-.menu-button {
+#menu-button {
 	color: #fff;
 	display: none;
 	float: right;
@@ -559,7 +559,7 @@ ul {
 	.navlinks {
 		display: none;
 	}
-	.menu-button {
+	#menu-button {
 		display: inline-block;
 	}
 }

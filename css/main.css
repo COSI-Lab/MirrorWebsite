@@ -432,7 +432,6 @@ header .top-header {
 
 header h1 {
 	display: inline;
-	float: left;
 	padding-left: 10px;
 	padding-top: 20px;
 }
@@ -444,7 +443,6 @@ header h1 a {
 
 header img {
 	display: inline;
-	float: left;
 }
 
 #menu-button {

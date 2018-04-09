@@ -342,7 +342,7 @@ function renderHourChart() {
       x: { type: "category" },
       y: {
         label: {
-          text: "Bandwidth (In TB)",
+          text: "Bandwidth (In GB)",
           position: "outer-middle"
         }
       }

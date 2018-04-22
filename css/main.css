@@ -428,12 +428,15 @@ header {
 
 header .top-header {
 	height: 80px;
+	display: flex;
+
 }
 
 header h1 {
 	display: inline;
 	padding-left: 10px;
 	padding-top: 20px;
+	flex: 1;
 }
 
 header h1 a {
@@ -448,7 +451,6 @@ header img {
 #menu-button {
 	color: #fff;
 	display: none;
-	float: right;
 	font-size: 2em;
 	margin: 0.67em 0;
 	padding-right: 15px;

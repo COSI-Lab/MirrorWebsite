@@ -180,6 +180,7 @@ td {
 
 .content.stats-content {
   background: #f0f0f0;
+  width: 100%;
 }
 
 .stats-card {
@@ -193,4 +194,44 @@ td {
 
 .histStats li {
   margin-left: 20px;
+}
+
+/*-----------------------------------*/
+
+#statsgrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 10px;
+  box-sizing: border-box;
+  max-width: 1800px;
+  margin: 0 auto;
+}
+
+#statsgrid > div {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+#statsgrid .stats-card-header {
+  grid-column: 1 / span 2;
+  box-sizing: border-box;
+}
+
+#statsgrid .general-info {
+  grid-column: 1 / span 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+#statsgrid p {
+  grid-column: 1 / span 2;
+}
+
+@media (max-width: 1200px) {
+  #statsgrid,
+  #statsgrid .general-info {
+    display: block;
+  }
 }

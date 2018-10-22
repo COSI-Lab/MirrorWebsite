@@ -87,156 +87,161 @@
     </div>
   </nav>
   <div class="content stats-content">
-    <div class="container">
-      <div class="stats-card">
+    <div id="statsgrid">
+      <div class="stats-card stats-card-header">
         <h1>Statistics</h1>
         <p>Statistics for this iteration of Mirror have been collected since April 24, 2016.</p>
       </div>
-      <div class="stats-card">
-        <h2>General Statistics</h2>
-        <h3 id="updated"></h3>
-        <div class="grid">
-          <div class="grid-section" id="today_stats">
-            <div class="radial">
-              <svg class="donut" width="100" height="100%" viewbox="0 0 42 42">
-                <circle class="donut-hole" cx="21" cy="21" r="15.91549430918952" fill="#fff"></circle>
-                <circle class="donut-ring" cx="21" cy="21" r="15.91549430918952" fill="transparent" stroke="#E0E0E0"></circle>
-                <circle class="donut-segment" cx="21" cy="21" r="15.91549430918952" fill="transparent"></circle>
-                <circle class="donut-segment" cx="21" cy="21" r="15.91549430918952" fill="transparent"></circle>
-              </svg>
+      <div class="general-info">
+        <div class="stats-card">
+          <h2>General Statistics</h2>
+          <h3 id="updated"></h3>
+          <div class="grid">
+            <div class="grid-section" id="today_stats">
+              <div class="radial">
+                <svg class="donut" width="100" height="100%" viewbox="0 0 42 42">
+                  <circle class="donut-hole" cx="21" cy="21" r="15.91549430918952" fill="#fff"></circle>
+                  <circle class="donut-ring" cx="21" cy="21" r="15.91549430918952" fill="transparent" stroke="#E0E0E0"></circle>
+                  <circle class="donut-segment" cx="21" cy="21" r="15.91549430918952" fill="transparent"></circle>
+                  <circle class="donut-segment" cx="21" cy="21" r="15.91549430918952" fill="transparent"></circle>
+                </svg>
+              </div>
+              <div class="content">
+                <h4></h4>
+                <table>
+                  <tr>
+                    <td>rx</td>
+                    <td class="rx"></td>
+                  </tr>
+                  <tr>
+                    <td>tx</td>
+                    <td class="tx"></td>
+                  </tr>
+                  <tr>
+                    <td>=</td>
+                    <td class="total"></td>
+                  </tr>
+                  <tr>
+                    <td class="rate" colspan="2"></td>
+                  </tr>
+                </table>
+              </div>
             </div>
-            <div class="content">
-              <h4></h4>
-              <table>
-                <tr>
-                  <td>rx</td>
-                  <td class="rx"></td>
-                </tr>
-                <tr>
-                  <td>tx</td>
-                  <td class="tx"></td>
-                </tr>
-                <tr>
-                  <td>=</td>
-                  <td class="total"></td>
-                </tr>
-                <tr>
-                  <td class="rate" colspan="2"></td>
-                </tr>
-              </table>
+            <div class="grid-section" id="yesterday_stats">
+              <div class="radial">
+                <svg class="donut" width="100" height="100%" viewbox="0 0 42 42">
+                  <circle class="donut-hole" cx="21" cy="21" r="15.91549430918952" fill="#fff"></circle>
+                  <circle class="donut-ring" cx="21" cy="21" r="15.91549430918952" fill="transparent" stroke="#E0E0E0"></circle>
+                  <circle class="donut-segment" cx="21" cy="21" r="15.91549430918952" fill="transparent"></circle>
+                  <circle class="donut-segment" cx="21" cy="21" r="15.91549430918952" fill="transparent"></circle>
+                </svg>
+              </div>
+              <div class="content">
+                <h4></h4>
+                <table>
+                  <tr>
+                    <td>rx</td>
+                    <td class="rx"></td>
+                  </tr>
+                  <tr>
+                    <td>tx</td>
+                    <td class="tx"></td>
+                  </tr>
+                  <tr>
+                    <td>=</td>
+                    <td class="total"></td>
+                  </tr>
+                  <tr>
+                    <td class="rate" colspan="2"></td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <div class="grid-section" id="month_stats">
+              <div class="radial">
+                <svg class="donut" width="100" height="100%" viewbox="0 0 42 42">
+                  <circle class="donut-hole" cx="21" cy="21" r="15.91549430918952" fill="#fff"></circle>
+                  <circle class="donut-ring" cx="21" cy="21" r="15.91549430918952" fill="transparent" stroke="#E0E0E0"></circle>
+                  <circle class="donut-segment" cx="21" cy="21" r="15.91549430918952" fill="transparent"></circle>
+                  <circle class="donut-segment" cx="21" cy="21" r="15.91549430918952" fill="transparent"></circle>
+                </svg>
+              </div>
+              <div class="content">
+                <h4></h4>
+                <table>
+                  <tr>
+                    <td>rx</td>
+                    <td class="rx"></td>
+                  </tr>
+                  <tr>
+                    <td>tx</td>
+                    <td class="tx"></td>
+                  </tr>
+                  <tr>
+                    <td>=</td>
+                    <td class="total"></td>
+                  </tr>
+                  <tr>
+                    <td class="rate" colspan="2"></td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <div class="grid-section" id="prev_month_stats">
+              <div class="radial">
+                <svg class="donut" width="100" height="100%" viewbox="0 0 42 42">
+                  <circle class="donut-hole" cx="21" cy="21" r="15.91549430918952" fill="#fff"></circle>
+                  <circle class="donut-ring" cx="21" cy="21" r="15.91549430918952" fill="transparent" stroke="#E0E0E0"></circle>
+                  <circle class="donut-segment" cx="21" cy="21" r="15.91549430918952" fill="transparent"></circle>
+                  <circle class="donut-segment" cx="21" cy="21" r="15.91549430918952" fill="transparent"></circle>
+                </svg>
+              </div>
+              <div class="content">
+                <h4></h4>
+                <table>
+                  <tr>
+                    <td>rx</td>
+                    <td class="rx"></td>
+                  </tr>
+                  <tr>
+                    <td>tx</td>
+                    <td class="tx"></td>
+                  </tr>
+                  <tr>
+                    <td>=</td>
+                    <td class="total"></td>
+                  </tr>
+                  <tr>
+                    <td class="rate" colspan="2"></td>
+                  </tr>
+                </table>
+              </div>
             </div>
           </div>
-          <div class="grid-section" id="yesterday_stats">
-            <div class="radial">
-              <svg class="donut" width="100" height="100%" viewbox="0 0 42 42">
-                <circle class="donut-hole" cx="21" cy="21" r="15.91549430918952" fill="#fff"></circle>
-                <circle class="donut-ring" cx="21" cy="21" r="15.91549430918952" fill="transparent" stroke="#E0E0E0"></circle>
-                <circle class="donut-segment" cx="21" cy="21" r="15.91549430918952" fill="transparent"></circle>
-                <circle class="donut-segment" cx="21" cy="21" r="15.91549430918952" fill="transparent"></circle>
-              </svg>
-            </div>
-            <div class="content">
-              <h4></h4>
-              <table>
-                <tr>
-                  <td>rx</td>
-                  <td class="rx"></td>
-                </tr>
-                <tr>
-                  <td>tx</td>
-                  <td class="tx"></td>
-                </tr>
-                <tr>
-                  <td>=</td>
-                  <td class="total"></td>
-                </tr>
-                <tr>
-                  <td class="rate" colspan="2"></td>
-                </tr>
-              </table>
-            </div>
-          </div>
-          <div class="grid-section" id="month_stats">
-            <div class="radial">
-              <svg class="donut" width="100" height="100%" viewbox="0 0 42 42">
-                <circle class="donut-hole" cx="21" cy="21" r="15.91549430918952" fill="#fff"></circle>
-                <circle class="donut-ring" cx="21" cy="21" r="15.91549430918952" fill="transparent" stroke="#E0E0E0"></circle>
-                <circle class="donut-segment" cx="21" cy="21" r="15.91549430918952" fill="transparent"></circle>
-                <circle class="donut-segment" cx="21" cy="21" r="15.91549430918952" fill="transparent"></circle>
-              </svg>
-            </div>
-            <div class="content">
-              <h4></h4>
-              <table>
-                <tr>
-                  <td>rx</td>
-                  <td class="rx"></td>
-                </tr>
-                <tr>
-                  <td>tx</td>
-                  <td class="tx"></td>
-                </tr>
-                <tr>
-                  <td>=</td>
-                  <td class="total"></td>
-                </tr>
-                <tr>
-                  <td class="rate" colspan="2"></td>
-                </tr>
-              </table>
-            </div>
-          </div>
-          <div class="grid-section" id="prev_month_stats">
-            <div class="radial">
-              <svg class="donut" width="100" height="100%" viewbox="0 0 42 42">
-                <circle class="donut-hole" cx="21" cy="21" r="15.91549430918952" fill="#fff"></circle>
-                <circle class="donut-ring" cx="21" cy="21" r="15.91549430918952" fill="transparent" stroke="#E0E0E0"></circle>
-                <circle class="donut-segment" cx="21" cy="21" r="15.91549430918952" fill="transparent"></circle>
-                <circle class="donut-segment" cx="21" cy="21" r="15.91549430918952" fill="transparent"></circle>
-              </svg>
-            </div>
-            <div class="content">
-              <h4></h4>
-              <table>
-                <tr>
-                  <td>rx</td>
-                  <td class="rx"></td>
-                </tr>
-                <tr>
-                  <td>tx</td>
-                  <td class="tx"></td>
-                </tr>
-                <tr>
-                  <td>=</td>
-                  <td class="total"></td>
-                </tr>
-                <tr>
-                  <td class="rate" colspan="2"></td>
-                </tr>
-              </table>
-            </div>
-          </div>
+          <div id="month-estimate"></div>
         </div>
-        <div id="month-estimate"></div>
-      </div>
-      <div class="stats-card">
-        <h2>All-time stats</h2>
-        <div id="alltimeStats"></div>
-      </div>
-      <div class="stats-card">
-        <h2>Historical Stats</h2>
-        <div class="histStats">
-          <li>Clarkson Mirror Started: October 2002</li>
-          <li>Current Mirror booted up for first time: April 2016</li>
-          <li>1.0PB reached on New Mirror: January 5, 2018 at 6pm EST</li>
-        </div>
-      </div>
-      <div class="stats-card">
-        <h2>Path to 5PB</h2>
-        <div id="pb-container">
-          <div class="progressbar">
-            <div class="progressbar--filled"></div>
+        <div>
+          <div class="stats-card">
+            <h2>All-time stats</h2>
+            <div id="alltimeStats"></div>
           </div>
+          <div class="stats-card">
+            <h2>Historical Stats</h2>
+            <div class="histStats">
+              <li>Clarkson Mirror Started: October 2002</li>
+              <li>Current Mirror booted up for first time: April 2016</li>
+              <li>1.0PB reached on New Mirror: January 5, 2018 at 6pm EST</li>
+            </div>
+          </div>
+          <div class="stats-card">
+            <h2>Path to 5PB</h2>
+            <div id="pb-container">
+              <div class="progressbar">
+                <div class="progressbar--filled"></div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
       <div class="stats-card">
@@ -280,7 +285,8 @@
       <div class="row">
         <div class="col col--4-of-4">
           <h4>
-            <a href="http://cosi.clarkson.edu">Clarkson Open Source Institute</a> | Design by Benjamin Lannon | Mirror Contact: newmanre@clarkson.edu |
+            <a href="http://cosi.clarkson.edu">Clarkson Open Source Institute</a> | Design by Benjamin Lannon | Mirror
+            Contact: newmanre@clarkson.edu |
             <a href="https://github.com/COSI-Lab/MirrorWebsite">GitHub Repository</a>
           </h4>
         </div>

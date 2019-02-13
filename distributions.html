@@ -96,6 +96,9 @@
               <a href="#arch">Arch Linux</a>
             </li>
             <li>
+              <a href="#arch32">Arch Linux 32</a>
+            </li>
+            <li>
               <a href="#artix">Artix Linux</a>
             </li>
             <li>
@@ -147,6 +150,9 @@
               <a href="#slitaz">SliTaz Linux</a>
             </li>
             <li>
+              <a href="#templeos">Temple OS</a>
+            </li>
+            <li>
               <a href="#ubuntu">Ubuntu</a>
             </li>
             <li>
@@ -175,8 +181,6 @@
             <h5>HTTP:</h5>
             <a href="./archlinux/">http://mirror.clarkson.edu/archlinux/</a>
             <br>
-            <h5>Rsync:</h5>rsync://mirror.clarkson.edu/archlinux
-            <br>
             <br>
             <h5>Upstream Mirror:</h5>
             <a href="http://mirrors.rit.edu">mirrors.rit.edu</a>
@@ -191,6 +195,34 @@
                 <span class="file">/etc/pacman.d/mirrorlist</span> and add the following line:</p>
               <pre>Server = http://mirror.clarkson.edu/archlinux/$repo/os/$arch</pre>
             </details>
+          </div>
+          <div class="distro" id="arch32">
+            <h3>Arch Linux 32</h3>
+            <h5>ISOs:</h5>
+            <a href="./archlinux32/archisos/">http://mirror.clarkson.edu/archlinux32/archisos/</a>
+            <br>
+            <h5>HTTP:</h5>
+            <a href="./archlinux32/">http://mirror.clarkson.edu/archlinux32/</a>
+            <br>
+            <br>
+            <h5>Upstream Mirror:</h5>
+            <a href="http://mirror.archlinux32.org">mirror.archlinux32.org</a>
+            <br>
+            <h5>Homepage:</h5>
+            <a href="http://www.archlinux32.org/">http://www.archlinux32.org/</a>
+            <!--
+
+            TODO: Someone investigate if this is correct or not.
+
+            <br>
+            <br>
+            <details>
+              <summary>Setup</summary>
+              <p>To setup ArchLinux32 to use our Mirror, open up
+                <span class="file">/etc/pacman.d/mirrorlist</span> and add the following line:</p>
+              <pre>Server = http://mirror.clarkson.edu/archlinux32/$repo/os/$arch</pre>
+            </details>
+            -->
           </div>
           <div class="distro" id="artix">
             <h3>Artix Linux (Official Mirror)</h3>
@@ -468,6 +500,15 @@ deb-src http://mirror.clarkson.edu/debian-security stretch/updates main
             <h5>Homepage:</h5>
             <a href="http://www.slitaz.org/en/">http://www.slitaz.org/en/</a>
           </div>
+          <div class="distro" id="templeos">
+            <h3>TempleOS</h3>
+            <h5>HTTP:</h5>
+            <a href="./templeos/">http://mirror.clarkson.edu/templeos/</a>
+            <br>
+            <br>
+            <h5>Homepage:</h5>
+            <a href="http://templeos.org/">http://templeos.org/</a>
+          </div>
           <div class="distro" id="ubuntu">
             <h3>Ubuntu (Official Mirror)</h3>
             <h5>ISOs:</h5>
@@ -518,5 +559,4 @@ deb-src http://mirror.clarkson.edu/debian-security stretch/updates main
     </div>
   </footer>
 </body>
-
 </html>

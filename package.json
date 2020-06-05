@@ -2,11 +2,11 @@
   "name": "mirror2016",
   "version": "1.0.0",
   "dependencies": {
-    "gulp": "^3.9.1",
-    "gulp-pug": "1.2.x",
-    "gulp-sass": "2.1.x",
-    "gulp-scss-lint": "^0.4.0",
-    "gulp-sourcemaps": "^1.6.0",
-    "pug": "^2.0.0-rc.3"
+    "gulp": "^4.0.2",
+    "gulp-pug": "4.0.1",
+    "gulp-sass": "4.1.0",
+    "gulp-scss-lint": "^1.0.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "pug": "^3.0.0"
   }
 }

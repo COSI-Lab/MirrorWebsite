@@ -21,6 +21,8 @@ html(lang="en")
 						ul
 							li: a(href='#alpine') Alpine Linux
 							li: a(href='#arch') Arch Linux
+							li: a(href='#arch32') Arch Linux 32
+							li: a(href='#artix') Artix Linux
 							li: a(href='#centos') CentOS
 							li: a(href='#debian') Debian
 							li: a(href='#fedora') Fedora
@@ -80,6 +82,39 @@ html(lang="en")
 									p To setup Arch to use our Mirror, open up #[span.file /etc/pacman.d/mirrorlist] and add the following line:
 									pre
 										| Server = http://mirror.clarkson.edu/archlinux/$repo/os/$arch
+						.distro#arch32
+							h3 Arch Linux
+							h5 ISOs:
+							a(href='./archlinux32/iso/latest/') http://mirror.clarkson.edu/archlinux32/iso/latest/
+							br
+							h5 HTTP:
+							a(href='./archlinux32/') http://mirror.clarkson.edu/archlinux32/
+							br
+							h5 Rsync:
+							| rsync://mirror.clarkson.edu/archlinux32
+							br
+							br
+							h5 Upstream Mirror:
+							a(href="http://mirrors.rit.edu") mirrors.rit.edu
+							br
+							h5 Homepage:
+							a(href='http://www.archlinux32.org/') http://www.archlinux32.org/
+
+						.distro#artix
+							h3 Artix Linux (Official Mirror)
+							h5 HTTP:
+							a(href='./artix-linux/') http://mirror.clarkson.edu/artix-linux/
+							br
+							h5 Rsync:
+							| rsync://mirror.clarkson.edu/artix-linux
+							br
+							br
+							h5 Upstream Mirror:
+							a(href="http://mirror1.artixlinux.org") mirror1.artixlinux.org
+							br
+
+							h5 Homepage:
+							a(href='https://artixlinux.org/') https://artixlinux.org/
 
 						.distro#centos
 							h3 CentOS (Official Mirror)

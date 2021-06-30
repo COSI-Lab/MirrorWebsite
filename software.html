@@ -1,376 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <title>Clarkson University Mirror - Software</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="css/main.css">
-  <script src="js/vendors/jquery-2.1.4.min.js"></script>
-  <script src="js/main.js"></script>
-  <meta name="theme-color" content="#035245">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta charset="utf-8">
-  <meta name="description" content="The website for Clarkson University's Software Mirror">
-  <script src="js/cosi-nav.js" defer></script>
-  <style>
-    :root {
-      --background-color: rgba(255, 255, 255, 0.2);
-      --text-color: white;
-    }
-  </style>
-  <script>
-    window.onload = function () {
-      var foo = document.getElementById('navsoft');
-      foo.setAttribute("class", "current");
-    };
-
-  </script>
-</head>
-
-<body>
-  <cosi-nav></cosi-nav>
-  <header>
-    <div class="container top-header">
-      <a href="http://clarkson.edu/">
-        <img src="img/clarksonlogo.jpg">
-      </a>
-      <h1 class="left">
-        <a href="index.html">Mirror</a>
-      </h1>
-      <i id="menu-button" class="fa fa-bars"></i>
-    </div>
-    <nav id="navdesktop">
+  <head>
+    <title>Clarkson University Mirror - Software</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="js/vendors/jquery-2.1.4.min.js"></script>
+    <script src="js/main.js"></script>
+    <meta name="theme-color" content="#035245">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="description" content="The website for Clarkson University's Software Mirror">
+    <link rel="stylesheet" href="https://dubsdot.cosi.clarkson.edu/cosi-nav.css">
+    <script src="js/fetch.js"></script>
+    <script src="js/cosi-nav.js" defer></script>
+    <style>
+      :root {
+          --background-color: rgba(255,255,255,0.2);
+          --text-color: white;
+      }
+    </style>
+    <script>
+      window.onload = function() {
+      	var foo = document.getElementById('navsoft');
+      	foo.setAttribute("class", "current");
+      };
+      
+    </script>
+  </head>
+  <body>
+    <cosi-nav></cosi-nav>
+    <header>
+      <div class="container top-header"><a href="http://clarkson.edu/"><img src="img/clarksonlogo.jpg"></a>
+        <h1 class="left"><a href="index.html">Mirror</a></h1><i class="fa fa-bars menu-button"></i>
+      </div>
+      <nav id="navdesktop">
+        <div class="container">
+              <ul>
+                <li id="navhome"><a href="index.html">Mirror Home</a></li>
+                <li id="navdistributions"><a href="distributions.html">Distributions</a></li>
+                <li id="navsoft"><a href="software.html">Software</a></li>
+                <li id="navstats"><a href="stats.html">Statistics</a></li>
+                <li id="navhistory"><a href="history.html">History & Sponsors</a></li>
+              </ul>
+        </div>
+      </nav>
+    </header>
+    <nav id="navmobile">
       <div class="container">
-        <ul>
-          <li id="navhome">
-            <a href="index.html">Mirror Home</a>
-          </li>
-          <li id="navdistributions">
-            <a href="distributions.html">Distributions</a>
-          </li>
-          <li id="navsoft">
-            <a href="software.html">Software</a>
-          </li>
-          <li id="navstats">
-            <a href="stats.html">Statistics</a>
-          </li>
-          <li id="navhistory">
-            <a href="history.html">History & Sponsors</a>
-          </li>
-        </ul>
+            <ul>
+              <li id="navhome"><a href="index.html">Mirror Home</a></li>
+              <li id="navdistributions"><a href="distributions.html">Distributions</a></li>
+              <li id="navsoft"><a href="software.html">Software</a></li>
+              <li id="navstats"><a href="stats.html">Statistics</a></li>
+              <li id="navhistory"><a href="history.html">History & Sponsors</a></li>
+            </ul>
       </div>
     </nav>
-  </header>
-  <nav id="navmobile">
-    <div class="container">
-      <ul>
-        <li id="navhome">
-          <a href="index.html">Mirror Home</a>
-        </li>
-        <li id="navdistributions">
-          <a href="distributions.html">Distributions</a>
-        </li>
-        <li id="navsoft">
-          <a href="software.html">Software</a>
-        </li>
-        <li id="navstats">
-          <a href="stats.html">Statistics</a>
-        </li>
-        <li id="navhistory">
-          <a href="history.html">History & Sponsors</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-  <div class="content">
-    <div class="container">
-      <h1>Other Software</h1>
-      <div class="row">
-        <div class="col col--1-of-4 software-contents">
-          <h2>Contents</h2>
-          <ul>
-            <li>
-              <a href="#blender">Blender</a>
-            </li>
-            <li>
-              <a href="#clonezilla">Clonezilla</a>
-            </li>
-            <li>
-              <a href="#cpan">CPAN</a>
-            </li>
-            <li>
-              <a href="#cran">CRAN</a>
-            </li>
-            <li>
-              <a href="#ctan">CTAN</a>
-            </li>
-            <li>
-              <a href="#cygwin">Cygwin</a>
-            </li>
-            <li>
-              <a href="#epel">EPEL</a>
-            </li>
-            <li>
-              <a href="#gnu">GNU Software</a>
-            </li>
-            <li>
-              <a href="#gparted">Gparted</a>
-            </li>
-            <li>
-              <a href="#isabelle">Isabelle</a>
-            </li>
-            <li>
-              <a href="#tdf">LibreOffice</a>
-            </li>
-            <li>
-              <a href="#linux">Linux</a>
-            </li>
-            <li>
-              <a href="#msdos">MS-DOS</a>
-            </li>
-            <li>
-              <a href="#msys2">MSYS2</a>
-            </li>
-            <li>
-              <a href="#odroid">Odroid Packages</a>
-            </li>
-            <li>
-              <a href="#ros">ROS</a>
-            </li>
-            <li>
-              <a href="#temple-os">Temple-OS</a>
-            </li>
-            <li>
-              <a href="#vlc">VLC</a>
-            </li>
-          </ul>
-        </div>
-        <div class="col col--3-of-4 software-section">
-          <section id="blender">
-            <h3>Blender (Official Mirror)</h3>
-            <h5>HTTP:</h5>
-            <a href="./blender/">http://mirror.clarkson.edu/blender/</a>
-            <br>
-            <h5>Frequency of Updates:</h5>4 times daily
-            <br>
-            <h5>Homepage:</h5>
-            <a href="https://www.blender.org">https://www.blender.org</a>
-          </section>
-          <section id="clonezilla">
-            <h3>Clonezilla</h3>
-            <h5>HTTP:</h5>
-            <a href="./clonezilla/">http://mirror.clarkson.edu/clonezilla/</a>
-            <br>
-            <h5>Frequency of Updates</h5>1 time daily
-            <br>
-            <h5>Homepage:</h5>
-            <a href="http://clonezilla.org/">http://clonezilla.org/</a>
-          </section>
-          <section id="cpan">
-            <h3>CPAN</h3>
-            <h5>HTTP:</h5>
-            <a href="./cpan/">http://mirror.clarkson.edu/cpan/</a>
-            <br>
-            <h5>Frequency of Updates</h5>2 times Daily
-            <br>
-            <h5>Homepage:</h5>
-            <a href="http://cpan.org/">http://www.cpan.org/</a>
-          </section>
-          <section id="cran">
-            <h3>CRAN</h3>
-            <h5>HTTP:</h5>
-            <a href="./cran/">http://mirror.clarkson.edu/cran/</a>
-            <br>
-            <h5>Frequency of Updates</h5>2 times Daily
-            <br>
-            <h5>Homepage:</h5>
-            <a href="http://cran.r-project.org/">http://cran.r-project.org/</a>
-          </section>
-          <section id="ctan">
-            <h3>CTAN</h3>
-            <h5>HTTP:</h5>
-            <a href="./ctan/">http://mirror.clarkson.edu/ctan/</a>
-            <br>
-            <h5>Frequency of Updates</h5>2 times Daily
-            <br>
-            <h5>Homepage:</h5>
-            <a href="http://ctan.org/">http://www.ctan.org/</a>
-          </section>
-          <section id="cygwin">
-            <h3>Cygwin (Official Mirror)</h3>
-            <h5>HTTP:</h5>
-            <a href="./cygwin/">http://mirror.clarkson.edu/cygwin/</a>
-            <br>
-            <h5>Frequency of Updates:</h5>2 times Daily
-            <br>
-            <h5>Homepage:</h5>
-            <a href="https://www.cygwin.com/">https://www.cygwin.com/</a>
-          </section>
-          <section id="epel">
-            <h3>Extra Packages for Enterprise Linux (EPEL)</h3>
-            <h5>HTTP:</h5>
-            <a href="./fedora-epel/">http://mirror.clarkson.edu/fedora-epel/</a>
-            <br>
-            <h5>Rsync:</h5>rsync://mirror.clarkson.edu/fedora-epel/
-            <br>
-            <br>
-            <h5>Upstream Mirror:</h5>
-            <a href="http://mirrors1.kernel.org">http://mirrors1.kernel.org</a>
-            <br>
-            <h5>Frequency of Updates:</h5>6 times Daily
-            <br>
-            <h5>Homepage:</h5>
-            <a href="http://fedoraproject.org/wiki/EPEL">http://fedoraproject.org/wiki/EPEL</a>
-          </section>
-          <section id="gnu">
-            <h3>GNU Software (Official Mirror)</h3>
-            <h5>HTTP:</h5>
-            <a href="./gnu/">http://mirror.clarkson.edu/gnu/</a>
-            <br>
-            <h5>Rsync:</h5> rsync://mirror.clarkson.edu/gnu
-            <br>
-            <br>
-            <h5>Upstream Mirror:</h5>
-            <a href="http://mirrors.kernel.org/">http://mirrors.kernel.org/</a>
-            <br>
-            <h5>Frequency of Updates:</h5> 2 times Daily
-            <br>
-            <h5>Homepage:</h5>
-            <a href="http://directory.fsf.org/GNU/">http://directory.fsf.org/GNU/</a>
-          </section>
-          <section id="gparted">
-            <h3>Gparted</h3>
-            <h5>HTTP:</h5>
-            <a href="./gparted/">http://mirror.clarkson.edu/gparted</a>
-            <br>
-            <br>
-            <h5>Upstream Mirror:</h5>
-            <a href="https://sourceforge.net/projects/gparted/files/">https://sourceforge.net/projects/gparted/files/</a>
-            <br>
-            <h5>Homepage:</h5>
-            <a href="http://gparted.org/">http://gparted.org/</a>
-          </section>
-          <section id="isabelle">
-            <h3>Isabelle (Official Mirror)</h3>
-            <h5>HTTP:</h5>
-            <a href="./isabelle/">http://mirror.clarkson.edu/isabelle/</a>
-            <br>
-            <h5>Frequency of Updates:</h5> 2 times Daily
-            <br>
-            <h5>Homepage:</h5>
-            <a href="https://isabelle.in.tum.de/">https://isabelle.in.tum.de/</a>
-          </section>
-          <section id="tdf">
-            <h3>LibreOffice (Official Mirror)</h3>
-            <h5>HTTP:</h5>
-            <a href="./tdf/">http://mirror.clarkson.edu/tdf/</a>
-            <br>
-            <h5>Rsync:</h5> rsync://mirror.clarkson.edu/tdf
-            <br>
-            <br>
-            <h5>Upstream Mirror:</h5>
-            <a href="http://rsync.documentfoundation.org/">rsync.documentfoundation.org</a>
-            <br>
-            <h5>Frequency of Updates:</h5> 4 times daily
-            <br>
-            <h5>Homepage:</h5>
-            <a href="http://www.documentfoundation.org/">http://www.documentfoundation.org/</a>
-          </section>
-          <section id="linux">
-            <h3>Linux (Including Kernel Source)</h3>
-            <h5>HTTP:</h5>
-            <a href="./linux/">http://mirror.clarkson.edu/linux/</a>
-            <br>
-            <h5>Rsync:</h5> rsync://mirror.clarkson.edu/linux/
-            <br>
-            <br>
-            <h5>Upstream Mirror:</h5>
-            <a href="http://rsync.kernel.org/">http://rsync.kernel.org/</a>
-            <br>
-            <h5>Frequency of Updates:</h5> 2 times Daily
-            <br>
-            <h5>Homepage:</h5>
-            <a href="http://kernel.org">http://kernel.org</a>
-          </section>
-          <section id="msdos">
-            <h3>MS-DOS</h3>
-            <h5>HTTP:</h5>
-            <a href="./MS-DOS/">http://mirror.clarkson.edu/MS-DOS/</a>
-            <br>
-            <h5>Homepage:</h5>
-            <a href="https://github.com/Microsoft/MS-DOS">https://github.com/Microsoft/MS-DOS</a>
-          </section>
-          <section id="msdos">
-            <h3>MSYS2</h3>
-            <h5>HTTP:</h5>
-            <a href="./msys2/">http://mirror.clarkson.edu/msys2/</a>
-            <br>
-            <h5>Rsync:</h5> rsync://mirror.clarkson.edu/msys2
-            <br>
-            <br>
-            <h5>Upstream Mirror:</h5>
-            <a href="http://repo.msys2.org">http://repo.msys2.org</a>
-            <br>
-            <h5>Frequency of Updates:</h5> 1 time daily
-            <br>
-            <h5>Homepage:</h5>
-            <a href="https://www.msys2.org/">https://www.msys2.org/</a>
-          </section>
-          <section id="odroid">
-            <h3>Odroid Packages</h3>
-            <h5>HTTP:</h5>
-            <a href="./odroid/">http://mirror.clarkson.edu/odroid/</a>
-            <br>
-            <h5>Frequency of Updates:</h5>Every 2 days
-            <br>
-            <h5>Homepage:</h5>
-            <a href="http://www.hardkernel.com/main/main.php">http://www.hardkernel.com/main/main.php</a>
-          </section>
-          <section id="ros">
-            <h3>ROS (Official Mirror)</h3>
-            <h5>HTTP:</h5>
-            <a href="./ros/">http://mirror.clarkson.edu/ros/</a>
-            <br>
-            <h5>Frequency of Updates:</h5>4 times daily
-            <br>
-            <h5>Homepage:</h5>
-            <a href="http://www.ros.org/">http://www.ros.org/</a>
-          </section>
-          <section id="templeos">
-            <h3>TempleOS</h3>
-            <h5>HTTP:</h5>
-            <a href="./templeos/">http://mirror.clarkson.edu/templeos/</a>
-            <br>
-            <br>
-            <h5>Homepage:</h5>
-            <a href="http://templeos.org/">http://templeos.org/</a>
-          </section>
-          <section id="vlc">
-            <h3>VLC (Offical Mirror)</h3>
-            <h5>HTTP:</h5>
-            <a href="./videolan/">http://mirror.clarkson.edu/videolan/</a>
-            <br>
-            <h5>Frequency of Updates:</h5>12 times daily
-            <br>
-            <h5>Homepage:</h5>
-            <a href="https://www.videolan.org/index.html">https://www.videolan.org/index.html</a>
-          </section>
+    <div class="content">
+      <div class="container">
+        <h1>Other Software</h1>
+        <div class="row">
+          <div class="col col--1-of-4 software-contents">
+            <h2>Contents</h2>
+            <ul>
+              <li><a href="#blender">Blender</a></li>
+              <li><a href="#clonezilla">Clonezilla</a></li>
+              <li><a href="#cpan">CPAN</a></li>
+              <li><a href="#cran">CRAN</a></li>
+              <li><a href="#ctan">CTAN</a></li>
+              <li><a href="#cygwin">Cygwin</a></li>
+              <li><a href="#epel">EPEL</a></li>
+              <li><a href="#gnu">GNU Software</a></li>
+              <li><a href="#gparted">Gparted</a></li>
+              <li><a href="#isabelle">Isabelle</a></li>
+              <li><a href="#tdf">LibreOffice</a></li>
+              <li><a href="#linux">Linux</a></li>
+              <li><a href="#msdos">MS-DOS</a></li>
+              <li><a href="#msys2">MSYS2</a></li>
+              <li><a href="#odroid">Odroid Packages</a></li>
+              <li><a href="#ros">ROS</a></li>
+              <li><a href="#temple-os">Temple-OS</a></li>
+              <li><a href="#vlc">VLC</a></li>
+            </ul>
+          </div>
+          <div class="col col--3-of-4 software-section">
+            <section id="blender">
+              <h3>Blender</h3>
+              <h5>HTTP:</h5><a href="./blender/">http://mirror.clarkson.edu/blender/</a><br>
+              <h5>Frequency of Updates:</h5>4 times daily<br>
+              <h5>Homepage:</h5><a href="https://www.blender.org">https://www.blender.org</a>
+            </section>
+            <section id="clonezilla">
+              <h3>Clonezilla</h3>
+              <h5>HTTP:</h5><a href="./clonezilla/">http://mirror.clarkson.edu/clonezilla/</a><br>
+              <h5>Frequency of Updates</h5>1 time daily<br>
+              <h5>Homepage:</h5><a href="http://clonezilla.org/">http://clonezilla.org/</a>
+            </section>
+            <section id="cpan">
+              <h3>CPAN</h3>
+              <h5>HTTP:</h5><a href="./cpan/">http://mirror.clarkson.edu/cpan/</a><br>
+              <h5>Frequency of Updates</h5>2 times Daily<br>
+              <h5>Homepage:</h5><a href="http://cpan.org/">http://www.cpan.org/</a>
+            </section>
+            <section id="cran">
+              <h3>CRAN</h3>
+              <h5>HTTP:</h5><a href="./cran/">http://mirror.clarkson.edu/cran/</a><br>
+              <h5>Frequency of Updates</h5>2 times Daily<br>
+              <h5>Homepage:</h5><a href="http://cran.r-project.org/">http://cran.r-project.org/</a>
+            </section>
+            <section id="ctan">
+              <h3>CTAN</h3>
+              <h5>HTTP:</h5><a href="./ctan/">http://mirror.clarkson.edu/ctan/</a><br>
+              <h5>Frequency of Updates</h5>2 times Daily<br>
+              <h5>Homepage:</h5><a href="http://ctan.org/">http://www.ctan.org/</a>
+            </section>
+            <section id="cygwin">
+              <h3>Cygwin</h3>
+              <h5>HTTP:</h5><a href="./cygwin/">http://mirror.clarkson.edu/cygwin/</a><br>
+              <h5>Frequency of Updates:</h5>2 times Daily<br>
+              <h5>Homepage:</h5><a href="https://www.cygwin.com/">https://www.cygwin.com/</a>
+            </section>
+            <section id="epel">
+              <h3>Extra Packages for Enterprise Linux (EPEL)</h3>
+              <h5>HTTP:</h5><a href="./fedora-epel/">http://mirror.clarkson.edu/fedora-epel/</a><br>
+              <h5>Rsync:</h5>rsync://mirror.clarkson.edu/fedora-epel/<br><br>
+              <h5>Upstream Mirror:</h5><a href="http://mirrors1.kernel.org">http://mirrors1.kernel.org</a><br>
+              <h5>Frequency of Updates:</h5>6 times Daily<br>
+              <h5>Homepage:</h5><a href="http://fedoraproject.org/wiki/EPEL">http://fedoraproject.org/wiki/EPEL</a>
+            </section>
+            <section id="gnu">
+              <h3>GNU Software (Official Mirror)</h3>
+              <h5>HTTP:</h5><a href="./gnu/">http://mirror.clarkson.edu/gnu/</a><br>
+              <h5>Rsync:</h5>	rsync://mirror.clarkson.edu/gnu<br><br>
+              <h5>Upstream Mirror:</h5><a href="http://mirrors.kernel.org/">http://mirrors.kernel.org/</a><br>
+              <h5>Frequency of Updates:</h5>	2 times Daily<br>
+              <h5>Homepage:</h5><a href="http://directory.fsf.org/GNU/">http://directory.fsf.org/GNU/</a>
+            </section>
+            <section id="gparted">
+              <h3>Gparted</h3>
+              <h5>HTTP:</h5><a href="./gparted/">http://mirror.clarkson.edu/gparted</a><br><br>
+              <h5>Upstream Mirror:</h5><a href="https://sourceforge.net/projects/gparted/files/">https://sourceforge.net/projects/gparted/files/</a><br>
+              <h5>Homepage:</h5><a href="http://gparted.org/">http://gparted.org/</a>
+            </section>
+            <section id="isabelle">
+              <h3>Isabelle (Official Mirror)</h3>
+              <h5>HTTP:</h5><a href="./isabelle/">http://mirror.clarkson.edu/isabelle/</a><br>
+              <h5>Frequency of Updates:</h5>	2 times Daily<br>
+              <h5>Homepage:</h5><a href="https://isabelle.in.tum.de/">https://isabelle.in.tum.de/</a>
+            </section>
+            <section id="tdf">
+              <h3>LibreOffice (Official Mirror)</h3>
+              <h5>HTTP:</h5><a href="./tdf/">http://mirror.clarkson.edu/tdf/</a><br>
+              <h5>Rsync:</h5>	rsync://mirror.clarkson.edu/tdf<br><br>
+              <h5>Upstream Mirror:</h5><a href="http://rsync.documentfoundation.org/">rsync.documentfoundation.org</a><br>
+              <h5>Frequency of Updates:</h5>	4 times daily<br>
+              <h5>Homepage:</h5><a href="http://www.documentfoundation.org/">http://www.documentfoundation.org/</a>
+            </section>
+            <section id="linux">
+              <h3>Linux (Including Kernel Source)</h3>
+              <h5>HTTP:</h5><a href="./linux/">http://mirror.clarkson.edu/linux/</a><br>
+              <h5>Rsync:</h5>	rsync://mirror.clarkson.edu/linux/<br><br>
+              <h5>Upstream Mirror:</h5><a href="http://rsync.kernel.org/">http://rsync.kernel.org/</a><br>
+              <h5>Frequency of Updates:</h5>	2 times Daily<br>
+              <h5>Homepage:</h5><a href="http://kernel.org">http://kernel.org</a>
+            </section>
+            <section id="msdos">
+              <h3>MS-DOS</h3>
+              <h5>HTTP:</h5><a href="./MS-DOS">http://mirror.clarkson.edu/MS-DOS</a><br>
+              <h5>Homepage: </h5><a href="https://github.com/Microsoft/MS-DOS">https://github.com/Microsoft/MS-DOS</a>
+            </section>
+            <section id="msys2">
+              <h3>MSYS2</h3>
+              <h5>HTTP:</h5><a href="./msys2/">http://mirror.clarkson.edu/msys2/</a><br>
+              <h5>Rsync:</h5>	rsync://mirror.clarkson.edu/msys2/<br><br>
+              <h5>Upstream Mirror:</h5><a href="http://repo.msys2.org">http://repo.msys2.org</a><br>
+              <h5>Frequency of Updates:</h5>	1 times Daily<br>
+              <h5>Homepage:</h5><a href="https://www.msys2.org/">https://www.msys2.org/</a>
+            </section>
+            <section id="odroid">
+              <h3>Odroid Packages</h3>
+              <h5>HTTP:</h5><a href="./odroid/">http://mirror.clarkson.edu/odroid/</a><br>
+              <h5>Frequency of Updates:</h5>Every 2 days<br>
+              <h5>Homepage:</h5><a href="http://www.hardkernel.com/main/main.php">http://www.hardkernel.com/main/main.php</a>
+            </section>
+            <section id="ros">
+              <h3>ROS (Official Mirror)</h3>
+              <h5>HTTP:</h5><a href="./ros">http://mirror.clarkson.edu/ros</a><br>
+              <h5>Frequency of Updates:</h5>4 times daily<br>
+              <h5>Homepage: </h5><a href="http://www.ros.org/">http://www.ros.org/</a>
+            </section>
+            <section id="temple-os">
+              <h3>TempleOS</h3>
+              <h5>HTTP:</h5><a href="./templeos">templeos</a><br>
+              <h5>Homepage: </h5><a href="http://templeos.org/">http://templeos.org/</a>
+            </section>
+            <section id="vlc">
+              <h3>VLC</h3>
+              <h5>HTTP:</h5><a href="./videolan/">http://mirror.clarkson.edu/videolan/</a><br>
+              <h5>Frequency of Updates:</h5>12 times daily<br>
+              <h5>Homepage:</h5><a href="https://www.videolan.org/index.html">https://www.videolan.org/index.html</a>
+            </section>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col col--4-of-4">
-          <h4>
-            <a href="http://cosi.clarkson.edu">Clarkson Open Source Institute</a> | Design by Benjamin Lannon | Mirror Contact: weinfuc@clarkson.edu thajohns@clarkson.edu |
-            <a href="https://github.com/COSI-Lab/MirrorWebsite">GitHub Repository</a>
-          </h4>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col col--4-of-4">
+            <h4><a href="http://cosi.clarkson.edu">Clarkson Open Source Institute</a> | Design by Benjamin Lannon | Mirror Contact: thajohns@clarkson.edu mahonec@clarkson.edu | <a href="https://github.com/COSI-Lab/MirrorWebsite">GitHub Repository</a></h4>
+          </div>
         </div>
       </div>
-    </div>
-  </footer>
-</body>
-
+    </footer>
+  </body>
 </html>

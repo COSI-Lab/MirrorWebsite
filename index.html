@@ -1,168 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <title>Clarkson University Mirror - Index</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="css/main.css">
-  <script src="js/vendors/jquery-2.1.4.min.js"></script>
-  <script src="js/main.js"></script>
-  <meta name="theme-color" content="#035245">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta charset="utf-8">
-  <meta name="description" content="The website for Clarkson University's Software Mirror">
-  <script src="js/cosi-nav.js" defer></script>
-  <style>
-    :root {
-      --background-color: rgba(255, 255, 255, 0.2);
-      --text-color: white;
-    }
-  </style>
-  <script>
-    window.onload = function () {
+  <head>
+    <title>Clarkson University Mirror - Index</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="js/vendors/jquery-2.1.4.min.js"></script>
+    <script src="js/main.js"></script>
+    <meta name="theme-color" content="#035245">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="description" content="The website for Clarkson University's Software Mirror">
+    <link rel="stylesheet" href="https://dubsdot.cosi.clarkson.edu/cosi-nav.css">
+    <script src="js/fetch.js"></script>
+    <script src="js/cosi-nav.js" defer></script>
+    <style>
+      :root {
+          --background-color: rgba(255,255,255,0.2);
+          --text-color: white;
+      }
+    </style>
+    <script>
+      window.onload = function() {
       var foo = document.getElementById("navhome");
-      foo.setAttribute("class", "current");
-    };
-  </script>
-</head>
-
-<body>
-  <cosi-nav></cosi-nav>
-  <header>
-    <div class="container top-header">
-      <a href="http://clarkson.edu/">
-        <img src="img/clarksonlogo.jpg">
-      </a>
-      <h1 class="left">
-        <a href="index.html">Mirror</a>
-      </h1>
-      <i id="menu-button" class="fa fa-bars"></i>
-    </div>
-    <nav id="navdesktop">
+      foo.setAttribute("class", "current"); };
+    </script>
+  </head>
+  <body>
+    <cosi-nav></cosi-nav>
+    <header>
+      <div class="container top-header"><a href="http://clarkson.edu/"><img src="img/clarksonlogo.jpg"></a>
+        <h1 class="left"><a href="index.html">Mirror</a></h1><i class="fa fa-bars menu-button"></i>
+      </div>
+      <nav id="navdesktop">
+        <div class="container">
+              <ul>
+                <li id="navhome"><a href="index.html">Mirror Home</a></li>
+                <li id="navdistributions"><a href="distributions.html">Distributions</a></li>
+                <li id="navsoft"><a href="software.html">Software</a></li>
+                <li id="navstats"><a href="stats.html">Statistics</a></li>
+                <li id="navhistory"><a href="history.html">History & Sponsors</a></li>
+              </ul>
+        </div>
+      </nav>
+    </header>
+    <nav id="navmobile">
       <div class="container">
-        <ul>
-          <li id="navhome">
-            <a href="index.html">Mirror Home</a>
-          </li>
-          <li id="navdistributions">
-            <a href="distributions.html">Distributions</a>
-          </li>
-          <li id="navsoft">
-            <a href="software.html">Software</a>
-          </li>
-          <li id="navstats">
-            <a href="stats.html">Statistics</a>
-          </li>
-          <li id="navhistory">
-            <a href="history.html">History & Sponsors</a>
-          </li>
-        </ul>
+            <ul>
+              <li id="navhome"><a href="index.html">Mirror Home</a></li>
+              <li id="navdistributions"><a href="distributions.html">Distributions</a></li>
+              <li id="navsoft"><a href="software.html">Software</a></li>
+              <li id="navstats"><a href="stats.html">Statistics</a></li>
+              <li id="navhistory"><a href="history.html">History & Sponsors</a></li>
+            </ul>
       </div>
     </nav>
-  </header>
-  <nav id="navmobile">
-    <div class="container">
-      <ul>
-        <li id="navhome">
-          <a href="index.html">Mirror Home</a>
-        </li>
-        <li id="navdistributions">
-          <a href="distributions.html">Distributions</a>
-        </li>
-        <li id="navsoft">
-          <a href="software.html">Software</a>
-        </li>
-        <li id="navstats">
-          <a href="stats.html">Statistics</a>
-        </li>
-        <li id="navhistory">
-          <a href="history.html">History & Sponsors</a>
-        </li>
-      </ul>
+    <div class="carasouel">
+      <div class="container">
+        <h1>Welcome to Mirror</h1>
+      </div>
     </div>
-  </nav>
-  <div class="carasouel">
-    <div class="container">
-      <h1>Welcome to Mirror</h1>
-    </div>
-  </div>
-  <div class="content">
-    <div class="container">
-      <div class="top">
-        <h2>About Mirror</h2>
+    <div class="content">
+      <div class="container">
+        <div class="top">
+          <h2>About Mirror</h2>
+          <p>
+            This site is a public repository of free and open source software. It is located at
+            <a href="http://www.clarkson.edu/">Clarkson University</a> in Potsdam, NY, US. This
+            site strives to provide exposure to open source software and various open source
+            operating systems. Currently, this site mirrors several Linux distributions, some
+            third party repositories, and even the Linux Kernel. You can find out more information
+            about everything we mirror by choosing the category that you are interested in.
+            
+          </p>
+        </div>
+        <hr>
+        <div class="row mid">
+          <div class="col col--1-of-3">
+            <div class="img-container"><a href="./distributions.html"><img src="img/ubuntu-logo32.png"></a></div>
+            <h2>Linux Distros</h2>
+            <p>
+              We host around 20 distributions including Debian, Ubuntu, Arch Linux, Linux Mint,
+              and many more. Many are official mirrors and the majority are updated 4 times a
+              day from upstream mirrors. Learn more on the <a href="distributions.html">Distributions</a> page.
+            </p>
+          </div>
+          <div class="col col--1-of-3">
+            <div class="img-container"><img src="img/blender-plain.png"></div>
+            <h2>Software</h2>
+            <p>
+              We also host a variety of software including Blender, GNU, Clonezilla, Cygwin, and many others. you can
+              find out more on the <a href="software.html">Software</a> page.
+            </p>
+          </div>
+          <div class="col col--1-of-3">
+            <div class="img-container"><img src="img/tux.png"></div>
+            <h2>Linux Kernel</h2>
+            <p>Versions of the Linux Kernel (Up to 4.5.X) can also be found on the <a href="software.html">Software</a>
+              page, found in the same place is documentation and souce for the kernel.
+              
+            </p>
+          </div>
+        </div>
+        <hr>
+        <h2>History</h2>
         <p>
-          This site is a public repository of free and open source software. It is located at
-          <a href="http://www.clarkson.edu/">Clarkson University</a> in Potsdam, NY, US. This site strives to provide exposure to open source software and various
-          open source operating systems. Currently, this site mirrors several Linux distributions, some third party repositories,
-          and even the Linux Kernel. You can find out more information about everything we mirror by choosing the category
-          that you are interested in.
-
+          The newest iteration was completed in April 2016, but we have had Mirror
+          running since 2002. If you want to learn more about the newest
+          iteration or the history behind the project, Visit the <a href="history.html">History</a> page.
+          
         </p>
       </div>
-      <hr>
-      <div class="row mid">
-        <div class="col col--1-of-3">
-          <div class="img-container">
-            <a href="distributions.html">
-              <img src="img/ubuntu-logo32.png">
-            </a>
+    </div>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col col--4-of-4">
+            <h4><a href="http://cosi.clarkson.edu">Clarkson Open Source Institute</a> | Design by Benjamin Lannon | Mirror Contact: thajohns@clarkson.edu mahonec@clarkson.edu | <a href="https://github.com/COSI-Lab/MirrorWebsite">GitHub Repository</a></h4>
           </div>
-          <h2>Linux Distros</h2>
-          <p>
-            We host around 20 distributions including Debian, Ubuntu, Arch Linux, Linux Mint, and many more. Many are official mirrors
-            and the majority are updated 4 times a day from upstream mirrors. Learn more on the
-            <a href="distributions.html">Distributions</a> page.
-          </p>
-        </div>
-        <div class="col col--1-of-3">
-          <div class="img-container">
-            <a href="software.html">
-              <img src="img/blender-plain.png">
-            </a>
-          </div>
-          <h2>Software</h2>
-          <p>
-            We also host a variety of software including Blender, GNU, Clonezilla, Cygwin, and many others. you can find out more on
-            the
-            <a href="software.html">Software</a> page.
-          </p>
-        </div>
-        <div class="col col--1-of-3">
-          <div class="img-container">
-            <a href="/linux">
-              <img src="img/tux.png">
-            </a>
-          </div>
-          <h2>Linux Kernel</h2>
-          <p>Versions of the Linux Kernel can also be found on the
-            <a href="software.html">Software</a>
-            page, found in the same place is documentation and souce for the kernel.
-
-          </p>
         </div>
       </div>
-      <hr>
-      <h2>History</h2>
-      <p>
-        The newest iteration was completed in April 2016, but we have had Mirror running since 2002. If you want to learn more about
-        the newest iteration or the history behind the project, Visit the
-        <a href="history.html">History</a> page.
-
-      </p>
-    </div>
-  </div>
-  <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col col--4-of-4">
-          <h4>
-            <a href="http://cosi.clarkson.edu">Clarkson Open Source Institute</a> | Design by Benjamin Lannon | Mirror Contact: weinfuc@clarkson.edu thajohns@clarkson.edu |
-            <a href="https://github.com/COSI-Lab/MirrorWebsite">GitHub Repository</a>
-          </h4>
-        </div>
-      </div>
-    </div>
-  </footer>
-</body>
-
+    </footer>
+  </body>
 </html>

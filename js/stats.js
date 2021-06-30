@@ -403,14 +403,14 @@ function renderPBBar() {
 
   let totalSpan = document.createElement("span");
 
-  const percentage = total / 7.5e15;
+  const percentage = total / 10e15;
 
   document.documentElement.style.setProperty(
     "--pb-width",
     Math.min(100, percentage * 100) + "%"
   );
 
-  const remainingMBytes = (7.5e15 - total) / 1e6;
+  const remainingMBytes = (10e15 - total) / 1e6;
 
   document.documentElement.style.setProperty("--pb-background", "#94CD27");
   const currDailyRate = monthData[0].rate / 8 * 3600 * 24;
@@ -423,8 +423,8 @@ function renderPBBar() {
   const totalTB = parseFloat((total / 1e12).toFixed(3));
 
   totalSpan.innerHTML = `
-      ${(7500 - totalTB).toFixed(3)}
-      TB remaining. Mirror should reach 7.5PB on
+      ${(10000 - totalTB).toFixed(3)}
+      TB remaining. Mirror should reach 10PB on
       ${date}, or
       ${daysLeft} day${daysLeft > 1 ? "s" : ""}<br>
       <small>This is based on this month's avg rate of
